@@ -152,12 +152,17 @@ h6 {
 
 .header .logo {
   line-height: 1;
+  
+}
+.logoclasss{
+  height:80px;
+  width:100%;
 }
 
-.header .logo img {
+/* .header .logo img {
   max-height: 32px;
   margin-right: 8px;
-}
+} */
 
 .header .logo h1 {
   font-size: 30px;
