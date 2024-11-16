@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Content Layout</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .image-section {
+            flex: 1;
+        }
+        .image-section img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .content-sec {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .content-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .icon {
+            font-size: 40px;
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .text p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="assets/img/img_h_4.jpg" alt="Description Image">
+            <h2 class="text-center">We Delivered 100+ Flats in 45 days</h2>
+        </div>
+        <div class="content-sec">
+            <div class="content-block">
+                <div class="icon">⚡</div>
+                <div class="text">
+                    <p>3 X YOUR REVENUE</p>
+                    <p>Partner with us to significantly increase your revenue through our innovative solutions.</p>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="text">
+                    <p>UNMATCHED SPEED</p>
+                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
+                </div>
+                <div class="icon">⏱️</div>
+                
+            </div>
+            <div class="content-block">
+                <div class="icon">⏱️</div>
+                <div class="text">
+                    <p>UNMATCHED SPEED</p>
+                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
+                </div>
+                
+                
+            </div>
+            <div class="content-block">
+                <div class="text">
+                    <p>UNMATCHED SPEED</p>
+                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
+                </div>
+                <div class="icon">⏱️</div>
+
+                
+                
+            </div>
+            <div class="content-block">
+                <div class="icon">⏱️</div>
+                <div class="text">
+                    <p>UNMATCHED SPEED</p>
+                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
+                </div>
+                
+                
+            </div>
+            <div class="content-block">
+               
+                <div class="text">
+                    <p>UNMATCHED SPEED</p>
+                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
+                </div>
+                
+                <div class="icon">⏱️</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
