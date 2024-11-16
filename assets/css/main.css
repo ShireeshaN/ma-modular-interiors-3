@@ -765,7 +765,7 @@ section,
 }
 
 .about .section-subtitle {
-  font-size: 15px;
+  font-size: 65px;
   margin-bottom: 10px;
   display: block;
   color: var(--default-color);
@@ -785,12 +785,17 @@ section,
   margin-bottom: 10px;
   display: block;
   color: var(--default-color);
+  font-weight: bold;
 }
 
 .about-2 .content-title {
-  color: var(--heading-color);
-  font-size: 22px;
+  color: black;
+  font-size: 15px;
   margin-bottom: 30px;
+  font-weight: lighter;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .about-2 p {
