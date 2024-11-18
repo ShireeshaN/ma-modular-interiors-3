@@ -3,113 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image and Content Layout</title>
+    <title>Interior Page Layout</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
         }
         .container {
             display: flex;
-            align-items: flex-start;
-            gap: 40px;
+            flex-direction: row;
+            background-color: #f5f5f5;
             padding: 20px;
-            max-width: 1200px;
-            margin: auto;
         }
-        .image-section {
-            flex: 1;
+        .main-content {
+            flex: 3;
+            padding: 20px;
+            background-color: white;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
         }
-        .image-section img {
+        .main-content img {
             width: 100%;
-            border-radius: 8px;
+            border-radius: 20px;
         }
-        .content-sec {
+        .label {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ff7a29;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        .sidebar {
             flex: 1;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-        }
-        .content-block {
-            display: flex;
-            align-items: flex-start;
             gap: 15px;
         }
-        .icon {
-            font-size: 40px;
+        .sidebar img {
+            width: 100%;
+            border-radius: 10px;
         }
-        .text {
+        .color-palette {
             display: flex;
-            flex-direction: column;
-            gap: 5px;
+            gap: 10px;
+            padding-top: 20px;
         }
-        .text p {
-            margin: 0;
+        .color-circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
         }
+        .color-1 { background-color: #d4d4d4; }
+        .color-2 { background-color: #f0b75e; }
+        .color-3 { background-color: #e4a23a; }
+        .color-4 { background-color: #005f73; }
+        .color-5 { background-color: #023047; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="image-section">
-            <img src="assets/img/img_h_4.jpg" alt="Description Image">
-            <h2 class="text-center">We Delivered 100+ Flats in 45 days</h2>
-        </div>
-        <div class="content-sec">
-            <div class="content-block">
-                <div class="icon">⚡</div>
-                <div class="text">
-                    <p>3 X YOUR REVENUE</p>
-                    <p>Partner with us to significantly increase your revenue through our innovative solutions.</p>
-                </div>
-            </div>
-            <div class="content-block">
-                <div class="text">
-                    <p>UNMATCHED SPEED</p>
-                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
-                </div>
-                <div class="icon">⏱️</div>
-                
-            </div>
-            <div class="content-block">
-                <div class="icon">⏱️</div>
-                <div class="text">
-                    <p>UNMATCHED SPEED</p>
-                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
-                </div>
-                
-                
-            </div>
-            <div class="content-block">
-                <div class="text">
-                    <p>UNMATCHED SPEED</p>
-                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
-                </div>
-                <div class="icon">⏱️</div>
-
-                
-                
-            </div>
-            <div class="content-block">
-                <div class="icon">⏱️</div>
-                <div class="text">
-                    <p>UNMATCHED SPEED</p>
-                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
-                </div>
-                
-                
-            </div>
-            <div class="content-block">
-               
-                <div class="text">
-                    <p>UNMATCHED SPEED</p>
-                    <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
-                </div>
-                
-                <div class="icon">⏱️</div>
+        <div class="main-content">
+            <div class="label">Laminate Finish</div>
+            <img src="assets/img/bannerss1.png"  alt="Interior Design">
+            <div class="color-palette">
+                <div class="color-circle color-1"></div>
+                <div class="color-circle color-2"></div>
+                <div class="color-circle color-3"></div>
+                <div class="color-circle color-4"></div>
+                <div class="color-circle color-5"></div>
             </div>
         </div>
-        
+        <div class="sidebar">
+            <img src="assets/img/bannerss1.png" alt="Premium Plus">
+            <p>Premium Plus</p>
+            <img src="assets/img/bannerss1.png" alt="Premium">
+            <p>Premium</p>
+            <img src="assets/img/bannerss1.png" alt="Standard">
+            <p>Standard</p>
+        </div>
     </div>
 </body>
 </html>
