@@ -271,12 +271,6 @@
   </div>
 
   <style>
-    .container {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
       .main-header {
             text-align: left;
             font-size: 36px;
@@ -449,117 +443,6 @@
         </div>
       </div>
     </section><!-- /Services Section -->
-
-    <div class="container">
-      <div class="main-content">
-          <div class="label">Laminate Finish</div>
-          <div class="swiper">
-              <div class="swiper-wrapper image">
-                  <div class="swiper-slide"><img src="assets/img/bannerss1.png" alt="Image 1"></div>
-                  <div class="swiper-slide"><img src="assets/img/bannerss1.png" alt="Image 2"></div>
-                  <div class="swiper-slide"><img src="assets/img/bannerss1.png" alt="Image 3"></div>
-              </div>
-              <div class="swiper-pagination"></div>
-          </div>
-          <div class="color-palette">
-              <div class="color-circle" style="background-color: #d4d4d4;"></div>
-              <div class="color-circle" style="background-color: #f0b75e;"></div>
-              <div class="color-circle" style="background-color: #e4a23a;"></div>
-              <div class="color-circle" style="background-color: #005f73;"></div>
-              <div class="color-circle" style="background-color: #023047;"></div>
-          </div>
-      </div>
-      <div class="sidebar">
-          <div class="animated animate-fade">
-              <img src="assets/img/bannerss1.png" alt="Premium Plus">
-              <p>Premium Plus</p>
-          </div>
-          <div class="animated animate-slide">
-              <img src="assets/img/bannerss1.png" alt="Premium">
-              <p>Premium</p>
-          </div>
-          <div class="animated animate-zoom">
-              <img src="assets/img/bannerss1.png" alt="Standard">
-              <p>Standard</p>
-          </div>
-      </div>
-  </div>
-
-
-  <style>
-     .main-content {
-            flex: 3;
-            background-color: white;
-            border-radius: 20px;
-            overflow: hidden;
-            padding: 20px;
-            
-        }
-        .swiper {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-        .label {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #ff7a29;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-weight: bold;
-            z-index: 2;
-        }
-        .sidebar {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .sidebar img {
-            width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-        .sidebar p {
-            margin: 5px 0;
-            text-align: center;
-        }
-        .color-palette {
-            display: flex;
-            gap: 10px;
-            padding-top: 20px;
-        }
-        .color-circle {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-       
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .main-content, .sidebar {
-                max-width: 100%;
-            }
-            .main-content {
-                padding: 10px;
-            }
-        }
-  </style>
-
-
-
 
     <!-- Stats Section -->
     <section id="stats" class="stats section light-background">
@@ -1282,20 +1165,6 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script>
-      var swiper = new Swiper('.swiper', {
-          loop: true,
-          pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-          },
-          autoplay: {
-              delay: 3000,
-              disableOnInteraction: false,
-          },
-      });
-  </script>
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
