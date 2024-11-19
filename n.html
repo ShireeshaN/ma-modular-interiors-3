@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Section</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .process-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .process-section h2 {
+            color: #6BA847;
+            margin-bottom: 30px;
+        }
+        .process-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            /* Ensures space between elements */
+            animation: slide-in 1s ease-in-out; /* Animation for entrance */
+        }
+        .text-block, .image-block {
+            border-radius: 10px;
+            overflow: hidden;
+            animation: fade-in 1.5s ease-in-out; /* Animation for content */
+        }
+        .text-block {
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: gray;
+            width: 30%;
+        }
+        .text-block h3 {
+            color: #d0a000;
+            margin-top: 0;
+        }
+        .text-block ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        .image-block img {
+            width: 400px;
+            border-radius: 10px;
+            display: block;
+            height: 400px;
+        }
+        .il img {
+            margin-left: auto;
+        }
+        .ir img {
+            margin-right: auto;
+        }
+        .pl{
+            margin-left: 200px;
+        }
+        .pr{
+            margin-right: 200px;
+        }
+
+        /* Animation keyframes */
+        @keyframes slide-in {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes fade-in {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .process-container {
+                flex-direction: column;
+                /*gap: 10px; */                /* Reduce gap for smaller screens */
+            }
+            .pl{
+            margin-left: 0px;
+        }
+        .pr{
+            margin-right: 0px;
+        }
+            .text-block {
+                width: 100%; /* Full width on mobile */
+                height: auto; /* Auto height to maintain aspect ratio */
+            }
+            .image-block img{
+                height:400px;
+                width:400px;
+            }
+            .text-block {
+                margin-bottom: 20px; /* Adds spacing between blocks */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="process-section">
+        <h2>Our Process Section</h2>
+
+        <div class="process-container pr">
+            <div class="text-block">
+                <h3>Initial Consultation</h3>
+                <p><strong>Description:</strong> Start by understanding the client’s needs, preferences, and budget. This meeting lays the groundwork for a tailored design that aligns with their vision.</p>
+                <ul>
+                    <li>Discuss goals and style preferences</li>
+                    <li>Explore potential solutions and timelines</li>
+                    <li>Gather space measurements and other essential details</li>
+                </ul>
+            </div>
+            <div class="image-block ir">
+                <img src="assets/img/team/team-1.jpg" alt="Initial Consultation">
+            </div>
+        </div>
+
+        <div class="process-container pl">
+            <div class="image-block il">
+                <img src="assets/img/team/team-1.jpg" alt="Custom Design and Planning">
+            </div>
+            <div class="text-block">
+                <h3>Custom Design & Planning</h3>
+                <p><strong>Description:</strong> Develop a detailed design plan with 3D renderings and material samples to give clients a preview of the final look. Adjustments are made based on client feedback.</p>
+                <ul>
+                    <li>Present custom designs and digital renderings</li>
+                    <li>Select materials, colors, and finishes</li>
+                    <li>Obtain client approval for the final design</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
