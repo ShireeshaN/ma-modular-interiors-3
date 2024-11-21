@@ -1,136 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Choose Us - Circular Layout</title>
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      display: flex;
-      
-      justify-content: space-between;
-      align-items: flex-start;
-      min-height: 100vh;
-    }
-
-    .why-choose-us-section {
-      text-align: center;
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    /* Heading */
-    .why-choose-us-section h2 {
-      font-size: 36px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .why-choose-us-section p {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-
-    .why-choose-us-section button {
-      padding: 12px 20px;
-      font-size: 16px;
-      border: none;
-      background-color: black;
-      color: white;
-      cursor: pointer;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
-
-    .why-choose-us-section button:hover {
-      background-color: #333;
-    }
-
-    /* Circular Boxes Layout */
-    .circle-container {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      margin: 50px auto 0;
-    }
-
-    .box {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background-color: #c6e87d;
-      color: #333;
-      
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-weight: bold;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .box:hover {
-      transform: scale(1.1);
-      background-color: #a3d14c;
-    }
-
-    .box span {
-      font-size: 14px;
-    }
-
-    /* Box Positions (Circular Alignment) */
-    .box:nth-child(1) { transform: translate(150px, 0); }
-    .box:nth-child(2) { transform: translate(280px, 150px); }
-    .box:nth-child(3) { transform: translate(150px, 280px); }
-    .box:nth-child(4) { transform: translate(0, 150px); }
-    .box:nth-child(5) { transform: translate(150px, 150px); /* Center Box */ }
-
-    /* Center Box Styling */
-    .box.center {
-      background-color: #ffcc00;
-      color: white;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .circle-container {
-        width: 300px;
-        height: 300px;
-      }
-
-      .box {
-        width: 80px;
-        height: 80px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <section class="why-choose-us-section">
-    <!-- Heading and Text -->
-    <h2>Why Choose Us</h2>
-    <p>
-      Embark on a design journey with spaces that reflect your vision and invite creativity. 
-      From planning to completion, we deliver exceptional results tailored to your needs.
-    </p>
-    <button>Book a Free Consultation</button>
-
-    <!-- Circular Boxes -->
-    <div class="circle-container">
-      <div class="box"><span>Professional<br>Designs</span></div>
-      <div class="box"><span>Strong<br>Design R&D</span></div>
-      <div class="box"><span>Hassle-Free<br>Execution</span></div>
-      <div class="box"><span>Fair<br>Pricing</span></div>
-      <div class="box center"><span>Fast Project<br>Delivery</span></div>
+<div class="main-container">
+    <!-- First Section: Image on Left, Carousel on Right -->
+    <div class="container">
+      <div class="content-section">
+        <img src="assets/img/production-images/75.png" alt="Content Image" class="content-image">
+        <div class="content">
+          <h2>Your Content Heading</h2>
+          <p>This is your content that goes beside the image. You can add more text or details here.</p>
+        </div>
+      </div>
+      <div class="carousel-section">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="assets/img/production-images/10.png" class="carousel-image" alt="Image 1">
+            <img src="assets/img/production-images/15.png" class="carousel-image" alt="Image 2">
+            <img src="assets/img/production-images/20.png" class="carousel-image" alt="Image 3">
+          </div>
+          <div class="carousel-controls">
+            <span class="carousel-control prev">&#10094;</span>
+            <span class="carousel-control next">&#10095;</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-</body>
-</html>
+  
+    <!-- Second Section: Carousel on Left, Image on Right -->
+    <div class="container reverse">
+        <div class="content-section">
+            <img src="assets/img/production-images/80.png" alt="Content Image" class="content-image">
+            <div class="content">
+              <h2>Your Opposite Content Heading</h2>
+              <p>This is your content that goes beside the carousel. You can add more text or details here.</p>
+            </div>
+          </div>
+      <div class="carousel-section">
+        <div class="carousel">
+          <div class="carousel-images">
+            <img src="assets/img/production-images/25.png" class="carousel-image" alt="Image 1">
+            <img src="assets/img/production-images/30.png" class="carousel-image" alt="Image 2">
+            <img src="assets/img/production-images/35.png" class="carousel-image" alt="Image 3">
+          </div>
+          <div class="carousel-controls">
+            <span class="carousel-control prev">&#10094;</span>
+            <span class="carousel-control next">&#10095;</span>
+          </div>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+<style>
+    /* Main container to center align all sections */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  margin: 50px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  width: 80%; /* Adjust width as needed */
+}
+
+/* Reverse alignment for the second section */
+.container.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-section {
+  width: 50%;
+  text-align: center; /* Center-align text */
+}
+
+.content-image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.carousel-section {
+  width: 50%;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-image {
+  min-width: 100%;
+  height: auto;
+}
+
+/* Controls */
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-control {
+  font-size: 30px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .container.reverse {
+    flex-direction: column;
+  }
+
+  .content-section,
+  .carousel-section {
+    width: 100%;
+  }
+}
+
+</style>
+
+<script>
+    // Handle both carousels
+document.querySelectorAll('.carousel').forEach(carousel => {
+  const carouselImages = carousel.querySelector('.carousel-images');
+  const images = carousel.querySelectorAll('.carousel-image');
+  const prevBtn = carousel.querySelector('.prev');
+  const nextBtn = carousel.querySelector('.next');
+  let currentIndex = 0;
+
+  // Function to update carousel position
+  function updateCarousel() {
+    const offset = -currentIndex * 100; // Move carousel to the current index
+    carouselImages.style.transform = `translateX(${offset}%)`;
+  }
+
+  // Go to the next image
+  function goToNextImage() {
+    currentIndex = (currentIndex + 1) % images.length; // Loop back to start
+    updateCarousel();
+  }
+
+  // Go to the previous image
+  function goToPrevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the end
+    updateCarousel();
+  }
+
+  // Event Listeners for controls
+  nextBtn.addEventListener('click', goToNextImage);
+  prevBtn.addEventListener('click', goToPrevImage);
+
+  // Automatic scrolling
+  setInterval(goToNextImage, 3000);
+});
+
+</script>
