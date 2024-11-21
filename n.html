@@ -1,179 +1,138 @@
-<div class="main-container">
-    <!-- First Section: Image on Left, Carousel on Right -->
-    <div class="container">
-      <div class="content-section">
-        <img src="assets/img/production-images/75.png" alt="Content Image" class="content-image">
-        <div class="content">
-          <h2>Your Content Heading</h2>
-          <p>This is your content that goes beside the image. You can add more text or details here.</p>
-        </div>
+<div class="animated-container">
+    <!-- First Section: Image on Left, Content on Right -->
+    <div class="animated-section">
+      <div class="image-section">
+        <img src="assets/img/production-images/75.png" alt="Image 1">
       </div>
-      <div class="carousel-section">
-        <div class="carousel">
-          <div class="carousel-images">
-            <img src="assets/img/production-images/10.png" class="carousel-image" alt="Image 1">
-            <img src="assets/img/production-images/15.png" class="carousel-image" alt="Image 2">
-            <img src="assets/img/production-images/20.png" class="carousel-image" alt="Image 3">
-          </div>
-          <div class="carousel-controls">
-            <span class="carousel-control prev">&#10094;</span>
-            <span class="carousel-control next">&#10095;</span>
-          </div>
-        </div>
+      <div class="content-section">
+        <h2 class="fade-in">High Animation Content Heading</h2>
+        <p class="slide-in">This content slides in with smooth animations. It can describe your product, service, or any details you wish to showcase.</p>
       </div>
     </div>
   
-    <!-- Second Section: Carousel on Left, Image on Right -->
-    <div class="container reverse">
-        <div class="content-section">
-            <img src="assets/img/production-images/80.png" alt="Content Image" class="content-image">
-            <div class="content">
-              <h2>Your Opposite Content Heading</h2>
-              <p>This is your content that goes beside the carousel. You can add more text or details here.</p>
-            </div>
+    <!-- Second Section: Content on Left, Image on Right -->
+    <div class="animated-section reverse">
+        <div class="image-section">
+            <img src="assets/img/production-images/80.png" alt="Image 2">
           </div>
-      <div class="carousel-section">
-        <div class="carousel">
-          <div class="carousel-images">
-            <img src="assets/img/production-images/25.png" class="carousel-image" alt="Image 1">
-            <img src="assets/img/production-images/30.png" class="carousel-image" alt="Image 2">
-            <img src="assets/img/production-images/35.png" class="carousel-image" alt="Image 3">
-          </div>
-          <div class="carousel-controls">
-            <span class="carousel-control prev">&#10094;</span>
-            <span class="carousel-control next">&#10095;</span>
-          </div>
-        </div>
+      <div class="content-section">
+        <h2 class="fade-in">Opposite High Animation Content Heading</h2>
+        <p class="slide-in">This section is reversed, with content on the left and the image on the right, maintaining the animation style.</p>
       </div>
      
     </div>
   </div>
 <style>
-    /* Main container to center align all sections */
-.main-container {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.animated-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 50px;
-  margin: 50px 0;
+ 
+  
 }
 
-.container {
+.animated-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 30px;
-  width: 80%; /* Adjust width as needed */
+  width: 80%;
+  margin: 0 auto;
 }
 
-/* Reverse alignment for the second section */
-.container.reverse {
+.animated-section.reverse {
   flex-direction: row-reverse;
 }
 
-.content-section {
-  width: 50%;
-  text-align: center; /* Center-align text */
-}
-
-.content-image {
+.image-section img {
   width: 500px;
   height: 500px;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.carousel-section {
-  width: 50%;
-  position: relative;
-}
-
-.carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.carousel-images {
-  display: flex;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0.8);
   transition: transform 0.5s ease;
 }
 
-.carousel-image {
-  min-width: 100%;
-  height: auto;
+.image-section img:hover {
+  transform: scale(1);
 }
 
-/* Controls */
-.carousel-controls {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
+.content-section {
+  flex: 1;
+  text-align: center;
 }
 
-.carousel-control {
-  font-size: 30px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  cursor: pointer;
-  user-select: none;
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fade-in 1.5s forwards;
+}
+
+.content-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #666;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slide-in 1.5s 0.5s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .container {
+  .animated-section {
     flex-direction: column;
   }
 
-  .container.reverse {
+  .animated-section.reverse {
     flex-direction: column;
   }
 
-  .content-section,
-  .carousel-section {
-    width: 100%;
+  .image-section img {
+    width: 300px;
   }
 }
 
-</style>
+</style>  
 
 <script>
-    // Handle both carousels
-document.querySelectorAll('.carousel').forEach(carousel => {
-  const carouselImages = carousel.querySelector('.carousel-images');
-  const images = carousel.querySelectorAll('.carousel-image');
-  const prevBtn = carousel.querySelector('.prev');
-  const nextBtn = carousel.querySelector('.next');
-  let currentIndex = 0;
+    const animatedSections = document.querySelectorAll('.animated-section');
 
-  // Function to update carousel position
-  function updateCarousel() {
-    const offset = -currentIndex * 100; // Move carousel to the current index
-    carouselImages.style.transform = `translateX(${offset}%)`;
-  }
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.fade-in, .slide-in').forEach((el) => {
+          el.style.animationPlayState = 'running';
+        });
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
 
-  // Go to the next image
-  function goToNextImage() {
-    currentIndex = (currentIndex + 1) % images.length; // Loop back to start
-    updateCarousel();
-  }
-
-  // Go to the previous image
-  function goToPrevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop to the end
-    updateCarousel();
-  }
-
-  // Event Listeners for controls
-  nextBtn.addEventListener('click', goToNextImage);
-  prevBtn.addEventListener('click', goToPrevImage);
-
-  // Automatic scrolling
-  setInterval(goToNextImage, 3000);
-});
+animatedSections.forEach((section) => observer.observe(section));
 
 </script>
