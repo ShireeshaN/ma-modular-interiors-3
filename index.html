@@ -89,7 +89,7 @@
   <main class="main">
 
     <!-- About Section -->
-    <section id="about" class="about section">
+    <section id="about" class="about section" style="background-color: #1f1f1f;">
 
       <div class="container">
         <div class="row align-items-center justify-content-between">
@@ -122,22 +122,22 @@
               </script>
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <img src="assets/img/bannersz1.jpg" alt="Image" class="img-fluid">
+                  <img src="assets/img/b1.png" alt="Image" class="img-fluid">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/bannerss2.jpg" alt="Image" class="img-fluid">
+                  <img src="assets/img/b2.png" alt="Image" class="img-fluid">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/bannerss3.jpg" alt="Image" class="img-fluid">
+                  <img src="assets/img/b3.png" alt="Image" class="img-fluid">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
             </div>
           </div>
           <div class="col-lg-4 order-lg-1 crafting-brilliance">
-            <span class="section-subtitle light" data-aos="fade-up">Innovating</span>
+            <span class="section-subtitle light text-white" data-aos="fade-up">Innovating</span>
             <span class="section-subtitle bold" data-aos="fade-up">Masterpieces</span>
-            <span class="section-subtitle light" data-aos="fade-up">with Precision</span>
+            <span class="section-subtitle light text-white" data-aos="fade-up">with Precision</span>
             <span class="section-subtitle bold" data-aos="fade-up">and Passion</span>
         </div>
         
@@ -233,10 +233,107 @@
       </div>
     </section>  -->
 
+    <section id="image-heading-text" class="section">
+      <div class="">
+        <div class="row align-items-center">
+          <!-- Left Image -->
+          <div class="col-lg-6 col-md-6">
+            <img src="assets/img/styleimgs/1.png" alt="Image Description" class="img-fluid rounded">
+          </div>
+          
+          <!-- Right Heading and Text -->
+          <div class="col-lg-6 col-md-6">
+            <h3 class="headspro">Beds & Bedroom Solutions</h3>
+            <p class="text-dark">
+              Create a relaxing and stylish bedroom with our innovative storage solutions, including customizable wardrobes, nightstands, and more.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="image-heading-text" class="section">
+      <div class="">
+        <div class="row align-items-center">
+           <!-- Right Heading and Text -->
+           <div class="col-lg-6 col-md-6 ">
+            <h3 class="headspro ">Beds & Bedroom Solutions</h3>
+            <p class="text-dark ">
+              Create a relaxing and stylish bedroom with our innovative storage solutions, including customizable wardrobes, nightstands, and more.
+            </p>
+          </div>
+          <!-- Left Image -->
+          <div class="col-lg-6 col-md-6">
+            <img src="assets/img/styleimgs/4.png" alt="Image Description" class="img-fluid rounded">
+          </div>
+          
+         
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* Section Style */
+#image-heading-text {
+  padding: 50px 0;
+}
+
+/* Heading Style */
+.headspro {
+  font-size: 32px; /* Medium font size */
+  font-weight: bold;
+  color: #333;
+  text-align: left; /* Left aligned */
+  font-family: 'Georgia', serif; /* Classic font */
+  margin-bottom: 15px;
+}
+
+/* Image Styling */
+#image-heading-text img {
+  max-width: 100%; /* Make image responsive */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+#image-heading-text p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left; /* Text aligned to left */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  #image-heading-text .row {
+    flex-direction: column; /* Stack the image and text on top of each other */
+  }
+
+  #image-heading-text img {
+    margin-bottom: 20px; /* Add space between image and text */
+  }
+
+  #image-heading-text .col-lg-6 {
+    text-align: center; /* Center the content for better mobile view */
+  }
+}
+
+@media (max-width: 480px) {
+  .headspro {
+    font-size: 28px; /* Slightly smaller font size on very small screens */
+  }
+  #image-heading-text p {
+    font-size: 16px; /* Smaller text for mobile screens */
+  }
+}
+
+    </style>
+    
+
 
     <div class="container pb-5">
-      <div class="main-header text-dark">
-          “REVOLUTIONIZING <br/> DESIGN AND <br/> MANUFACTURING”
+      <div class="main-header text-dark container">
+          <h2>`` REVOLUTIONIZING <br/> DESIGN AND MANUFACTURING ``</h2>
       </div>
       <div class="row content-section align-items-center">
           <div class="about-section col-md-8">
@@ -270,6 +367,118 @@
           </div>
       </div>
   </div>
+  
+  <style>
+      /* Importing Google Fonts */
+     
+  
+      /* Main header with animation */
+      .main-header {
+          font-size: 2.5rem;
+          font-weight: bold;
+          text-align: center;
+          color: #333;
+          transform: rotateY(20deg);
+          animation: slideIn 1.5s ease-out;
+          font-family: 'Playfair Display', serif; /* Classic elegant font */
+          letter-spacing: 1px;
+      }
+  
+      @keyframes slideIn {
+          0% { transform: translateY(-50px) rotateY(-20deg); opacity: 0; }
+          100% { transform: translateY(0) rotateY(0); opacity: 1; }
+      }
+  
+      /* About section */
+      .about-section {
+          transition: transform 0.3s ease;
+      }
+  
+      .about-text h2 {
+          font-size: 2rem;
+          font-weight: 600;
+          color: #fff;
+          transform: translateZ(40px);
+          font-family: 'Playfair Display', serif; /* Classic font */
+      }
+  
+      .about-text p {
+          font-size: 1.1rem;
+          color: #ccc;
+          margin-top: 15px;
+          font-family: 'Lora', serif; /* Clean and timeless serif */
+      }
+  
+      /* Factory info with animation */
+      .factory-info {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #fff;
+          margin-top: 5px;
+          transition: transform 0.4s ease-in-out;
+          font-family: 'Lora', serif; /* Classic, refined font */
+      }
+  
+      /* Feature list (3D animation on hover) */
+      .feature-list {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+      }
+  
+      .feature-item {
+          background: #2b2b2b;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          transform: translateZ(0);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      .feature-item:hover {
+          transform: translateZ(20px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+  
+      .feature-icon {
+          font-size: 3rem;
+          margin-bottom: 10px;
+          transition: transform 0.3s ease;
+      }
+  
+      .feature-text {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: #fff;
+          font-family: 'Roboto', sans-serif; /* For clean and modern contrast */
+      }
+  
+      /* Add 3D hover effect on feature items */
+      .feature-item:hover .feature-icon {
+          transform: rotate(360deg);
+      }
+  
+      /* Mobile responsive */
+      @media (max-width: 768px) {
+          .main-header {
+              font-size: 2rem;
+          }
+  
+          .about-section {
+              margin-top: 20px;
+          }
+  
+          .feature-list {
+              gap: 20px;
+          }
+  
+          .feature-item {
+              padding: 15px;
+          }
+      }
+  </style>
+  
 
   <style>
     .carousel-container {
