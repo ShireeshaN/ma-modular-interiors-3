@@ -1,140 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Process Section</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .process-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .process-section h2 {
-            color: #6BA847;
-            margin-bottom: 30px;
-        }
-        .process-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 40px;
-            /* Ensures space between elements */
-            animation: slide-in 1s ease-in-out; /* Animation for entrance */
-        }
-        .text-block, .image-block {
-            border-radius: 10px;
-            overflow: hidden;
-            animation: fade-in 1.5s ease-in-out; /* Animation for content */
-        }
-        .text-block {
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: gray;
-            width: 30%;
-        }
-        .text-block h3 {
-            color: #d0a000;
-            margin-top: 0;
-        }
-        .text-block ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-top: 10px;
-        }
-        .image-block img {
-            width: 400px;
-            border-radius: 10px;
-            display: block;
-            height: 400px;
-        }
-        .il img {
-            margin-left: auto;
-        }
-        .ir img {
-            margin-right: auto;
-        }
-        .pl{
-            margin-left: 200px;
-        }
-        .pr{
-            margin-right: 200px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Choose Us - Circular Layout</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      
+      justify-content: space-between;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
 
-        /* Animation keyframes */
-        @keyframes slide-in {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes fade-in {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    .why-choose-us-section {
+      text-align: center;
+      position: relative;
+      max-width: 900px;
+      margin: auto;
+    }
 
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            .process-container {
-                flex-direction: column;
-                /*gap: 10px; */                /* Reduce gap for smaller screens */
-            }
-            .pl{
-            margin-left: 0px;
-        }
-        .pr{
-            margin-right: 0px;
-        }
-            .text-block {
-                width: 100%; /* Full width on mobile */
-                height: auto; /* Auto height to maintain aspect ratio */
-            }
-            .image-block img{
-                height:400px;
-                width:400px;
-            }
-            .text-block {
-                margin-bottom: 20px; /* Adds spacing between blocks */
-            }
-        }
-    </style>
+    /* Heading */
+    .why-choose-us-section h2 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .why-choose-us-section p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .why-choose-us-section button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+
+    .why-choose-us-section button:hover {
+      background-color: #333;
+    }
+
+    /* Circular Boxes Layout */
+    .circle-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 50px auto 0;
+    }
+
+    .box {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background-color: #c6e87d;
+      color: #333;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .box:hover {
+      transform: scale(1.1);
+      background-color: #a3d14c;
+    }
+
+    .box span {
+      font-size: 14px;
+    }
+
+    /* Box Positions (Circular Alignment) */
+    .box:nth-child(1) { transform: translate(150px, 0); }
+    .box:nth-child(2) { transform: translate(280px, 150px); }
+    .box:nth-child(3) { transform: translate(150px, 280px); }
+    .box:nth-child(4) { transform: translate(0, 150px); }
+    .box:nth-child(5) { transform: translate(150px, 150px); /* Center Box */ }
+
+    /* Center Box Styling */
+    .box.center {
+      background-color: #ffcc00;
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .circle-container {
+        width: 300px;
+        height: 300px;
+      }
+
+      .box {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="process-section">
-        <h2>Our Process Section</h2>
+  <section class="why-choose-us-section">
+    <!-- Heading and Text -->
+    <h2>Why Choose Us</h2>
+    <p>
+      Embark on a design journey with spaces that reflect your vision and invite creativity. 
+      From planning to completion, we deliver exceptional results tailored to your needs.
+    </p>
+    <button>Book a Free Consultation</button>
 
-        <div class="process-container pr">
-            <div class="text-block">
-                <h3>Initial Consultation</h3>
-                <p><strong>Description:</strong> Start by understanding the client’s needs, preferences, and budget. This meeting lays the groundwork for a tailored design that aligns with their vision.</p>
-                <ul>
-                    <li>Discuss goals and style preferences</li>
-                    <li>Explore potential solutions and timelines</li>
-                    <li>Gather space measurements and other essential details</li>
-                </ul>
-            </div>
-            <div class="image-block ir">
-                <img src="assets/img/team/team-1.jpg" alt="Initial Consultation">
-            </div>
-        </div>
-
-        <div class="process-container pl">
-            <div class="image-block il">
-                <img src="assets/img/team/team-1.jpg" alt="Custom Design and Planning">
-            </div>
-            <div class="text-block">
-                <h3>Custom Design & Planning</h3>
-                <p><strong>Description:</strong> Develop a detailed design plan with 3D renderings and material samples to give clients a preview of the final look. Adjustments are made based on client feedback.</p>
-                <ul>
-                    <li>Present custom designs and digital renderings</li>
-                    <li>Select materials, colors, and finishes</li>
-                    <li>Obtain client approval for the final design</li>
-                </ul>
-            </div>
-        </div>
+    <!-- Circular Boxes -->
+    <div class="circle-container">
+      <div class="box"><span>Professional<br>Designs</span></div>
+      <div class="box"><span>Strong<br>Design R&D</span></div>
+      <div class="box"><span>Hassle-Free<br>Execution</span></div>
+      <div class="box"><span>Fair<br>Pricing</span></div>
+      <div class="box center"><span>Fast Project<br>Delivery</span></div>
     </div>
+  </section>
 </body>
 </html>
