@@ -7,11 +7,17 @@
   <title>Index - Active Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -189,10 +195,10 @@
 </style>
         </div>
       </div>
-    </section><!-- /About Section -->
+    </section>
 
-    <!-- About 2 Section -->
-    <section id="about-2" class="about-2 section light-background">
+ 
+    <!-- <section id="about-2" class="about-2 section light-background">
 
       <div class="container">
         <div class="content">
@@ -204,7 +210,6 @@
                 </div>
               </div>
             </div>
-
             <div class="offset-md-0 offset-lg-1 col-sm-12 col-md-5 col-lg-5 col-xl-6" data-aos="fade-up">
               <div class="px-3">
                 <span class="content-subtitle">Our Mission</span>
@@ -226,16 +231,13 @@
           </div>
         </div>
       </div>
-    </section><!-- /About 2 Section -->
+    </section>  -->
 
 
-    <div class="container">
-      <div class="main-header">
+    <div class="container pb-5">
+      <div class="main-header text-dark">
           “REVOLUTIONIZING <br/> DESIGN AND <br/> MANUFACTURING”
       </div>
-      
-
-    
       <div class="row content-section align-items-center">
           <div class="about-section col-md-8">
               <div class="about-text">
@@ -243,7 +245,7 @@
                   <p>At Interior Objekts, we're more than just a manufacturing company; we're a catalyst for innovation. Our mission is to streamline the design and manufacturing process, empowering businesses to achieve their full potential.</p>
               </div>
               <div class="factory-info">
-                  2.5-Acre<br>
+                  1-Acre<br>
                   <strong>FACTORY</strong><br>
                   <span>60,000 sq. ft.<br/> production space</span>
               </div>
@@ -267,182 +269,761 @@
               </div>
           </div>
       </div>
- 
   </div>
 
   <style>
-      .main-header {
-            text-align: left;
-            font-size: 36px;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .main-header span {
-            font-weight: bold;
-        }
-        .content-section {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .about-section {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #6b6c6b;
-            color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            height: 200px;
-        }
-        .about-text {
-            flex: 2;
-        }
-        .about-text h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .about-text p {
-            line-height: 1.5;
-        }
-        .factory-info {
-            flex: 1;
-            text-align: center;
-            border-radius: 50%;
-            background-color: #ffffff;
-            color: #3a3a3a;
-            padding: 30px;
-            font-weight: bold;
-            font-size: 18px;
-            margin-left: 20px;
-        }
-        .factory-info span {
-            display: block;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-        .feature-list {
-            /* flex: 2; */
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .feature-item {
-            display: flex;
-            align-items: center;
-            background-color: #4a4b4a;
-            color: #ffffff;
-            padding: 20px;
-            border-top-right-radius: 50px;
-            border-bottom-right-radius: 50px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 500px;
-            height:80px;
-        }
-        .feature-icon {
-            width: 100px;
-            height: 100px;
-            background-color: #ffffff;
-            color: #3a3a3a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-size: 40px;
-        }
-        .feature-text {
-            font-size: 18px;
-            font-weight: bold;
-        }
-        .icon{
-          width: 200px;
-          height:200px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .content-section {
-                flex-direction: column;
-            }
-            .main-header {
-                font-size: 28px;
-            }
-            .about-section, .feature-list {
-                width: 100%;
-                flex-direction: column;
-                align-items: flex-start;
-                height: max-content;
-            }
-            .factory-info {
-                margin-left: 0;
-                margin-top: 20px;
-                padding: 20px;
-                font-size: 16px;
-            }
-            .feature-item {
-                padding: 10px;
-            }
-            .feature-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
-            .feature-text {
-                font-size: 16px;
-            }
-        }
-  </style>
+    .carousel-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        height:500px;
+        margin: auto;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(52, 52, 52, 0.2);
+    }
+    .carousel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      
+    }
+    .carousel-slide img {
+        width: 100%;
+        border-radius: 30px;
+    }
+    .carousel-indicators {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+    .dot {
+        height: 10px;
+        width: 10px;
+        background-color: #b3afaf;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+    .dot.active {
+        background-color: #f04e30;
+    }
+    .carousel-arrows {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+       
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+    }
+    .arrow {
+        background-color: #f04e30;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+</style>
 
 
+<h1 class="text-center pt-5">Process</h1>
 
-    <!-- Services Section -->
-    <section id="services" class="services section light-background">
+<section class="interior-section container">
+  <div class="container2">
+    <div class="text-content">
+      <h1>Transform Your Space</h1>
+      <p>
+        Explore modern, sleek, and elegant interior designs tailored to fit your style. From minimalist apartments to luxurious spaces, our designs redefine comfort and sophistication.
+      </p>
+      <button>Learn More</button>
+    </div>
+    <div class="image-gallery">
+      <div class="image-box">
+        <i class="fas fa-couch"></i> <!-- Icon -->
+        <p>   Initial Consultation</p>
+      </div>
+      <div class="image-box">
+        <i class="fas fa-ruler-combined"></i> <!-- Icon -->
+        <p>  Custom Design & 
 
-      <div class="container">
-        <div class="row gy-4 justify-content-center">
+          Planning</p>
+      </div>
+      <div class="image-box">
+        <i class="fas fa-paint-roller"></i> <!-- Icon -->
+        <p> Production & Assembly</p>
+      </div>
+      <div class="image-box">
+        <i class="fas fa-lightbulb"></i> <!-- Icon -->
+        <p>Delivery & Installation</p>
+      </div>
+      <div class="image-box">
+        <i class="fas fa-chair"></i> <!-- Icon -->
+        <p> Post-Installation 
+          Support
+        
+        </p>
+      </div>
+      <div class="image-box">
+        <i class="fas fa-paint-brush" style="font-size: 80px;"></i> <!-- Larger Paintbrush Icon -->
+        <p>Custom Furniture</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <div class="col-lg-3">
-            <div class="services-item" data-aos="fade-up">
-              <div class="services-icon">
-                <i class="bi bi-bullseye"></i>
-              </div>
-              <div>
-                <h3>Technology</h3>
-                <p>Separated they live in Bookmarksgrove right at the coast</p>
-              </div>
-            </div>
+<style>
+  /* Interior Section Styling */
+  .interior-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+
+  .container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .text-content {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .text-content button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .text-content button:hover {
+    background-color: #555;
+  }
+
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+
+  .image-box {
+    background-color: #93C572;
+    text-align: center;
+    width: 100%;
+    height: 200px; /* Ensure each box is square */
+    max-width: 200px; /* Limit the width for squares */
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(79, 230, 81, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px; /* Space between each box */
+  }
+
+  .image-box i {
+    font-size: 40px; /* Icon size */
+    margin-bottom: 10px; /* Space between icon and text */
+  }
+
+  .image-box p {
+    margin: 0; /* Remove default margin */
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .container2 {
+      flex-direction: column;
+    }
+
+    .text-content,
+    .image-gallery {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+
+    .text-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .text-content p {
+      font-size: 0.9rem;
+    }
+
+    .text-content button {
+      font-size: 0.9rem;
+    }
+  }
+
+</style>
+
+<div class="carousel-container pt-5 pb-5">
+  
+  <div class="carousel-slide" id="carouselSlide">
+      <img src="assets/img/processimgs/1.jpg" alt="Image 1">
+      <img src="assets/img/processimgs/2.jpg" alt="Image 2">
+      <img src="assets/img/processimgs/3.jpg" alt="Image 3">
+      <img src="assets/img/processimgs/4.jpg" alt="Image 4">
+      <img src="assets/img/processimgs/.jpg" alt="Image 4">
+  </div>
+  <div class="carousel-arrows">
+      <button class="arrow" onclick="prevSlide()">&#10094;</button>
+      <button class="arrow" onclick="nextSlide()">&#10095;</button>
+  </div>
+  <div class="carousel-indicators" id="carouselIndicators">
+      <span class="dot active" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slides = document.querySelectorAll('.carousel-slide img');
+  const dots = document.querySelectorAll('.dot');
+
+  function showSlide(index) {
+      if (index >= slides.length) {
+          currentIndex = 0;
+      } else if (index < 0) {
+          currentIndex = slides.length - 1;
+      } else {
+          currentIndex = index;
+      }
+      document.getElementById('carouselSlide').style.transform = `translateX(${-currentIndex * 100}%)`;
+      dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentIndex));
+  }
+
+  function nextSlide() {
+      showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+      showSlide(currentIndex - 1);
+  }
+
+  function currentSlide(index) {
+      showSlide(index);
+  }
+
+  // Automatically scroll the images every 3 seconds
+  setInterval(() => {
+      nextSlide();
+  }, 3000);
+</script>
+<style>
+   .containerss {
+          display: flex;
+          gap: 20px;
+          padding: 20px;
+          flex-wrap: wrap;
+      }
+    .main-header {
+          text-align: left;
+          font-size: 36px;
+          font-weight: bold;
+          color: #333;
+          margin-bottom: 20px;
+      }
+      .main-header span {
+          font-weight: bold;
+      }
+      .content-section {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+      }
+      .about-section {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          background-color: #6b6c6b;
+          color: #ffffff;
+          padding: 20px;
+          border-radius: 8px;
+          height: 200px;
+      }
+      .about-text {
+          flex: 2;
+      }
+      .about-text h2 {
+          font-size: 24px;
+          margin-bottom: 10px;
+      }
+      .about-text p {
+          line-height: 1.5;
+      }
+      .factory-info {
+          flex: 1;
+          text-align: center;
+          border-radius: 50%;
+          background-color: #ffffff;
+          color: #3a3a3a;
+          padding: 30px;
+          font-weight: bold;
+          font-size: 18px;
+          margin-left: 20px;
+      }
+      .factory-info span {
+          display: block;
+          font-size: 14px;
+          margin-top: 10px;
+      }
+      .feature-list {
+          /* flex: 2; */
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+      }
+      .feature-item {
+          display: flex;
+          align-items: center;
+          background-color: #4a4b4a;
+          color: #ffffff;
+          padding: 20px;
+          border-top-right-radius: 50px;
+          border-bottom-right-radius: 50px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          width: 500px;
+          height:80px;
+      }
+      @media(max-width:992px){
+        .feature-item{
+          width:100%;
+        }
+      }
+      .feature-icon {
+          width: 100px;
+          height: 100px;
+          background-color: #ffffff;
+          color: #3a3a3a;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 15px;
+          font-size: 40px;
+      }
+      .feature-text {
+          font-size: 18px;
+          font-weight: bold;
+      }
+      .icon{
+        width: 200px;
+        height:200px;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+          .content-section {
+              flex-direction: column;
+          }
+          .main-header {
+              font-size: 28px;
+          }
+          .about-section, .feature-list {
+              width: 100%;
+              flex-direction: column;
+              align-items: flex-start;
+              height: max-content;
+          }
+          .factory-info {
+              margin-left: 0;
+              margin-top: 20px;
+              padding: 20px;
+              font-size: 16px;
+          }
+          .feature-item {
+              padding: 10px;
+          }
+          .feature-icon {
+              width: 40px;
+              height: 40px;
+              font-size: 20px;
+          }
+          .feature-text {
+              font-size: 16px;
+          }
+      }
+</style>
+
+
+<h2 class="text-center pt-5">Prodcution</h2>
+<div class="containerss">
+  <div class="main-content">
+      <div class="label">Laminate Finish</div>
+      <div class="swiper">
+          <div class="swiper-wrapper image">
+              <div class="swiper-slide"><img src="assets/img/Modular Cabinetry & Storage.jpg" alt="Image 1"></div>
+              <div class="swiper-slide"><img src="assets/img/productionimags/10.jpg" alt="Image 2"></div>
+              <div class="swiper-slide"><img src="assets/img/productionimags/11.jpg" alt="Image 3"></div>
+              <div class="swiper-slide"><img src="assets/img/productionimags/12.jpg" alt="Image 3"></div>
+              <div class="swiper-slide"><img src="assets/img/productionimags/13.jpg" alt="Image 3"></div>
+              <div class="swiper-slide"><img src="assets/img/productionimags/14.jpg" alt="Image 3"></div>
           </div>
+          <div class="swiper-pagination"></div>
+      </div>
+      <!-- <div class="color-palette">
+          <div class="color-circle" style="background-color: #d4d4d4;"></div>
+          <div class="color-circle" style="background-color: #f0b75e;"></div>
+          <div class="color-circle" style="background-color: #e4a23a;"></div>
+          <div class="color-circle" style="background-color: #005f73;"></div>
+          <div class="color-circle" style="background-color: #023047;"></div>
+      </div> -->
+  </div>
+  <div class="sidebar">
+      <div class="animated animate-fade">
+          <img src="assets/img/Modular Cabinetry & Storage.jpg" alt="Premium Plus">
+          <!-- <p>Premium Plus</p> -->
+      </div>
+      <div class="animated animate-zoom">
+        <img src="assets/img/productionimags/9pr.png" alt="Standard">
+        <!-- <p>Standard</p> -->
+    </div>
+      <div class="animated animate-slide">
+          <img src="assets/img/productionimags/8pr.png" alt="Premium">
+          <!-- <p>Premium</p> -->
+      </div>
+     
+  </div>
+</div>
 
-          <div class="col-lg-3">
-            <div class="services-item" data-aos="fade-up" data-aos-delay="100">
-              <div class="services-icon">
-                <i class="bi bi-command"></i>
-              </div>
-              <div>
-                <h3>Web Design</h3>
-                <p>Separated they live in Bookmarksgrove right at the coast</p>
-              </div>
-            </div>
+<script>
+  var swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+      autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+      },
+  });
+</script>
+
+<style>
+ 
+  .main-content {
+      flex: 3;
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      padding: 20px;
+  }
+  .swiper {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+  }
+  .swiper-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+      object-fit: cover;
+  }
+  .label {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #ff7a29;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 15px;
+      font-weight: bold;
+      z-index: 2;
+  }
+  .sidebar {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+  }
+  .sidebar img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+  }
+  .sidebar p {
+      margin: 5px 0;
+      text-align: center;
+  }
+  .color-palette {
+      display: flex;
+      gap: 10px;
+      padding-top: 20px;
+  }
+  .color-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+  }
+ 
+  @media (max-width: 768px) {
+      .container {
+          flex-direction: column;
+          align-items: center;
+      }
+      .main-content, .sidebar {
+          max-width: 100%;
+      }
+      .main-content {
+          padding: 10px;
+      }
+  }
+</style>
+
+<!-- Services Section -->
+<section id="pro-servicess" class="pro-services section light-background">
+  <div class="container">
+    <div class="row gy-4 justify-content-center">
+
+      <!-- First Row of Services (4 items) -->
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item modular-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-house-door text-dark"></i>
           </div>
-
-          <div class="col-lg-3">
-            <div class="services-item" data-aos="fade-up" data-aos-delay="200">
-              <div class="services-icon">
-                <i class="bi bi-bar-chart"></i>
-              </div>
-              <div>
-                <h3>Branding</h3>
-                <p>Separated they live in Bookmarksgrove right at the coast</p>
-              </div>
-            </div>
+          <div>
+            <h3>Modular Cabinetry & Storage</h3>
+            <ul class="ulls">
+              <li class="text-dark">Wardrobes</li>
+              <li class="text-dark">Kitchen cabinets</li>
+              <li class="text-dark">TV units</li>
+              <li class="text-dark">Storage cabinets</li>
+              <li class="text-dark">Bookshelves and display units</li>
+            </ul>
           </div>
-
         </div>
       </div>
-    </section><!-- /Services Section -->
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item wall-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-bricks text-dark"></i>
+          </div>
+          <div>
+            <h3>Wall Units</h3>
+            <ul class="ulls">
+              <li class="text-dark">Wall paneling and decorative units</li>
+              <li class="text-dark">Floating shelves and racks</li>
+              <li class="text-dark">Wall-mounted desks and workspaces</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item bedroom-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-house-door"></i>
+          </div>
+          <div>
+            <h3 class="text-white">Beds & Bedroom Solutions</h3>
+            <ul class="ulls">
+              <li class="text-white">Storage beds</li>
+              <li class="text-white">Modular bedside tables</li>
+              <li class="text-white">Headboards with built-in storage or features</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item workspace-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-briefcase text-dark"></i>
+          </div>
+          <div>
+            <h3>Workspace Solutions</h3>
+            <ul class="ulls">
+              <li class="text-dark">Modular workstations and desks</li>
+              <li class="text-dark">Overhead storage units</li>
+              <li class="text-dark">File cabinets and organizers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Row of Services -->
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item table-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-table text-dark"></i>
+          </div>
+          <div>
+            <h3>Modular Tables</h3>
+            <ul class="ulls">
+              <li>Side storage tables</li>
+              <li>Coffee tables with storage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item kitchen-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="fas fa-utensils text-dark"></i>
+          </div>
+          <div>
+            <h3>Kitchen Solutions</h3>
+            <ul class="ulls">
+              <li class="text-dark">Modular kitchen counters and islands</li>
+              <li class="text-dark">Pull-out pantries</li>
+              <li class="text-dark">Overhead and under-counter storage solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item bathroom-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="fas fa-toilet text-dark"></i>
+          </div>
+          <div>
+            <h3>Bathroom Solutions</h3>
+            <ul class="ulls">
+              <li class="text-dark">Vanity units</li>
+              <li class="text-dark">Modular storage cabinets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item entertainment-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="fas fa-tv text-dark"></i>
+          </div>
+          <div>
+            <h3 class="">Entertainment Center</h3>
+            <ul class="ulls">
+              <li class="text-dark">TV wall units</li>
+              <li class="text-dark">Media storage solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+
+
+  /* Individual Backgrounds */
+  .modular-bg {
+    background-image: url('assets/img/productionlargeimages/1.jpg');
+  }
+
+  .wall-bg {
+    background-image: url('assets/img/productionlargeimages/2.jpg');
+  }
+
+  .bedroom-bg {
+    background-image: url('assets/img/productionlargeimages/3.jpg');
+  }
+
+  .workspace-bg {
+    background-image: url('assets/img/productionlargeimages/4.jpg');
+  }
+
+  .table-bg {
+    background-image: url('assets/img/productionlargeimages/5.jpg');
+  }
+
+  .kitchen-bg {
+    background-image: url('assets/img/productionlargeimages/6.jpg');
+  }
+
+  .bathroom-bg {
+    background-image: url('assets/img/productionlargeimages/7.jpg');
+  }
+
+  .entertainment-bg {
+    background-image: url('assets/img/productionlargeimages/8.jpg');
+  }
+
+  /* General Styling */
+  .pro-services-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  /* Style for the unordered list */
+.ulls {
+  list-style: none;
+  padding: 0;
+}
+
+/* Style for each list item */
+.ulls li {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+/* 3D Text Effect */
+.ulls li {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -1px -1px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Hover effect for 3D text with increased font weight */
+.ulls li:hover {
+  font-weight: bold;
+  color: #1f1f1f; /* Change color on hover */
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6), -2px -2px 8px rgba(255, 255, 255, 0.2); /* Enhanced 3D shadow */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+</style>
+
+
+
+
+
+
+
+
 
     <!-- Stats Section -->
     <section id="stats" class="stats section light-background">
@@ -598,7 +1179,7 @@
 
     <!-- Tabs Section -->
     <section id="tabs" class="tabs section light-background">
-
+      <h2 class="text-center pb-5">Resources</h2>
       <div class="container">
         <div class="row gap-x-lg-4 justify-content-between">
           <div class="col-lg-4 js-custom-dots">
@@ -608,9 +1189,9 @@
               </div>
               <!-- /.icon -->
               <div class="service-contents">
-                <h3>Modern and clean design</h3>
+                <h3>PROJECTS</h3>
                 <p>
-                  Far far away, behind the word mountains, far from the countries .
+                  Showcasing Excellence, One Space at a Time
                 </p>
               </div>
               <!-- /.service-contents-->
@@ -623,9 +1204,9 @@
               </div>
               <!-- /.icon -->
               <div class="service-contents">
-                <h3>Sell Products</h3>
+                <h3>GALLERY</h3>
                 <p>
-                  Far far away, behind the word mountains, far from the countries .
+                  Inspiring Spaces, Endless Possibilities
                 </p>
               </div>
               <!-- /.service-contents-->
@@ -638,9 +1219,9 @@
               </div>
               <!-- /.icon -->
               <div class="service-contents">
-                <h3>Success Every Day</h3>
+                <h3>BLOGS</h3>
                 <p>
-                  Far far away, behind the word mountains, far from the countries .
+                  Your Guide to Interiors and Beyond
                 </p>
               </div>
               <!-- /.service-contents-->
@@ -653,17 +1234,49 @@
               </div>
               <!-- /.icon -->
               <div class="service-contents">
-                <h3>Bring Ideas to Life</h3>
+                <h3>VIDEOS</h3>
                 <p>
-                  Far far away, behind the word mountains, far from the countries .
+                  Transformations Captured in Motion
                 </p>
               </div>
               <!-- /.service-contents-->
             </a>
+
+
+            <a href="#" class="service-item link horizontal d-flex" data-aos="fade-left" data-aos-delay="300">
+              <div class="service-icon color-4 mb-4">
+                <i class="bi bi-easel"></i>
+              </div>
+              <!-- /.icon -->
+              <div class="service-contents">
+                <h3>NEWS &MEDIA</h3>
+                <p>
+                  Making Headlines with Exceptional Designs
+                </p>
+              </div>
+              <!-- /.service-contents-->
+            </a>
+
+
+
+            <a href="#" class="service-item link horizontal d-flex" data-aos="fade-left" data-aos-delay="300">
+              <div class="service-icon color-4 mb-4">
+                <i class="bi bi-easel"></i>
+              </div>
+              <!-- /.icon -->
+              <div class="service-contents">
+                <h3>DOWNLOADS</h3>
+                <p>
+                  Resources to Empower Your Design Journey
+                </p>
+              </div>
+              <!-- /.service-contents-->
+            </a>
+
             <!-- /.service -->
           </div>
 
-          <div class="col-lg-8">
+          <div class="col-lg-6">
             <div class="swiper init-swiper-tabs">
               <script type="application/json" class="swiper-config">
                 {
@@ -695,41 +1308,133 @@
                 <div class="swiper-slide">
                   <img src="assets/img/img_h_1.jpg" alt="Image" class="img-fluid">
                   <div class="p-4">
-                    <h3 class="text-black h5 mb-3">Modern and clean design</h3>
+                    <h3 class="text-black h5 mb-3">Projects</h3>
                     <div class="row">
-                      <div class="col-lg-8">
+                      <div class="col-lg-7">
                         <p>
-                          Far far away, behind the word mountains, far from the
-                          countries Vokalia and Consonantia, there live the blind
-                          texts. Separated they live in Bookmarksgrove right at the
-                          coast of the Semantics, a large language ocean.
+                          Explore our diverse portfolio of projects where creativity meets functionality. From modern kitchens to luxurious living rooms, we’ve transformed countless spaces into personalized masterpieces. Witness our commitment to precision and elegance in every project we undertake.
+
+
+
+
                         </p>
-                        <p>
-                          A small river named Duden flows by their place and
-                          supplies it with the necessary regelialia. It is a
-                          paradisematic country, in which roasted parts of sentences
-                          fly into your mouth.
-                        </p>
+                        
                       </div>
                       <div class="col-lg-4">
-                        <ul class="list-unstyled list-check">
-                          <li>Far far away, behind the word</li>
-                          <li>Far from the countries Vokalia</li>
-                          <li>Separated they live in Bookmarksgrove</li>
-                        </ul>
+                       <img src="assets/img/pro3.png"/>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/img_h_2.jpg" alt="Image" class="img-fluid">
+                  <img src="assets/img/img_h_1.jpg" alt="Image" class="img-fluid">
+                  <div class="p-4">
+                    <h3 class="text-black h5 mb-3">Gallery</h3>
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <p>
+                          Step into our world of design through stunning visuals. Our gallery showcases an extensive collection of interior designs, 
+                          each telling a story of style and sophistication. Whether you’re looking for inspiration or admiring our craftsmanship, this is your go-to destination.
+
+                        </p>
+                       
+                      </div>
+                      <div class="col-lg-4">
+                     
+                          <img src="assets/img/pro3.png"/>
+                       
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="swiper-slide">
-                  <img src="assets/img/img_h_3.jpg" alt="Image" class="img-fluid">
+                  <img src="assets/img/img_h_1.jpg" alt="Image" class="img-fluid">
+                  <div class="p-4">
+                    <h3 class="text-black h5 mb-3">Blogs</h3>
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <p>
+                          Discover expert tips, design trends, and insights into creating your dream home. From choosing the right materials to maximizing small spaces, our blogs provide actionable advice and creative ideas to elevate your interiors. Stay informed and inspired!
+                        </p>
+                       
+                      </div>
+                      <div class="col-lg-4">
+                      
+                          <img src="assets/img/pro3.png"/>
+                   
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="swiper-slide">
-                  <img src="assets/img/img_h_4.jpg" alt="Image" class="img-fluid">
+                  <img src="assets/img/img_h_1.jpg" alt="Image" class="img-fluid">
+                  <div class="p-4">
+                    <h3 class="text-black h5 mb-3">Videos</h3>
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <p>
+                          Watch our design journeys come to life through engaging videos. From concept to completion, see how we bring spaces to life. Get a closer look at our processes, customer testimonials, and the magic behind our stunning transformations.
+
+                        </p>
+                       
+                      </div>
+                      <div class="col-lg-4">
+                     
+                          <img src="assets/img/pro3.png"/>
+                      
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <div class="swiper-slide">
+                  <img src="assets/img/img_h_1.jpg" alt="Image" class="img-fluid">
+                  <div class="p-4">
+                    <h3 class="text-black h5 mb-3">Modern and clean design</h3>
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <p>
+                          Stay updated with our latest achievements, events, and recognitions in the world of interiors. Explore media coverage, press releases, and success stories that highlight our journey of delivering excellence and innovation in every project.
+
+
+                        </p>
+                      
+                      </div>
+                      <div class="col-lg-4">
+                       
+                          <img src="assets/img/pro3.png"/>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="swiper-slide">
+                  <img src="assets/img/img_h_1.jpg" alt="Image" class="img-fluid">
+                  <div class="p-4">
+                    <h3 class="text-black h5 mb-3">Modern and clean design</h3>
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <p>
+                          Access our free design resources, brochures, and guides to
+                           help you plan your perfect space. Download inspiration-packed 
+                           catalogues, material details, and project checklists that ensure
+                            your interior journey is seamless and informed.
+                        </p>
+                       
+                      </div>
+                      <div class="col-lg-4">
+                      
+                          <img src="assets/img/pro3.png"/>
+                     
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
