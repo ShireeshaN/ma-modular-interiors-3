@@ -1,136 +1,138 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Why Choose Us - Circular Layout</title>
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      display: flex;
-      
-      justify-content: space-between;
-      align-items: flex-start;
-      min-height: 100vh;
-    }
-
-    .why-choose-us-section {
-      text-align: center;
-      position: relative;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    /* Heading */
-    .why-choose-us-section h2 {
-      font-size: 36px;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    .why-choose-us-section p {
-      font-size: 16px;
-      color: #555;
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-
-    .why-choose-us-section button {
-      padding: 12px 20px;
-      font-size: 16px;
-      border: none;
-      background-color: black;
-      color: white;
-      cursor: pointer;
-      border-radius: 25px;
-      transition: background-color 0.3s ease;
-    }
-
-    .why-choose-us-section button:hover {
-      background-color: #333;
-    }
-
-    /* Circular Boxes Layout */
-    .circle-container {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      margin: 50px auto 0;
-    }
-
-    .box {
-      position: absolute;
-      width: 100px;
-      height: 100px;
-      background-color: #c6e87d;
-      color: #333;
-      
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-weight: bold;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .box:hover {
-      transform: scale(1.1);
-      background-color: #a3d14c;
-    }
-
-    .box span {
-      font-size: 14px;
-    }
-
-    /* Box Positions (Circular Alignment) */
-    .box:nth-child(1) { transform: translate(150px, 0); }
-    .box:nth-child(2) { transform: translate(280px, 150px); }
-    .box:nth-child(3) { transform: translate(150px, 280px); }
-    .box:nth-child(4) { transform: translate(0, 150px); }
-    .box:nth-child(5) { transform: translate(150px, 150px); /* Center Box */ }
-
-    /* Center Box Styling */
-    .box.center {
-      background-color: #ffcc00;
-      color: white;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .circle-container {
-        width: 300px;
-        height: 300px;
-      }
-
-      .box {
-        width: 80px;
-        height: 80px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <section class="why-choose-us-section">
-    <!-- Heading and Text -->
-    <h2>Why Choose Us</h2>
-    <p>
-      Embark on a design journey with spaces that reflect your vision and invite creativity. 
-      From planning to completion, we deliver exceptional results tailored to your needs.
-    </p>
-    <button>Book a Free Consultation</button>
-
-    <!-- Circular Boxes -->
-    <div class="circle-container">
-      <div class="box"><span>Professional<br>Designs</span></div>
-      <div class="box"><span>Strong<br>Design R&D</span></div>
-      <div class="box"><span>Hassle-Free<br>Execution</span></div>
-      <div class="box"><span>Fair<br>Pricing</span></div>
-      <div class="box center"><span>Fast Project<br>Delivery</span></div>
+<div class="animated-container">
+    <!-- First Section: Image on Left, Content on Right -->
+    <div class="animated-section">
+      <div class="image-section">
+        <img src="assets/img/production-images/75.png" alt="Image 1">
+      </div>
+      <div class="content-section">
+        <h2 class="fade-in">High Animation Content Heading</h2>
+        <p class="slide-in">This content slides in with smooth animations. It can describe your product, service, or any details you wish to showcase.</p>
+      </div>
     </div>
-  </section>
-</body>
-</html>
+  
+    <!-- Second Section: Content on Left, Image on Right -->
+    <div class="animated-section reverse">
+        <div class="image-section">
+            <img src="assets/img/production-images/80.png" alt="Image 2">
+          </div>
+      <div class="content-section">
+        <h2 class="fade-in">Opposite High Animation Content Heading</h2>
+        <p class="slide-in">This section is reversed, with content on the left and the image on the right, maintaining the animation style.</p>
+      </div>
+     
+    </div>
+  </div>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.animated-container {
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+
+.animated-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.animated-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.image-section img {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: scale(0.8);
+  transition: transform 0.5s ease;
+}
+
+.image-section img:hover {
+  transform: scale(1);
+}
+
+.content-section {
+  flex: 1;
+  text-align: center;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fade-in 1.5s forwards;
+}
+
+.content-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #666;
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slide-in 1.5s 0.5s forwards;
+}
+
+/* Keyframes for animations */
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .animated-section {
+    flex-direction: column;
+  }
+
+  .animated-section.reverse {
+    flex-direction: column;
+  }
+
+  .image-section img {
+    width: 300px;
+  }
+}
+
+</style>  
+
+<script>
+    const animatedSections = document.querySelectorAll('.animated-section');
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.fade-in, .slide-in').forEach((el) => {
+          el.style.animationPlayState = 'running';
+        });
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+
+animatedSections.forEach((section) => observer.observe(section));
+
+</script>
