@@ -161,6 +161,9 @@ h6 {
   height:80px;
   width:100%;
 }
+.bg1{
+  background-image: url("assets/img/processimgs/3.jpg");
+}
 
 /* .header .logo img {
   max-height: 32px;
@@ -659,11 +662,87 @@ h6 {
   padding: 20px 0;
   position: relative;
 }
+.light-background-1 {
 
-.page-title h1 {
+  position: relative;
+  background: url('../img/about-banner.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-2 {
+
+  position: relative;
+  background: url('../img/our-process.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-3 {
+
+  position: relative;
+  background: url('../img/our-process.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-4 {
+
+  position: relative;
+  background: url('../img/resources-banner.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-5 {
+
+  position: relative;
+  background: url('../img/contact-banner.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-1 h1 {
   font-size: 24px;
   font-weight: 300;
   margin: 0 0 5px 0;
+}
+
+.page-title h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+  color: #fff;
 }
 
 .page-title .breadcrumbs ol {
@@ -672,7 +751,7 @@ h6 {
   list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
 }
 
