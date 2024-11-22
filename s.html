@@ -265,3 +265,49 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    function showSlide(carouselId, index) {
+        const caIn = document.getElementById(carouselId);
+        const slides = caIn.querySelectorAll('img');
+        const totalSlides = slides.length;
+        if (index >= totalSlides) index = 0;
+        if (index < 0) index = totalSlides - 1;
+        const offset = -index * 100;
+        caIn.style.transform = `translateX(${offset}%)`;
+        caIn.dataset.currentIndex = index;
+    }
+
+    function nextSlide(carouselId) {
+        const caIn = document.getElementById(carouselId);
+        let currentIndex = parseInt(caIn.dataset.currentIndex || 0, 10);
+        showSlide(carouselId, currentIndex + 1);
+    }
+
+    function prevSlide(carouselId) {
+        const caIn = document.getElementById(carouselId);
+        let currentIndex = parseInt(caIn.dataset.currentIndex || 0, 10);
+        showSlide(carouselId, currentIndex - 1);
+    }
+
+    // Auto-scroll functionality with repeating slides
+    function startAutoScroll(carouselId) {
+        setInterval(() => {
+            nextSlide(carouselId);
+        }, 3000);
+    }
+
+    // Initialize auto-scrolling for both carousels
+    startAutoScroll('caIn1');
+    startAutoScroll('caIn2');
+</script>
