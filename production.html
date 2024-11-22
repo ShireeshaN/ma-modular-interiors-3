@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Ma Modular Interiors </title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-
-      <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-      <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Ma Madulars Interiors</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          rel="stylesheet"
+        />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+      
+       
+        <!-- Favicons -->
+        <link href="assets/img/logooos.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+      
+        <!-- Main CSS File -->
+        <link href="assets/css/main.css" rel="stylesheet">
+      
+        
+      </head>
 <body>
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -87,9 +93,10 @@
         </div><!-- End Page Title -->
     <style>
        .bg{
-        background-color: black;
+        background-color: #000000;
+        padding-bottom: 5px;
        }
-        .container {
+        .cont {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -98,40 +105,40 @@
             margin-top: 20px;
             
         }
-        .text-section {
-            width: 30%;
+        .text-sec {
+            width: 50%;
          padding-left: 20%;
             text-align: center;
         }
-        .text-section li{
+        .text-sec li{
             text-align: start;
            
 
         }
-        .text-section h2 {
+        .text-sec h2 {
             color: #d1e800;
             font-size: 24px;
             margin-bottom: 20px;
             text-align: start;
         }
-        .text-section ul {
+        .text-sec ul {
             text-align: center;
             
             color: #ffe100;
             font-size: 18px;
         }
-        .carousel {
+        .ca {
             position: relative;
             width: 40%;
             overflow: hidden;
             margin: 0 auto;
             
         }
-        .carousel-inner {
+        .ca-in {
             display: flex;
             transition: transform 1s ease-in-out;
         }
-        .carousel-inner img {
+        .ca-in img {
             width: 100%;
             height: auto;
             border-radius: 10px;
@@ -150,15 +157,25 @@
             font-size: 20px;
             z-index: 2;
         }
-        .carousel-button.left {
-            left: -50px;
+        .ca-button.left1 {
+            left:0px;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            background-color: #d1e800!important;
         }
-        .carousel-button.right {
-            right: -50px;
+        .ca-button.right1 {
+            right: 0px;
+            position: absolute;
+            top: 50%;
+            z-index: 2;
+            background-color: #d1e800!important;
+            
         }
         .heading{
             text-align: center;
             color: #34bf49;
+            
 
         }
         /* .leftm{
@@ -171,41 +188,41 @@
                 flex-direction: column;
                 margin-bottom: 20px;
             }
-            .text-section, .carousel {
+            .text-sec, .ca {
                 width: 100%;
                 padding: 10px;
             }
-            .text-section h2 {
+            .text-sec h2 {
                 font-size: 20px;
             }
-            .text-section ul {
+            .text-sec ul {
                 font-size: 16px;
             }
-            .carousel-button.left {
+            .ca-button.left1 {
                 left: 5px;
             }
-            .carousel-button.right {
+            .ca-button.right1 {
                 right: 5px;
             }
         }
 
         @media (max-width: 480px) {
-            .text-section h2 {
+            .text-sec h2 {
                 font-size: 18px;
             }
-            .text-section ul {
+            .text-sec ul {
                 font-size: 14px;
             }
-            .carousel-button {
+            .ca-button {
                 padding: 10px;
                 font-size: 16px;
             }
         }
     </style>
-    <h2 class="heading">Precision Production for Every Space</h2>
+    <h2 class="heading mt-3 pb-4">Precision Production for Every Space</h2>
     <!-- First Section: Text on Left, Carousel on Right -->
-    <div class="container">
-        <div class="text-section ml-5">
+    <div class="cont">
+        <div class="text-sec ml-5">
             <h2>Modular Cabinetry & Storage</h2>
             <ul >
                 <li>Wardrobes</li>
@@ -215,8 +232,8 @@
                 <li>Bookshelves and display units</li>
             </ul>
         </div>
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner1">
+        <div class="ca">
+            <div class="ca-in" id="caIn1">
                 <img src="assets/img/production-images/63.png" alt="Slide 1">
                 <img src="assets/img/production-images/47.png" alt="Slide 2">
                 <img src="assets/img/production-images/30.png" alt="Slide 3">
@@ -235,15 +252,15 @@
                 <img src="assets/img/production-images/7.png" alt="Slide 6">
                 
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner1')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner1')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn1')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn1')">&#10095;</button>
         </div>
     </div>
 
     <!-- Second Section: Carousel on Left, Text on Right -->
-    <div class="container">
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner2">
+    <div class="cont">
+        <div class="ca">
+            <div class="ca-in" id="caIn2">
                 <img src="assets/img/production-images/87.png" alt="Slide 1">
                 <img src="assets/img/production-images/46.png" alt="Slide 2">
                 <img src="assets/img/production-images/45.png" alt="Slide 3">
@@ -260,10 +277,10 @@
                 <img src="assets/img/production-images/28.png" alt="Slide 5">
                 <img src="assets/img/production-images/17.png" alt="Slide 6">
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner2')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner2')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn2')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn2')">&#10095;</button>
         </div>
-        <div class="text-section">
+        <div class="text-sec">
             <h2>Modular Tables</h2>
             <ul>
                 <li>Side storage tables</li>
@@ -274,8 +291,8 @@
 
 
     <!-- First Section: Text on Left, Carousel on Right -->
-    <div class="container ">
-        <div class="text-section">
+    <div class="cont ">
+        <div class="text-sec">
             <h2>Beds & Bedroom Solutions</h2>
             <ul>
                 <li>Storage beds.</li>
@@ -285,8 +302,8 @@
                
             </ul>
         </div>
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner1">
+        <div class="ca">
+            <div class="ca-in" id="caIn1">
                 <img src="assets/img/production-images/55.png" alt="Slide 1">
                 <img src="assets/img/production-images/56.png" alt="Slide 2">
                 <img src="assets/img/production-images/54.png" alt="Slide 3">
@@ -301,15 +318,15 @@
                 <img src="assets/img/production-images/13.png" alt="Slide 6">
                 
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner1')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner1')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn1')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn1')">&#10095;</button>
         </div>
     </div>
 
     <!-- Second Section: Carousel on Left, Text on Right -->
-    <div class="container">
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner2">
+    <div class="cont">
+        <div class="ca">
+            <div class="ca-in" id="caIn2">
                 <img src="assets/img/production-images/114.png" alt="Slide 1">
                 <img src="assets/img/production-images/62.png" alt="Slide 2">
                 <img src="assets/img/production-images/61.png" alt="Slide 3">
@@ -324,10 +341,10 @@
                 <img src="assets/img/production-images/9.png" alt="Slide 4">
               
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner2')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner2')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn2')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn2')">&#10095;</button>
         </div>
-        <div class="text-section">
+        <div class="text-sec">
             <h2>Wall Units</h2>
             <ul>
                 <li>Wall paneling and decorative units</li>
@@ -339,8 +356,8 @@
     </div>
 
     <!-- First Section: Text on Left, Carousel on Right -->
-    <div class="container ">
-        <div class="text-section">
+    <div class="cont ">
+        <div class="text-sec">
             <h2>Workspace Solutions</h2>
             <ul>
                 <li>Modular workstations and desks</li>
@@ -349,8 +366,8 @@
                
             </ul>
         </div>
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner1">
+        <div class="ca">
+            <div class="ca-in" id="caIn1">
                 <img src="assets/img/production-images/75.png" alt="Slide 1">
                 <img src="assets/img/production-images/74.png" alt="Slide 2">
                 <img src="assets/img/production-images/73.png" alt="Slide 3">
@@ -362,15 +379,15 @@
                 <img src="assets/img/production-images/66.png" alt="Slide 4">
                
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner1')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner1')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn1')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn1')">&#10095;</button>
         </div>
     </div>
 
     <!-- Second Section: Carousel on Left, Text on Right -->
-    <div class="container">
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner2">
+    <div class="cont">
+        <div class="ca">
+            <div class="ca-in" id="caIn2">
                 <img src="assets/img/production-images/86.png" alt="Slide 1">
                 <img src="assets/img/production-images/85.png" alt="Slide 2">
                 <img src="assets/img/production-images/84.png" alt="Slide 3">
@@ -386,10 +403,10 @@
                 <img src="assets/img/production-images/16.png" alt="Slide 3">
                
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner2')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner2')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn2')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn2')">&#10095;</button>
         </div>
-        <div class="text-section">
+        <div class="text-sec">
             <h2>Kitchen Solutions</h2>
             <ul>
                 <li>Modular kitchen counters and islands</li>
@@ -403,8 +420,8 @@
 
  
     <!-- First Section: Text on Left, Carousel on Right -->
-    <div class="container ">
-        <div class="text-section">
+    <div class="cont ">
+        <div class="text-sec">
             <h2>Entertainment Center</h2>
             <ul>
                 <li>TV Wall Units</li>
@@ -412,8 +429,8 @@
                
             </ul>
         </div>
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner1">
+        <div class="ca">
+            <div class="ca-in" id="caIn1">
                 <img src="assets/img/production-images/98.png" alt="Slide 1">
                 <img src="assets/img/production-images/97.png" alt="Slide 2">
                 <img src="assets/img/production-images/96.png" alt="Slide 3">
@@ -429,15 +446,15 @@
                 <img src="assets/img/production-images/64.png" alt="Slide 5">
                 <img src="assets/img/production-images/3.png" alt="Slide 6">
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner1')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner1')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn1')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn1')">&#10095;</button>
         </div>
     </div>
 
        <!-- Second Section: Carousel on Left, Text on Right -->
-       <div class="container">
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner2">
+       <div class="cont">
+        <div class="ca">
+            <div class="ca-in" id="caIn2">
                 <img src="assets/img/production-images/113.png" alt="Slide 1">
                 <img src="assets/img/production-images/112.png" alt="Slide 2">
                 <img src="assets/img/production-images/111.png" alt="Slide 3">
@@ -454,10 +471,10 @@
                 
             
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner2')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner2')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn2')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn2')">&#10095;</button>
         </div>
-        <div class="text-section">
+        <div class="text-sec">
             <h2>Bathroom Solutions</h2>
             <ul>
                 <li> Vanity units</li>
@@ -467,8 +484,8 @@
     </div>
 
      <!-- First Section: Text on Left, Carousel on Right -->
-     <div class="container ">
-        <div class="text-section">
+     <div class="cont ">
+        <div class="text-sec">
             <h2>Accessory Holders & Displays</h2>
             <ul>
                 <li> Vanity units</li>
@@ -476,8 +493,8 @@
                
             </ul>
         </div>
-        <div class="carousel">
-            <div class="carousel-inner" id="carouselInner1">
+        <div class="ca">
+            <div class="ca-in" id="caIn1">
                 <img src="assets/img/production-images/107.png" alt="Slide 1">
                 <img src="assets/img/production-images/100.png" alt="Slide 2">
                 <img src="assets/img/production-images/99.png" alt="Slide 6">
@@ -488,8 +505,8 @@
                 <img src="assets/img/production-images/2.png" alt="">
                 <img src="assets/img/production-images/1.png" alt="">
             </div>
-            <button class="carousel-button left" onclick="prevSlide('carouselInner1')">&#10094;</button>
-            <button class="carousel-button right" onclick="nextSlide('carouselInner1')">&#10095;</button>
+            <button class="ca-button left1" onclick="prevSlide('caIn1')">&#10094;</button>
+            <button class="ca-button right1" onclick="nextSlide('caIn1')">&#10095;</button>
         </div>
     </div>
 
@@ -502,25 +519,25 @@
 
     <script>
         function showSlide(carouselId, index) {
-            const carouselInner = document.getElementById(carouselId);
-            const slides = carouselInner.querySelectorAll('img');
+            const caIn = document.getElementById(carouselId);
+            const slides = caIn.querySelectorAll('img');
             const totalSlides = slides.length;
             if (index >= totalSlides) index = 0;
             if (index < 0) index = totalSlides - 1;
             const offset = -index * 100;
-            carouselInner.style.transform = `translateX(${offset}%)`;
-            carouselInner.dataset.currentIndex = index;
+            caIn.style.transform = `translateX(${offset}%)`;
+            caIn.dataset.currentIndex = index;
         }
 
         function nextSlide(carouselId) {
-            const carouselInner = document.getElementById(carouselId);
-            let currentIndex = parseInt(carouselInner.dataset.currentIndex || 0, 10);
+            const caIn = document.getElementById(carouselId);
+            let currentIndex = parseInt(caIn.dataset.currentIndex || 0, 10);
             showSlide(carouselId, currentIndex + 1);
         }
 
         function prevSlide(carouselId) {
-            const carouselInner = document.getElementById(carouselId);
-            let currentIndex = parseInt(carouselInner.dataset.currentIndex || 0, 10);
+            const caIn = document.getElementById(carouselId);
+            let currentIndex = parseInt(caIn.dataset.currentIndex || 0, 10);
             showSlide(carouselId, currentIndex - 1);
         }
 
@@ -532,8 +549,8 @@
         }
 
         // Initialize auto-scrolling for both carousels
-        startAutoScroll('carouselInner1');
-        startAutoScroll('carouselInner2');
+        startAutoScroll('caIn1');
+        startAutoScroll('caIn2');
     </script>
 </body>
 </html>
