@@ -108,7 +108,10 @@ h6 {
   margin-bottom: 24px;
   font-weight: 600;
 }
-
+.footeimg{
+  height: 120px;
+  width:180px;
+}
 .php-email-form .loading {
   display: none;
   background: var(--surface-color);
