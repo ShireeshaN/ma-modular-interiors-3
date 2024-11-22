@@ -733,6 +733,20 @@ h6 {
  
   
 }
+.light-background-6 {
+
+  position: relative;
+  background: url('../img/blog-banner.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
 .light-background-1 h1 {
   font-size: 24px;
   font-weight: 300;
