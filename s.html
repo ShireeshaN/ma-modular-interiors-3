@@ -1,268 +1,418 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Carousel and Sidebar</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-        .container {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
-        .main-content {
-            flex: 3;
-            background-color: white;
-            border-radius: 20px;
-            overflow: hidden;
-            padding: 20px;
-        }
-        .swiper {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-        }
-        .swiper-slide img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-radius: 20px;
-            object-fit: cover;
-        }
-        .label {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #ff7a29;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-weight: bold;
-            z-index: 2;
-        }
-        .sidebar {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .sidebar img {
-            width: 100%;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-        .sidebar p {
-            margin: 5px 0;
-            text-align: center;
-        }
-        .color-palette {
-            display: flex;
-            gap: 10px;
-            padding-top: 20px;
-        }
-        .color-circle {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-       
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .main-content, .sidebar {
-                max-width: 100%;
-            }
-            .main-content {
-                padding: 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="main-content">
-            <div class="label">Laminate Finish</div>
-            <div class="swiper">
-                <div class="swiper-wrapper image">
-                    <div class="swiper-slide"><img src="assets/img/bannerss1.png" alt="Image 1"></div>
-                    <div class="swiper-slide"><img src="assets/img/bannerss1.png" alt="Image 2"></div>
-                    <div class="swiper-slide"><img src="assets/img/bannerss1.png" alt="Image 3"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="color-palette">
-                <div class="color-circle" style="background-color: #d4d4d4;"></div>
-                <div class="color-circle" style="background-color: #f0b75e;"></div>
-                <div class="color-circle" style="background-color: #e4a23a;"></div>
-                <div class="color-circle" style="background-color: #005f73;"></div>
-                <div class="color-circle" style="background-color: #023047;"></div>
-            </div>
-        </div>
-        <div class="sidebar">
-            <div class="animated animate-fade">
-                <img src="assets/img/bannerss1.png" alt="Premium Plus">
-                <p>Premium Plus</p>
-            </div>
-            <div class="animated animate-slide">
-                <img src="assets/img/bannerss1.png" alt="Premium">
-                <p>Premium</p>
-            </div>
-            <div class="animated animate-zoom">
-                <img src="assets/img/bannerss1.png" alt="Standard">
-                <p>Standard</p>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-        });
-    </script>
-</body>
-</html> -->
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Carousel</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            height:500px;
-            margin: auto;
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .carousel-slide {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel-slide img {
-            width: 100%;
-            border-radius: 30px;
-        }
-        .carousel-indicators {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 10px;
-        }
-        .dot {
-            height: 10px;
-            width: 10px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s;
-        }
-        .dot.active {
-            background-color: #f04e30;
-        }
-        .carousel-arrows {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-           
-            display: flex;
-            justify-content: space-between;
-            transform: translateY(-50%);
-        }
-        .arrow {
-            background-color: #f04e30;
-            border: none;
-            border-radius: 50%;
-            color: white;
-            cursor: pointer;
-            padding: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Design Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    .header .logo {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #ff7f50;
+      line-height: 1.2;
+    }
+
+    .header .logo span {
+      color: #444;
+    }
+
+    .header .color-palette {
+      display: flex;
+      gap: 10px;
+    }
+
+    .header .color-palette span {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .color1 { background-color: #8c4b3f; }
+    .color2 { background-color: #b4825c; }
+    .color3 { background-color: #d2b6a1; }
+    .color4 { background-color: #e9ded9; }
+
+    .header .dots {
+      display: flex;
+      gap: 10px;
+    }
+
+    .header .dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #ff7f50;
+    }
+
+    /* Main Content Section */
+    .main-content {
+      position: relative;
+      margin-top: 30px;
+      background-color: #ffffff;
+      border-radius: 50px;
+      overflow: hidden;
+      padding: 30px;
+    }
+
+    .main-content .ellipse {
+      position: absolute;
+      top: -80px;
+      left: -80px;
+      width: 130%;
+      height: 300px;
+      background: #ffffff;
+      border: 2px solid #ff7f50;
+      border-radius: 50%;
+      transform: rotate(20deg);
+      z-index: 1;
+    }
+
+    .main-content .ellipse::before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #ff7f50;
+      border-radius: 50%;
+    }
+
+    .main-content .images {
+      display: flex;
+      position: relative;
+      z-index: 2;
+    }
+
+    .main-content .images img {
+      width: 40%;
+      height: auto;
+      padding-left: 10px;
+    }
+
+    .main-content .badge {
+      position: absolute;
+      bottom: 20px;
+      left: 50px;
+      z-index: 3;
+      background-color: #ff7f50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 1.2rem;
+    }
+
+    /* Footer Section */
+    .footer {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer .wardrobe-label {
+      background-color: #ff7f50;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 15px;
+      font-size: 1rem;
+    }
+
+    .footer .navigation {
+      display: flex;
+      gap: 10px;
+    }
+
+    .footer .navigation span {
+      width: 15px;
+      height: 15px;
+      border: 2px solid #ff7f50;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .footer .navigation span.active {
+      background-color: #ff7f50;
+    }
+    .image-left{
+      border-top-left-radius: 150px;
+      border-bottom-left-radius: 150px;
+    }
+    .image-right{
+      border-top-right-radius: 150px;
+      border-bottom-right-radius: 150px;
+    }
+  </style>
 </head>
 <body>
-    <div class="carousel-container">
-        <div class="carousel-slide" id="carouselSlide">
-            <img src="assets/img/img_h_6.jpg" alt="Image 1">
-            <img src="assets/img/img_h_6.jpg" alt="Image 2">
-            <img src="assets/img/img_h_6.jpg" alt="Image 3">
-            <img src="assets/img/img_h_6.jpg" alt="Image 4">
+ 
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+      <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+          <div class="logo">
+            Interior<br><span>Objekts</span>
+          </div>
+          <div class="color-palette">
+            <span class="color1"></span>
+            <span class="color2"></span>
+            <span class="color3"></span>
+            <span class="color4"></span>
+          </div>
+          <div class="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <div class="carousel-arrows">
-            <button class="arrow" onclick="prevSlide()">&#10094;</button>
-            <button class="arrow" onclick="nextSlide()">&#10095;</button>
-        </div>
-        <div class="carousel-indicators" id="carouselIndicators">
-            <span class="dot active" onclick="currentSlide(0)"></span>
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
+      <!-- <div class="ellipse"></div> -->
+      <div class="images">
+        <img src="assets/img/our-process.webp" alt="Interior Left" class="image-left">
+        <img src="assets/img/our-process.webp" alt="Interior Right" class="image-right">
+      </div>
+      <div class="badge">PU Finish</div>
     </div>
 
-    <script>
-        let currentIndex = 0;
-        const slides = document.querySelectorAll('.carousel-slide img');
-        const dots = document.querySelectorAll('.dot');
+    <!-- Footer Section -->
+    <div class="footer">
+      <div class="wardrobe-label">Full Height Wardrobe</div>
+      <div class="navigation">
+        <span></span>
+        <span class="active"></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
 
-        function showSlide(index) {
-            if (index >= slides.length) {
-                currentIndex = 0;
-            } else if (index < 0) {
-                currentIndex = slides.length - 1;
-            } else {
-                currentIndex = index;
-            }
-            document.getElementById('carouselSlide').style.transform = `translateX(${-currentIndex * 100}%)`;
-            dots.forEach((dot, idx) => dot.classList.toggle('active', idx === currentIndex));
-        }
 
-        function nextSlide() {
-            showSlide(currentIndex + 1);
-        }
 
-        function prevSlide() {
-            showSlide(currentIndex - 1);
-        }
 
-        function currentSlide(index) {
-            showSlide(index);
-        }
+<!-- elipse image 2 images -->
 
-        // Automatically scroll the images every 3 seconds
-        setInterval(() => {
-            nextSlide();
-        }, 3000);
-    </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrolling Image Carousel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Logo styling */
+    .logo-container {
+      text-align: center;
+      margin-bottom: 20px; /* Adjust the spacing below the logo */
+    }
+
+    .logo-container img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    .main-content {
+      background-color: #ffffff;
+      border-radius: 50px;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .carousel {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      flex: 0 0 50%; /* Show two items at a time */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 0; /* Remove all margins */
+      padding: 0 5px;
+    }
+
+    .carousel-item img {
+      width: 100%; /* Adjust to fill the carousel item */
+      height: auto;
+      object-fit: cover;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .dots span {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+
+    .dots span.active {
+      background-color: #ff7f50;
+    }
+
+    .badge {
+      position: absolute;
+      bottom: 10px;
+      background-color: #ff7f50;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+    }
+
+    .badge-left {
+      left: 10%;
+    }
+
+    .badge-right {
+      right: 10%;
+    }
+
+    /* Adjust border-radius for left and right images */
+    .left-image {
+      border-top-left-radius: 150px;
+      border-bottom-left-radius: 150px;
+    }
+
+    .right-image {
+      border-top-right-radius: 150px;
+      border-bottom-right-radius: 150px;
+    }
+
+    /* Remove gap between images */
+    .carousel-track {
+      gap: 0; /* Remove default gap between flex items */
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+      <div class="carousel">
+        <div class="carousel-track">
+          <!-- First Set of Images -->
+          <div class="carousel-item">
+            <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image">
+            <div class="badge badge-left">Label 1</div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image">
+            <div class="badge badge-right">Label 2</div>
+          </div>
+
+           <!-- First Set of Images -->
+           <div class="carousel-item">
+            <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image">
+            <div class="badge badge-left">Label 1</div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image">
+            <div class="badge badge-right">Label 2</div>
+          </div>
+
+         
+
+          <!-- Add more items as needed -->
+        </div>
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="dots">
+        <span class="active" data-index="0"></span>
+        <span data-index="1"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for Carousel Functionality
+    const carouselTrack = document.querySelector('.carousel-track');
+    const dots = document.querySelectorAll('.dots span');
+    let currentIndex = 0;
+
+    // Function to update the carousel
+    function updateCarousel(index) {
+      const slideWidth = document.querySelector('.carousel-item').clientWidth;
+      carouselTrack.style.transform = `translateX(-${index * slideWidth * 2}px)`;
+
+      // Update active dot
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    // Add click event for dots
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.dataset.index);
+        updateCarousel(currentIndex);
+      });
+    });
+
+    // Auto-scroll functionality
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % dots.length;
+      updateCarousel(currentIndex);
+    }, 3000); // Change every 3 seconds
+  </script>
 </body>
 </html>
 
@@ -273,41 +423,153 @@
 
 
 
+<!-- design 4 -->
 
-
-
-<script>
-    function showSlide(carouselId, index) {
-        const caIn = document.getElementById(carouselId);
-        const slides = caIn.querySelectorAll('img');
-        const totalSlides = slides.length;
-        if (index >= totalSlides) index = 0;
-        if (index < 0) index = totalSlides - 1;
-        const offset = -index * 100;
-        caIn.style.transform = `translateX(${offset}%)`;
-        caIn.dataset.currentIndex = index;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materials Layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    function nextSlide(carouselId) {
-        const caIn = document.getElementById(carouselId);
-        let currentIndex = parseInt(caIn.dataset.currentIndex || 0, 10);
-        showSlide(carouselId, currentIndex + 1);
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      color: #333;
+      background-color: #f5f5f5;
     }
 
-    function prevSlide(carouselId) {
-        const caIn = document.getElementById(carouselId);
-        let currentIndex = parseInt(caIn.dataset.currentIndex || 0, 10);
-        showSlide(carouselId, currentIndex - 1);
+    .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      flex-wrap: wrap; /* Allows content to wrap on smaller screens */
     }
 
-    // Auto-scroll functionality with repeating slides
-    function startAutoScroll(carouselId) {
-        setInterval(() => {
-            nextSlide(carouselId);
-        }, 3000);
+    .section {
+      flex: 1;
+      background-color: #ffffff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      position: relative;
+      text-align: center;
+      margin-bottom: 20px; /* Spacing between sections */
     }
 
-    // Initialize auto-scrolling for both carousels
-    startAutoScroll('caIn1');
-    startAutoScroll('caIn2');
-</script>
+    .section .line {
+      width: 40px;
+      height: 7px;
+      background-color: #FF7D3E;
+      margin-right: 10px;
+      position: absolute;
+      top: 30px; /* Adjusted to provide consistent spacing for all sections */
+      left: 20px; /* Positioned on the left */
+    }
+
+    .section h2 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #FF7D3E;
+      /* display: inline-block; */
+      margin-left: 3.4rem !important; 
+      margin-bottom: 10px;
+   
+      text-align: left;
+    }
+    .section-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px; /* Adjusted to space out the content */
+    }
+
+    .section-content-left {
+      flex-direction: reverse; /* Images on the right side for even sections */
+    }
+
+    .section p {
+      font-size: 14px;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .section img {
+      width: 100%;
+      max-width: 300px; /* Adjusted to make the image consistent across all sections */
+      height: auto;
+      display: block;
+      margin: 0 ;
+      
+      border-radius: 4px;
+    }
+    .even-image{
+      padding-bottom: 5px;
+    }
+    .text-even{
+      text-align: justify;
+      padding-top: 5px;
+      margin-bottom: 0 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="line"></div>
+      <h2>PLYWOOD</h2>
+      <div class="section-content">
+        <p>
+          BWR (Boiling Water Resistant) and BWP (Boiling Water Proof). Both grades offer superior durability, strength, and moisture resistance.
+        </p>
+        <img src="https://via.placeholder.com/300" alt="Plywood">
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="line"></div>
+      <h2>HDHMR</h2>
+      <div class="section-content section-content-left">
+        <img src="https://via.placeholder.com/300" alt="HDHMR" class="even-image">
+        <p class="text-even">
+          HDHMR (High-Density High Moisture Resistance) board is a moisture-resistant wood product known for its superior strength and durability.
+        </p>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="line"></div>
+      <h2>EXT - MDF</h2>
+      <div class="section-content">
+        <p>
+          Exterior MDF is specifically designed for outdoor or high-moisture environments. It is treated with water-resistant resins and additives to prevent swelling, warping, and degradation when exposed to moisture.
+        </p>
+        <img src="https://via.placeholder.com/300" alt="EXT - MDF">
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <div class="line"></div>
+      <h2>MDF</h2>
+      <div class="section-content section-content-left">
+        <img src="https://via.placeholder.com/300" alt="MDF" class="even-image">
+        <p class="text-even">
+          MDF (Medium Density Fiberboard) is commonly used in furniture, cabinetry, and interior applications due to its smooth surface and ease of machining.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
