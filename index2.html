@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ma Madular Interiors</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- Favicons -->
+  <link href="assets/img/logooos.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+ 
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+      <img src="assets/img/logooos.png" alt="" class="logoclasss"> 
+        <!-- <h1 class="sitename">Active.</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html" class="active" >Home</a></li>
+          <li><a href="about.html" >About Us</a></li>
+          <li><a href="our-process.html">Our Process</a></li>
+          <li><a href="production.html">Production</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="blog.html">Blog</a></li>
+         
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+<!--BannerSection-->
+<div class="container-banners">
+    <!-- Left Side Text -->
+    <div class="text-banners">
+        <p class="crafting-banners">CRAFTING</p>
+        <p class="brilliance-banners">BRILLIANCE</p>
+        <p class="with-precision-banners">with <span class="precision-banners">PRECISION</span></p>
+        <p class="and-innovation-banners">AND INNOVATION</p>
+    </div>
+
+    <!-- Right Side Image -->
+    <div class="image-banners">
+        <img src="assets/img/mainbanners.jpg" alt="Interior Design Image">
+    </div>
+</div>
+
+<style>
+
+  
+  .container-banners {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      gap: 30px;
+  }
+  
+  .text-banners {
+      width: 50%;
+  }
+  
+  .text-banners p {
+      margin: 0;
+      text-align: left;
+      color: #4a4a4a; /* Neutral gray for regular text */
+  }
+  
+  .crafting-banners {
+      font-size: 90px;
+      color: #4a4a4a; /* Dark gray */
+      font-weight: 300;
+      letter-spacing: 2px;
+      line-height: 2; /* Add line-height for proper spacing */
+      margin-bottom: 20px; /* Adjust spacing between lines */
+  }
+  
+  .brilliance-banners {
+      font-size: 90px;
+      color: #4a4a4a; /* Dark gray */
+      font-weight: bold;
+      letter-spacing: 1px;
+      line-height: 2;
+      margin-bottom: 15px;
+  }
+  
+  .with-precision-banners {
+      font-size: 90px;
+      color: #4a4a4a;
+      line-height: 2;
+      margin-bottom: 15px;
+  }
+  
+  .with-precision-banners .precision-banners {
+      color: #ff6a33; /* Orange for emphasis */
+      font-weight: bold;
+      letter-spacing: 2px; /* Increase spacing for emphasis */
+  }
+  
+  .and-innovation-banners {
+      font-size: 90px;
+      color: #4a4a4a;
+      font-weight: bold;
+      letter-spacing: 1.5px; /* Add subtle spacing */
+      line-height: 2;
+      margin-top: 20px; /* Adjust vertical alignment */
+  }
+  
+  .image-banners {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .image-banners img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px; /* Optional: Add slight rounding for elegance */
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+      .container-banners {
+          flex-direction: column; /* Stack image and text vertically */
+          align-items: center;
+          padding: 20px; /* Reduce padding for smaller screens */
+          gap: 20px; /* Adjust gap between text and image */
+      }
+  
+      .text-banners {
+          width: 100%; /* Full width for text */
+          text-align: center; /* Center-align text */
+      }
+  
+      .text-banners p {
+          font-size: 40px; /* Adjust font size for smaller screens */
+          line-height: 1.5;
+      }
+  
+      .crafting-banners {
+          font-size: 28px;
+          margin-bottom: 10px;
+      }
+  
+      .brilliance-banners {
+          font-size: 32px;
+          margin-bottom: 10px;
+      }
+  
+      .with-precision-banners {
+          font-size: 24px;
+          margin-bottom: 10px;
+      }
+  
+      .and-innovation-banners {
+          font-size: 24px;
+          margin-top: 10px;
+      }
+  
+      .image-banners {
+          width: 100%; /* Full width for image */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+  
+      .image-banners img {
+          max-width: 100%;
+          height: auto;
+      }
+  }
+  
+  </style>
+  
+<!--BannerSection-->
+
+<!--about-->
+<section class="hero-section-aboutusto">
+    <!-- Top Heading Section -->
+    <div class="quote-container-aboutusto">
+      <p class="quote-aboutusto">
+        <span>“ </span><strong style="color: #ff6a33;">REVOLUTIONIZING</strong><br><strong>DESIGN AND</strong><br><strong style="color: #ff6a33;">MANUFACTURING</strong> ” 
+      </p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content-aboutusto">
+      <!-- Left Section -->
+      <div class="left-panel-aboutusto">
+        <h2>About<br>Ma <strong style="color: #ff6a33;">Modulars</strong></h2>
+        <div class="content-row-aboutusto">
+          <p class="description-aboutusto">
+            At Interior Objekts, we are more than just a manufacturing company;
+            we’re a catalyst for innovation. Our mission is to streamline design
+            and manufacturing, empowering businesses to achieve their full potential.
+          </p>
+
+          <!-- Pipe and Circle Connection -->
+          <div class="pipe-circle-container-aboutusto">
+            <div class="pipe-aboutusto"></div>
+            <div class="circle-info-aboutusto">
+              <p class="area-aboutusto">2.5-Acre</p>
+              <p class="factory-aboutusto">FACTORY</p>
+              <p class="details-aboutusto">60,000 sq. ft.<br>production space</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Section -->
+      <div class="right-panel-aboutusto ">
+        <div class="feature-aboutusto">
+            <div class="icon-aboutusto">⚙️</div>
+            <p>Cutting-Edge Technology</p>
+        </div>
+        <div class="feature-aboutusto">
+            <div class="icon-aboutusto">👨‍🔧</div>
+            <p>Expert Craftsmanship</p>
+        </div>
+        <div class="feature-aboutusto">
+            <div class="icon-aboutusto">🏭</div>
+            <p>Advanced Machinery</p>
+        </div>
+        <div class="feature-aboutusto">
+            <div class="icon-aboutusto">🤖</div>
+            <p>Automation Expertise</p>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+<style>
+/* General Styling */
+
+.hero-section-aboutusto {
+    padding: 50px;
+    text-align: start;
+    background-color: #e6edf3; /* Light background color */
+    align-items: center;
+   
+}
+
+.quote-container-aboutusto {
+    margin-bottom: 40px;
+}
+
+.quote-aboutusto {
+    font-size: 36px;
+    line-height: 1.5;
+    color: #333333;
+    font-weight: 400;
+}
+
+.quote-aboutusto span {
+    font-size: 48px;
+    vertical-align: top;
+    color: #333333;
+   
+}
+
+.quote-aboutusto strong {
+    font-weight: 700;
+    color: #1e1e1e; /* Dark color for emphasis */
+}
+
+.main-content-aboutusto {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.left-panel-aboutusto {
+    background-color: #f3f4f6; /* Lighter background color */
+    color: #333333;
+    padding: 30px;
+    border-radius: 12px;
+    width: 55%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.left-panel-aboutusto h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000000; /* Dark color for the heading */
+}
+
+.content-row-aboutusto {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.description-aboutusto {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+    text-align: justify;
+}
+
+/* Pipe and Circle Connection */
+.pipe-circle-container-aboutusto {
+    display: flex;
+    align-items: center;
+    position: relative;
+   
+   
+}
+
+.pipe-aboutusto {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    width: 100px;
+    height: 2px;
+    background-color: #333333;
+    animation: drawPipe-aboutusto 1.5s ease-out forwards;
+}
+
+.circle-info-aboutusto {
+    background-color: #ffffff;
+    color: #333333;
+    text-align: center;
+    padding: 30px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.circle-info-aboutusto:hover {
+    transform: scale(1.1); /* 3D hover effect */
+}
+
+.circle-info-aboutusto .area-aboutusto {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.circle-info-aboutusto .factory-aboutusto {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.circle-info-aboutusto .details-aboutusto {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Right Panel */
+.right-panel-aboutusto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 45%;
+    margin-top: -80px; /* Moves the section upwards */
+    padding-top: 20px;
+    padding-left: 50px;
+   
+    
+}
+
+.feature-aboutusto {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 15px;
+    border-radius: 12px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-aboutusto:hover {
+    transform: scale(1.05); /* 3D hover effect */
+}
+
+.feature-aboutusto .icon-aboutusto {
+    width: 80px;
+    height: 80px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 32px; /* Increased icon size */
+}
+
+.feature-aboutusto p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Pipe and Circle Connection - Animation */
+@keyframes drawPipe-aboutusto {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100px;
+    }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero-section-aboutusto {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .quote-aboutusto {
+        font-size: 28px;
+    }
+
+    .quote-aboutusto span {
+        font-size: 36px;
+    }
+
+    .main-content-aboutusto {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .left-panel-aboutusto,
+    .right-panel-aboutusto {
+        width: 100%;
+        padding-top: 100px;
+        padding-left: 20px;
+    }
+
+    .content-row-aboutusto {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .pipe-circle-container-aboutusto {
+        display: block;
+        align-items: center;
+        position: relative;
+    }
+
+    .pipe-aboutusto {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        width: 80px;
+        height: 2px;
+        background-color: #333333;
+    }
+
+    .circle-info-aboutusto {
+        width: 200px;
+        height: 200px;
+        font-size: 12px;
+    
+     
+    }
+
+    .feature-aboutusto {
+        
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        padding: 20px 10px;
+    }
+
+    .feature-aboutusto .icon-aboutusto {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    .feature-aboutusto p {
+        font-size: 14px;
+    }
+}
+</style>
+<!--about-->
+
+
+
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading">Address</h3>
+            <p class="mb-4">
+             Bachupally, Hyderabad
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading">Quick links</h3>
+            <ul class="list-unstyled float-start me-5">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="production.html">Production</a></li>
+            </ul>
+            <ul class="list-unstyled float-start">
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="our-process.html">Our Process</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+       
+        <div class="col-md-4 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading">Connect</h3>
+            <ul class="list-unstyled social-icons light mb-3">
+              <li>
+                <a href="#"><span class="bi bi-facebook"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-twitter-x"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-linkedin"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-google"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-google-play"></span></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="widget">
+            
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
+         <img class="footeimg" src="assets/img/logooos.png"/>
+        </div>
+        
+      </div>
+
+      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+        <p>© <span>Copyright</span> <a href="index.html" target="_blank"><strong class="px-1 sitename">Ma Madulars Interiors.</strong> </a><span>All Rights Reserved</span></p>
+        <div class="credits">
+       
+          Designed by   <a href="https://thepatternscompany.com/" target="_blank">The Patterns Company</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
