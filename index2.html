@@ -691,6 +691,9 @@
 <!--did you know-->
 
 
+
+
+
 <!--new-->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div class="container3 " style="background-color: #eee6e6;">
@@ -854,9 +857,1003 @@
 <!--new-->
 
 
-<!--new new-->
+
+
+<!--attchimg-->
+
+<div class="container-attached container pt-5 pb-5">
+  <div class="main-content-attached">
+    <div class="carousel-track-attached">
+      <div class="carousel-item-attached">
+        <img src="assets/img/production-images/99.png" alt="Image 1">
+      </div>
+      <div class="carousel-item-attached">
+        <img src="assets/img/production-images/88.png" alt="Image 2">
+      </div>
+      <div class="carousel-item-attached">
+        <img src="assets/img/production-images/77.png" alt="Image 3">
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel Controls -->
+  <div class="controls-attached">
+    <button class="prev-attached">❮</button>
+    <button class="next-attached">❯</button>
+  </div>
+</div>
+
+<style>
+  /* Capsule Container */
+  .main-content-attached {
+    overflow: hidden;
+    width: 90%;
+    height: 500px;
+    border-radius: 250px; /* Capsule effect */
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* Carousel Track */
+  .carousel-track-attached {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+
+  /* Carousel Item */
+  .carousel-item-attached {
+    flex: 0 0 100%; /* Each image takes 100% of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  .carousel-item-attached img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 250px; /* Capsule effect for images */
+  }
+
+  /* Controls */
+  .controls-attached {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .controls-attached button {
+    border: none;
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+
+  .controls-attached button:hover {
+    background-color: #ff4500;
+  }
+
+  /* Mobile View Adjustments */
+  @media (max-width: 768px) {
+    .main-content-attached {
+      height: 250px; /* Adjust height for smaller screens */
+      border-radius: 125px; /* Smaller radius for capsule effect */
+    }
+
+    .carousel-item-attached img {
+      object-fit: cover; /* Ensure the image fits properly */
+    }
+
+    .controls-attached {
+      gap: 10px;
+    }
+
+    .controls-attached button {
+      padding: 8px;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .main-content-attached {
+      height: 200px; /* Further reduce height for very small devices */
+      border-radius: 100px;
+    }
+
+    .controls-attached {
+      flex-direction: column; /* Stack buttons vertically on very small screens */
+      gap: 8px;
+    }
+
+    .controls-attached button {
+      width: 40px;
+      height: 40px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<script>
+  const track = document.querySelector('.carousel-track-attached');
+  const items = document.querySelectorAll('.carousel-item-attached');
+  const prevButton = document.querySelector('.prev-attached');
+  const nextButton = document.querySelector('.next-attached');
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const slideWidth = items[0].clientWidth;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length; // Loop to the first slide
+    updateCarousel();
+  });
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length; // Loop to the last slide
+    updateCarousel();
+  });
+
+  // Auto-scroll every 3 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % items.length;
+    updateCarousel();
+  }, 3000);
+</script>
+
+
+<!--attachimg-->
+
+
+<!-- Right Effect with Text on Left -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<div class="container-madu">
+  <!-- Left Text Section -->
+  <div class="text-content-madu">
+    <h2>Laminate Finish</h2>
+    <p>
+      Discover the elegance and durability of laminate finishes, designed to enhance your interiors with a modern touch. 
+      Easy to maintain and versatile, they are perfect for every space.
+    </p>
+  </div>
+
+  <!-- Right Image Slider Section -->
+  <div class="main-content-madu">
+    <div class="label-madu">Laminate Finish</div>
+    <div class="swiper-madu">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img class="curvedd-madu" src="assets/img/production-images/102.png" alt="Image 1">
+        </div>
+        <div class="swiper-slide">
+          <img class="curvedd-madu" src="assets/img/production-images/102.png" alt="Image 2">
+        </div>
+        <div class="swiper-slide">
+          <img class="curvedd-madu" src="assets/img/production-images/102.png" alt="Image 3">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* General Container Styles */
+  .container-madu {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #eee6e6;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Left Text Section */
+  .text-content-madu {
+    flex: 1;
+    max-width: 40%;
+    padding: 20px;
+    text-align: left;
+    font-family: Arial, sans-serif;
+  }
+
+  .text-content-madu h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .text-content-madu p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Right Main Content */
+  .main-content-madu {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center; /* Vertical alignment */
+  }
+
+  /* Swiper Styles */
+  .swiper-madu {
+    width: 100%;
+    height: auto;
+    display: flex;
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+
+  .swiper-slide img.curvedd-madu {
+    width: 100%; /* Take 90% width of the container */
+    max-height: 950px;
+    object-fit: cover;
+    border-top-right-radius: 48%;
+    border-bottom-right-radius: 48%;
+    transform: scaleX(-1); /* Flip image horizontally */
+    padding: 20px; 
+  }
+
+  /* Label Styling */
+  .label-madu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff7a29;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 2;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .container-madu {
+      flex-direction: column;
+      padding: 5px;
+    }
+
+    .text-content-madu {
+      max-width: 100%;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .main-content-madu {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .swiper-slide img.curvedd-madu {
+      width: 95%; /* Take up less width on mobile */
+      max-height: 400px;
+      border-top-right-radius: 40%;
+      border-bottom-right-radius: 40%;
+    }
+
+    .label-madu {
+      top: 5px;
+      right: 5px;
+      padding: 3px 10px;
+      font-size: 12px;
+    }
+  }
+</style>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-madu', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination-madu',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
+
+
+
+
+
+
 
 <!--new new-->
+<div class="container-tablets">
+  <!-- Main Content Section -->
+  <div class="main-content-tablets">
+    <div class="carousel-tablets">
+      <div class="carousel-track-tablets">
+        <!-- First Set of Images -->
+        <div class="carousel-item-tablets">
+          <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image-tablets">
+          <div class="badge-tablets badge-left-tablets">Label 1</div>
+        </div>
+        <div class="carousel-item-tablets">
+          <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image-tablets">
+          <div class="badge-tablets badge-right-tablets">Label 2</div>
+        </div>
+
+        <!-- First Set of Images -->
+        <div class="carousel-item-tablets">
+          <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image-tablets">
+          <div class="badge-tablets badge-left-tablets">Label 1</div>
+        </div>
+        <div class="carousel-item-tablets">
+          <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image-tablets">
+          <div class="badge-tablets badge-right-tablets">Label 2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="dots-tablets">
+      <span class="active" data-index="0"></span>
+      <span data-index="1"></span>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+  // JavaScript for Carousel Functionality
+  const carouselTrack = document.querySelector('.carousel-track-tablets');
+  const dots = document.querySelectorAll('.dots-tablets span');
+  let currentIndex = 0;
+
+  // Function to update the carousel
+  function updateCarousel(index) {
+    const slideWidth = document.querySelector('.carousel-item-tablets').clientWidth;
+    carouselTrack.style.transform = `translateX(-${index * slideWidth * 2}px)`;
+
+    // Update active dot
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  // Add click event for dots
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      currentIndex = parseInt(dot.dataset.index);
+      updateCarousel(currentIndex);
+    });
+  });
+
+  // Auto-scroll functionality
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % dots.length;
+    updateCarousel(currentIndex);
+  }, 3000); // Change every 3 seconds
+</script>
+<!--new new-->
+
+
+<style>
+
+
+  .container-tablets {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Logo styling */
+  .logo-container-tablets {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust the spacing below the logo */
+  }
+
+  .logo-container-tablets img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .main-content-tablets {
+   
+    border-radius: 50px;
+    padding: 30px;
+
+    overflow: hidden;
+  }
+
+  .carousel-tablets {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track-tablets {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-item-tablets {
+    flex: 0 0 50%; /* Show two items at a time */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0; /* Remove all margins */
+    padding: 0 5px;
+  }
+
+  .carousel-item-tablets img {
+    width: 100%; /* Adjust to fill the carousel item */
+    height: auto;
+    object-fit: cover;
+  }
+
+  .dots-tablets {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .dots-tablets span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+
+  .dots-tablets span.active {
+    background-color: #ff7f50;
+  }
+
+  .badge-tablets {
+    position: absolute;
+    bottom: 10px;
+    background-color: #ff7f50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  .badge-left-tablets {
+    left: 10%;
+  }
+
+  .badge-right-tablets {
+    right: 10%;
+  }
+
+  /* Adjust border-radius for left and right images */
+  .left-image-tablets {
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+  }
+
+  .right-image-tablets {
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+  }
+
+  /* Remove gap between images */
+  .carousel-track-tablets {
+    gap: 0; /* Remove default gap between flex items */
+  }
+</style>
+
+
+<!--not attach-->
+
+<div class="container-attachedimg">
+  <div class="main-content-attachedimg">
+    <!-- First Carousel -->
+    <div class="carousel-attachedimg active" id="carousel-1">
+      <div class="carousel-track-attachedimg">
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image-attachedimg">
+          <div class="badge-attachedimg badge-left-attachedimg">Label 1</div>
+        </div>
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image-attachedimg">
+          <div class="badge-attachedimg badge-right-attachedimg">Label 2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Carousel -->
+    <div class="carousel-attachedimg" id="carousel-2">
+      <div class="carousel-track-attachedimg">
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/77.png" alt="Image 3" class="left-image-attachedimg">
+          <div class="badge-attachedimg badge-left-attachedimg">Label 3</div>
+        </div>
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/66.png" alt="Image 4" class="right-image-attachedimg">
+          <div class="badge-attachedimg badge-right-attachedimg">Label 4</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Carousel -->
+    <div class="carousel-attachedimg" id="carousel-3">
+      <div class="carousel-track-attachedimg">
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/55.png" alt="Image 5" class="left-image-attachedimg">
+          <div class="badge-attachedimg badge-left-attachedimg">Label 5</div>
+        </div>
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/44.png" alt="Image 6" class="right-image-attachedimg">
+          <div class="badge-attachedimg badge-right-attachedimg">Label 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls to Switch Between Carousels -->
+  <div class="controls-attachedimg">
+    <button onclick="switchCarousel(1)">1</button>
+    <button onclick="switchCarousel(2)">2</button>
+    <button onclick="switchCarousel(3)">3</button>
+  </div>
+</div>
+
+<script>
+  function switchCarousel(index) {
+    // Hide all carousels
+    const carousels = document.querySelectorAll('.carousel-attachedimg');
+    carousels.forEach(carousel => carousel.classList.remove('active'));
+
+    // Show the selected carousel
+    const activeCarousel = document.getElementById(`carousel-${index}`);
+    if (activeCarousel) {
+      activeCarousel.classList.add('active');
+    }
+  }
+</script>
+
+<style>
+  .container-attachedimg {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .main-content-attachedimg {
+    border-radius: 20px;
+    padding: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-attachedimg {
+    display: none; /* Only one carousel visible at a time */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-attachedimg.active {
+    display: flex; /* Show the active carousel */
+  }
+
+  .carousel-track-attachedimg {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0;
+  }
+
+  .carousel-item-attachedimg {
+    flex: 0 0 50%; /* Show two items at a time */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .carousel-item-attachedimg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .badge-attachedimg {
+    position: absolute;
+    bottom: 10px;
+    background-color: #ff7f50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  .badge-left-attachedimg {
+    left: 10%;
+  }
+
+  .badge-right-attachedimg {
+    right: 10%;
+  }
+
+  .left-image-attachedimg {
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+  }
+
+  .right-image-attachedimg {
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+  }
+
+  .controls-attachedimg {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .controls-attachedimg button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .controls-attachedimg button:hover {
+    background-color: #ff4500;
+  }
+</style>
+<!--not attach-->
+
+
+<!--materials-->
+<div class="materials-container">
+  <!-- Section 1 -->
+  <div class="materials-section">
+    <div class="line"></div>
+    <h2>PLYWOOD</h2>
+    <div class="materials-section-content">
+      <p>
+        BWR (Boiling Water Resistant) and BWP (Boiling Water Proof). Both grades offer superior durability, strength, and moisture resistance.
+      </p>
+      <img src="assets/img/mainbanners.jpg" alt="Plywood">
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="materials-section">
+    <div class="line"></div>
+    <h2>HDHMR</h2>
+    <div class="materials-section-content materials-section-content-left">
+      <img src="assets/img/mainbanners.jpg" alt="HDHMR" class="even-image">
+      <p class="text-even">
+        HDHMR (High-Density High Moisture Resistance) board is a moisture-resistant wood product known for its superior strength and durability.
+      </p>
+    </div>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="materials-section">
+    <div class="line"></div>
+    <h2>EXT - MDF</h2>
+    <div class="materials-section-content">
+      <p>
+        Exterior MDF is specifically designed for outdoor or high-moisture environments. It is treated with water-resistant resins and additives to prevent swelling, warping, and degradation when exposed to moisture.
+      </p>
+      <img src="assets/img/mainbanners.jpg" alt="EXT - MDF">
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="materials-section">
+    <div class="line"></div>
+    <h2>MDF</h2>
+    <div class="materials-section-content materials-section-content-left">
+      <img src="assets/img/mainbanners.jpg" alt="MDF" class="even-image">
+      <p class="text-even">
+        MDF (Medium Density Fiberboard) is commonly used in furniture, cabinetry, and interior applications due to its smooth surface and ease of machining.
+      </p>
+    </div>
+  </div>
+</div>
+<style>
+
+
+  .materials-container {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+  }
+
+  .materials-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px; /* Spacing between sections */
+  }
+
+  .materials-section .line {
+    width: 40px;
+    height: 7px;
+    background-color: #FF7D3E;
+    margin-right: 10px;
+    position: absolute;
+    top: 30px; /* Adjusted to provide consistent spacing for all sections */
+    left: 20px; /* Positioned on the left */
+  }
+
+  .materials-section h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF7D3E;
+    margin-left: 3.4rem !important; 
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .materials-section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Adjusted to space out the content */
+  }
+
+  .materials-section-content-left {
+    flex-direction: reverse; /* Images on the right side for even sections */
+  }
+
+  .materials-section p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+
+  .materials-section img {
+    width: 100%;
+    max-width: 300px; /* Adjusted to make the image consistent across all sections */
+    height: auto;
+    display: block;
+    margin: 0 ;
+    border-radius: 4px;
+  }
+
+  .even-image {
+    padding-bottom: 5px;
+  }
+
+  .text-even {
+    text-align: justify;
+    padding-top: 5px;
+    margin-bottom: 0 !important;
+  }
+
+  /* Mobile responsiveness */
+  @media screen and (max-width: 768px) {
+    .materials-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .materials-section {
+      flex: none;
+      width: 100%;
+    }
+
+    .materials-section h2 {
+      font-size: 18px;
+      margin-left: 1.4rem !important; 
+    }
+
+    .materials-section-content {
+      flex-direction: column;
+    }
+
+    .materials-section-content-left {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .materials-section img {
+      max-width: 100%; /* Ensure images are responsive */
+      margin-bottom: 15px;
+    }
+  }
+</style>
+
+<!--materials-->
+
+
+
+
+<!--secmate-->
+
+<!--secmate-->
+<!--secmate-->
+<section class="section-container">
+  <div class="content-wrapper">
+    <div class="text-section">
+      <p class="line text-start">RESULTS-DRIVEN</p>
+      <p class="line text-start">SOLUTIONS</p>
+      <p class="line text-start">FOR INTERIOR</p>
+      <p class="line text-start">DESIGNERS</p>
+    </div>
+    <div class="image-section">
+      <img src="assets/img/RESULTS.png" alt="Image description" />
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Basic section styles */
+  .section-container {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Space between text and image */
+    align-items: center;
+    width: 100%; /* Ensure full-width layout */
+    max-width: 1200px; /* Restrict maximum width */
+    gap: 20px; /* Add spacing between elements */
+  }
+
+  .text-section {
+    text-align: center; /* Center text content */
+    flex: 1; /* Allow flexible space for text */
+  }
+
+  .line {
+    font-size: 50px;
+    margin: 8px 0;
+  }
+
+  .image-section {
+    flex: 1; /* Allow flexible space for image */
+    text-align: center;
+  }
+
+  .image-section img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column; /* Stack text and image vertically */
+      align-items: center;
+      text-align: center;
+    }
+
+    .text-section {
+      margin-bottom: 20px; /* Add space below text */
+      text-align: start;
+    }
+
+    .line {
+      font-size: 30px; /* Reduce font size for smaller screens */
+      
+    }
+
+    .image-section img {
+      max-width: 80%; /* Adjust image size for mobile */
+    }
+  }
+</style>
+<!--secmate-->
+
+<!--secmate1-->
+<section class="section-container">
+  <div class="content-wrapper">
+    <!-- Left Image -->
+    <div class="image-section">
+      <img src="assets/img/processimgs/5.jpg" alt="Image Description">
+    </div>
+    <!-- Right Text -->
+    <div class="text-section">
+      <h2 class="heading">Eazy Cabinates</h2>
+      <p class="paragraph">Eazy Cabinets offers custom-built cabinetry designed to enhance both style and functionality. Our expert team creates elegant, tailored solutions to fit your unique needs. With precision craftsmanship, we bring your vision to life, transforming your space into a beautiful, functional home.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Basic section styles */
+  .section-container {
+    padding: 30px;
+    background-color: #f9f9f9; /* Light background for better contrast */
+  }
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 30px; /* Space between elements */
+    max-width: 1200px;
+    margin: 0 auto; /* Center section */
+  }
+
+  .image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex: 1;
+  }
+
+  .text-section {
+    flex: 1;
+    text-align: left;
+  }
+
+  .heading {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column; /* Stack elements vertically */
+      text-align: center; /* Center text for better alignment */
+    }
+
+    .image-section img {
+      max-width: 80%; /* Smaller image size for mobile */
+      margin-bottom: 20px;
+    }
+
+    .text-section {
+      text-align: center; /* Center text on mobile */
+    }
+
+    .heading {
+      font-size: 24px; /* Adjust heading size */
+    }
+
+    .paragraph {
+      font-size: 14px; /* Smaller text size for mobile */
+    }
+  }
+</style>
+<!--secmate1-->
 
 
   </main>
