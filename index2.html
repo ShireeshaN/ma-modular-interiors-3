@@ -691,6 +691,9 @@
 <!--did you know-->
 
 
+
+
+
 <!--new-->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <div class="container3 " style="background-color: #eee6e6;">
@@ -854,9 +857,513 @@
 <!--new-->
 
 
-<!--new new-->
+
+
+<!--attchimg-->
+<div class="container-attached container pt-5">
+  <div class="main-content-attached">
+    <!-- First Carousel -->
+    <div class="carousel-attached active" id="carousel-attached-1">
+      <div class="carousel-track-attached">
+        <div class="carousel-item-attached">
+          <img src="assets/img/production-images/99.png" alt="Image 1">
+          <div class="badge-attached">Label 1</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Carousel -->
+    <div class="carousel-attached" id="carousel-attached-2">
+      <div class="carousel-track-attached">
+        <div class="carousel-item-attached">
+          <img src="assets/img/production-images/88.png" alt="Image 2">
+          <div class="badge-attached">Label 2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Carousel -->
+    <div class="carousel-attached" id="carousel-attached-3">
+      <div class="carousel-track-attached">
+        <div class="carousel-item-attached">
+          <img src="assets/img/production-images/77.png" alt="Image 3">
+          <div class="badge-attached">Label 3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls to Switch Between Carousels -->
+  <!-- <div class="controls-attached">
+    <button onclick="switchCarousel(1)"> 1</button>
+    <button onclick="switchCarousel(2)"> 2</button>
+    <button onclick="switchCarousel(3)"> 3</button>
+  </div> -->
+</div>
+
+<!-- <script>
+  function switchCarousel(index) {
+
+    const carousels = document.querySelectorAll('.carousel-attached');
+    carousels.forEach(carousel => carousel.classList.remove('active'));
+
+   
+    const activeCarousel = document.getElementById(`carousel-attached-${index}`);
+    if (activeCarousel) {
+      activeCarousel.classList.add('active');
+    }
+  }
+</script> -->
+
+<style>
+  .container-attached {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 50px;
+  }
+  .main-content-attached {
+    border-radius: 200px; /* Smoother, larger border-radius */
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 550px; /* Increase height for more space */
+  }
+  .carousel-attached {
+    display: none; /* Only one carousel visible at a time */
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-attached.active {
+    display: block; /* Show the active carousel */
+  }
+
+  .carousel-track-attached {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+
+  .carousel-item-attached {
+    flex: 0 0 100%; /* Single item fills the entire carousel */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+  }
+
+  .carousel-item-attached img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure images fit the capsule */
+  }
+
+  .badge-attached {
+    position: absolute;
+    bottom: 20px;
+    background-color: #ff7f50;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 1rem;
+  }
+
+  .controls-attached {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .controls-attached button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .controls-attached button:hover {
+    background-color: #ff4500;
+  }
+
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .main-content-attached {
+      height: 200px; /* Adjust height for mobile */
+      border-radius: 100px; /* Less radius for smaller devices */
+    }
+
+    .carousel-item-attached img {
+      object-fit: cover; /* Ensure image fits within the capsule on mobile */
+    }
+
+    .controls-attached {
+      flex-direction: column; /* Stack the buttons vertically */
+    }
+
+    .controls-attached button {
+      margin-bottom: 10px; /* Space between buttons */
+    }
+  }
+</style>
+<!--attachimg-->
 
 <!--new new-->
+<div class="container-tablets">
+  <!-- Main Content Section -->
+  <div class="main-content-tablets">
+    <div class="carousel-tablets">
+      <div class="carousel-track-tablets">
+        <!-- First Set of Images -->
+        <div class="carousel-item-tablets">
+          <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image-tablets">
+          <div class="badge-tablets badge-left-tablets">Label 1</div>
+        </div>
+        <div class="carousel-item-tablets">
+          <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image-tablets">
+          <div class="badge-tablets badge-right-tablets">Label 2</div>
+        </div>
+
+        <!-- First Set of Images -->
+        <div class="carousel-item-tablets">
+          <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image-tablets">
+          <div class="badge-tablets badge-left-tablets">Label 1</div>
+        </div>
+        <div class="carousel-item-tablets">
+          <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image-tablets">
+          <div class="badge-tablets badge-right-tablets">Label 2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="dots-tablets">
+      <span class="active" data-index="0"></span>
+      <span data-index="1"></span>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+  // JavaScript for Carousel Functionality
+  const carouselTrack = document.querySelector('.carousel-track-tablets');
+  const dots = document.querySelectorAll('.dots-tablets span');
+  let currentIndex = 0;
+
+  // Function to update the carousel
+  function updateCarousel(index) {
+    const slideWidth = document.querySelector('.carousel-item-tablets').clientWidth;
+    carouselTrack.style.transform = `translateX(-${index * slideWidth * 2}px)`;
+
+    // Update active dot
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  // Add click event for dots
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      currentIndex = parseInt(dot.dataset.index);
+      updateCarousel(currentIndex);
+    });
+  });
+
+  // Auto-scroll functionality
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % dots.length;
+    updateCarousel(currentIndex);
+  }, 3000); // Change every 3 seconds
+</script>
+<!--new new-->
+
+
+<style>
+
+
+  .container-tablets {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Logo styling */
+  .logo-container-tablets {
+    text-align: center;
+    margin-bottom: 20px; /* Adjust the spacing below the logo */
+  }
+
+  .logo-container-tablets img {
+    max-width: 200px;
+    height: auto;
+  }
+
+  .main-content-tablets {
+   
+    border-radius: 50px;
+    padding: 30px;
+
+    overflow: hidden;
+  }
+
+  .carousel-tablets {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track-tablets {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-item-tablets {
+    flex: 0 0 50%; /* Show two items at a time */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0; /* Remove all margins */
+    padding: 0 5px;
+  }
+
+  .carousel-item-tablets img {
+    width: 100%; /* Adjust to fill the carousel item */
+    height: auto;
+    object-fit: cover;
+  }
+
+  .dots-tablets {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  .dots-tablets span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+
+  .dots-tablets span.active {
+    background-color: #ff7f50;
+  }
+
+  .badge-tablets {
+    position: absolute;
+    bottom: 10px;
+    background-color: #ff7f50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  .badge-left-tablets {
+    left: 10%;
+  }
+
+  .badge-right-tablets {
+    right: 10%;
+  }
+
+  /* Adjust border-radius for left and right images */
+  .left-image-tablets {
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+  }
+
+  .right-image-tablets {
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+  }
+
+  /* Remove gap between images */
+  .carousel-track-tablets {
+    gap: 0; /* Remove default gap between flex items */
+  }
+</style>
+
+
+
+<!--not attach-->
+
+<div class="container-attachedimg">
+  <div class="main-content-attachedimg">
+    <!-- First Carousel -->
+    <div class="carousel-attachedimg active" id="carousel-1">
+      <div class="carousel-track-attachedimg">
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image-attachedimg">
+          <div class="badge-attachedimg badge-left-attachedimg">Label 1</div>
+        </div>
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image-attachedimg">
+          <div class="badge-attachedimg badge-right-attachedimg">Label 2</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Carousel -->
+    <div class="carousel-attachedimg" id="carousel-2">
+      <div class="carousel-track-attachedimg">
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/77.png" alt="Image 3" class="left-image-attachedimg">
+          <div class="badge-attachedimg badge-left-attachedimg">Label 3</div>
+        </div>
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/66.png" alt="Image 4" class="right-image-attachedimg">
+          <div class="badge-attachedimg badge-right-attachedimg">Label 4</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third Carousel -->
+    <div class="carousel-attachedimg" id="carousel-3">
+      <div class="carousel-track-attachedimg">
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/55.png" alt="Image 5" class="left-image-attachedimg">
+          <div class="badge-attachedimg badge-left-attachedimg">Label 5</div>
+        </div>
+        <div class="carousel-item-attachedimg">
+          <img src="assets/img/production-images/44.png" alt="Image 6" class="right-image-attachedimg">
+          <div class="badge-attachedimg badge-right-attachedimg">Label 6</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls to Switch Between Carousels -->
+  <div class="controls-attachedimg">
+    <button onclick="switchCarousel(1)">1</button>
+    <button onclick="switchCarousel(2)">2</button>
+    <button onclick="switchCarousel(3)">3</button>
+  </div>
+</div>
+
+<script>
+  function switchCarousel(index) {
+    // Hide all carousels
+    const carousels = document.querySelectorAll('.carousel-attachedimg');
+    carousels.forEach(carousel => carousel.classList.remove('active'));
+
+    // Show the selected carousel
+    const activeCarousel = document.getElementById(`carousel-${index}`);
+    if (activeCarousel) {
+      activeCarousel.classList.add('active');
+    }
+  }
+</script>
+
+<style>
+  .container-attachedimg {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .main-content-attachedimg {
+    border-radius: 20px;
+    padding: 30px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-attachedimg {
+    display: none; /* Only one carousel visible at a time */
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-attachedimg.active {
+    display: flex; /* Show the active carousel */
+  }
+
+  .carousel-track-attachedimg {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 0;
+  }
+
+  .carousel-item-attachedimg {
+    flex: 0 0 50%; /* Show two items at a time */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .carousel-item-attachedimg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .badge-attachedimg {
+    position: absolute;
+    bottom: 10px;
+    background-color: #ff7f50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  .badge-left-attachedimg {
+    left: 10%;
+  }
+
+  .badge-right-attachedimg {
+    right: 10%;
+  }
+
+  .left-image-attachedimg {
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+  }
+
+  .right-image-attachedimg {
+    border-top-right-radius: 150px;
+    border-bottom-right-radius: 150px;
+  }
+
+  .controls-attachedimg {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .controls-attachedimg button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff7f50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .controls-attachedimg button:hover {
+    background-color: #ff4500;
+  }
+</style>
+
+
+<!--not attach-->
+
+
+
 
 
   </main>
