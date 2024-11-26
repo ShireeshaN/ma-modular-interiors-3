@@ -632,3 +632,198 @@
   </div>
 </body>
 </html>
+
+
+
+<!-- slide 16 design -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Objekts Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="logo">
+        <h1><span class="interior">Interior</span> <span class="objekts">Objekts</span></h1>
+        <p class="tagline">Space Saving Furniture</p>
+      </div>
+      <div class="cta">
+        <h2>Add <span class="highlight">Space</span> to <br>Your Life</h2>
+        <div class="arrows">
+          <span>&#9658;</span>
+          <span>&#9658;</span>
+          <span>&#9658;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+      <!-- Sofabed Section -->
+      <div class="product">
+        <img src="assets/img/resources3.png" alt="Sofabed" class="product-image">
+        <h3>Sofabed</h3>
+        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+      </div>
+
+      <!-- Pull-down Table Section -->
+      <div class="product">
+        <div class="product-images">
+          <img src="assets/img/resources3.png" alt="Table Closed" class="product-image">
+         
+        </div>
+        <h3>Pull down Table</h3>
+        <p>The storage unit can be converted into a 6-seater dining table with just a pull.</p>
+      </div>
+    </div>
+
+    <!-- Dots Section -->
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <style>
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.logo .interior {
+  font-weight: 400;
+}
+
+.logo .objekts {
+  font-weight: 700;
+  color: #ff6f00;
+}
+
+.tagline {
+  color: #ff6f00;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  text-align: right;
+}
+
+.cta .highlight {
+  font-weight: bold;
+  color: #ff6f00;
+}
+
+.arrows {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.arrows span {
+  font-size: 1.5rem;
+  color: #ff6f00;
+  margin-right: 5px;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product {
+  flex: 1;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Product with two images */
+.product-images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.product-images img {
+  max-width: 140px;
+}
+
+/* Dots Section */
+.dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #ff6f00;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+  </style>
+</body>
+</html>

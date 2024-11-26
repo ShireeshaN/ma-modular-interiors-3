@@ -1,331 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Carousel and Sidebar</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-        .container3 {
-            display: flex;
-            gap: 20px;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
-        .main-content {
-            flex: 3;
-            border-radius: 20px;
-            overflow: hidden;
-            padding: 20px;
-        }
-        .swiper {
-            width: 100%;
-            height: auto;
-        }
-        .swiper-slide img.curvedd {
-            width: 80%;
-            height: 700px;
-            display: block;
-            object-fit: cover;
-            border-top-right-radius: 43%;
-            border-bottom-right-radius: 43%;
-        }
-        .label {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #ff7a29;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-weight: bold;
-            z-index: 2;
-        }
-        .sidebar {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .sidebar img {
-            width: 70%;
-            border-radius: 10px;
-            object-fit: cover;
-        }
-        .sidebar p {
-            margin: 5px 0;
-            text-align: start;
-        }
-        .color-palette {
-            display: flex;
-            gap: 10px;
-            padding-top: 20px;
-        }
-        .color-circle {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-        }
-        @media (max-width: 768px) {
-            .container3 {
-                flex-direction: column;
-                gap: 20px;
-                text-align: center;
-            }
-            .main-content {
-                width: 100%;
-                padding: 10px;
-            }
-            .swiper-slide img.curvedd {
-                width: 100%;
-                height: auto;
-                border-top-right-radius: 43%;
-                border-bottom-right-radius: 43%;
-            }
-            .sidebar {
-                width: 100%;
-                flex-direction: row;
-                justify-content: space-between;
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            .sidebar p {
-                margin: 5px 0;
-                text-align: center;
-            }
-            .sidebar img {
-                width: 70%;
-            }
-            .color-palette {
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-            .color-circle {
-                width: 25px;
-                height: 25px;
-            }
-            .label {
-                font-size: 14px;
-                top: 10px;
-                right: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interior Objekts Design</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Libraries Stylesheet -->
+<link href="lib/animate/animate.min.css" rel="stylesheet" />
+<link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container3">
-        <div class="main-content">
-            <div class="label">Laminate Finish</div>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img class="curvedd" src="assets/img/production-images/102.png" alt="Image 1"></div>
-                    <div class="swiper-slide"><img class="curvedd" src="assets/img/production-images/102.png" alt="Image 2"></div>
-                    <div class="swiper-slide"><img class="curvedd" src="assets/img/production-images/102.png" alt="Image 3"></div>
-                </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="color-palette">
-                <div class="color-circle" style="background-color: #d4d4d4;"></div>
-                <div class="color-circle" style="background-color: #f0b75e;"></div>
-                <div class="color-circle" style="background-color: #e4a23a;"></div>
-                <div class="color-circle" style="background-color: #005f73;"></div>
-                <div class="color-circle" style="background-color: #023047;"></div>
-            </div>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header">
+      <div class="logo">
+        <h1><span class="interior">Interior</span> <span class="objekts">Objekts</span></h1>
+        <p class="tagline">Space Saving Furniture</p>
+      </div>
+      <div class="cta">
+        <h2>Add <span class="highlight">Space</span> to <br>Your Life</h2>
+        <div class="arrows">
+          <span>&#9658;</span>
+          <span>&#9658;</span>
+          <span>&#9658;</span>
         </div>
-        <div class="sidebar">
-            <div class="animated animate-fade">
-                <img src="assets/img/production-images/102.png" alt="Premium Plus">
-                <p>Premium Plus</p>
-            </div>
-            <div class="animated animate-slide">
-                <img src="assets/img/production-images/102.png" alt="Premium">
-                <p>Premium</p>
-            </div>
-            <div class="animated animate-zoom">
-                <img src="assets/img/production-images/102.png" alt="Standard">
-                <p>Standard</p>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-        });
-    </script>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interior Objekts - Our Factory</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f5f5f5;
-            padding: 20px;
-            border-bottom: 3px solid #ccc;
-        }
-
-        .logo-section h1 {
-            font-size: 24px;
-            margin: 0;
-            color: #333;
-        }
-
-        .logo-section .highlight {
-            color: #ff6600;
-        }
-
-        .title-section h2 {
-            font-size: 20px;
-            margin: 0;
-            color: #555;
-        }
-
-        .content {
-            display: flex;
-            align-items: stretch; /* Ensures both sections align properly */
-            padding: 0; /* Removes unnecessary padding */
-            gap: 0; /* Eliminates the gap between text and image sections */
-        }
-
-        /* Text Section */
-        .text-section {
-            flex: 1;
-            background: #fecb38;
-            color: #333;
-            padding: 20px 25px; /* Adds inner padding to prevent text cutoff */
-            clip-path: polygon(0% 0%, 100% 0%, 65% 100%, 0% 100%);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .text-section h3 {
-            margin: 15px 0 5px;
-            font-size: 18px;
-            color: #333;
-        }
-
-        .text-section p {
-            margin: 5px 0 15px;
-            line-height: 1.5;
-            color: #555;
-        }
-
-        /* Image Section */
-        .image-section {
-            flex: 1;
-            position: relative;
-        }
-
-        .image-section img {
-            max-width: 100%;
-            height: 100%; /* Matches the height of the text section */
-            object-fit: cover; /* Ensures the image fits nicely */
-            clip-path: polygon(35% 0%, 100% 0%, 100% 100%, 0% 100%);
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px;
-            background: #ff6600;
-            color: white;
-        }
-
-        .machine-image img {
-            max-width: 40%;
-        }
-
-        .tagline h2 {
-            font-size: 20px;
-            margin: 0;
-            color: white;
-            text-transform: uppercase;
-        }
-
-        .tagline .highlight {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <div class="logo-section">
-                <h1>Interior <span class="highlight">Objekts</span></h1>
-            </div>
-            <div class="title-section">
-                <h2>Our Factory</h2>
-            </div>
-        </header>
-        <div class="content">
-            <!-- Text Section -->
-            <div class="text-section">
-                <h3>Dedicated Team</h3>
-                <p>A workforce of 150+ professionals, including 12+ design engineers, oversees every step of the project until delivery.</p>
-
-                <h3>Advanced Machinery</h3>
-                <p>We utilize cutting-edge Italian and German equipment, along with European modular technology, to ensure precision in every piece.</p>
-
-                <h3>Expert Craftsmanship</h3>
-                <p>Our modules are crafted with care, using premium materials and skilled expertise.</p>
-
-                <h3>Fully Integrated Production</h3>
-                <p>We control the entire manufacturing process in-house, ensuring superior quality and efficiency.</p>
-
-                <h3>State-of-the-Art Facility</h3>
-                <p>Our 60,000 sq. ft. production space and 2.5-acre factory in Bengaluru provide the ideal environment for creating high-quality custom solutions.</p>
-            </div>
-            <!-- Image Section -->
-            <div class="image-section">
-                <img src="assets/img/production-images/65.png" alt="Worker in factory">
-            </div>
+    <!-- Content Section -->
+    <div class="content">
+      <!-- Sofabed Section (Left side) -->
+       <div class="owl-carousel pricing-carousel">
+        <div class="product left">
+       
+          <img src="assets/img/Untitled__1_-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
         </div>
-        <div class="footer">
-            <div class="machine-image">
-                <img src="https://via.placeholder.com/200x150" alt="Factory Machine">
-            </div>
-            <div class="tagline">
-                <h2>CRAFTING PRECISION FOR <span class="highlight">KITCHEN AND WARDROBES</span></h2>
-            </div>
+        <div class="product left">
+       
+          <img src="assets/img/RancheroMurphyCabinetBedBakarOpe-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
         </div>
+        <div class="product left">
+       
+          <img src="assets/img/indiana-wall-bed-with-sofa4-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        
+        
+      
+
+        <div class="product left">
+       
+          <img src="assets/img/indiana-wall-bed-with-sofa4-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/indiana-wall-bed-with-sofa4-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/RancheroMurphyCabinetBedBakarOpe-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/smastad-loft-bed-white-white-wit-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/Untitled-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+       </div>
+     
+   
+
+       <div class="owl-carousel pricing-carousel">
+        <div class="product left">
+       
+          <img src="assets/img/Untitled-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/Untitled__3_-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/smastad-loft-bed-white-white-wit-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images-removebg-preview (1).png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images__3_-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+
+
+
+
+
+        <div class="product left">
+       
+          <img src="assets/img/images__2_-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images__1_-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images__2_-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images__3_-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images-removebg-preview (1).png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+        <div class="product left">
+       
+          <img src="assets/img/images__3_-removebg-preview.png" alt="Sofabed" class="product-image">
+        
+        
+          <h3>Sofabed</h3>
+          <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
+        </div>
+       </div>
+      </div>
+     
     </div>
+
+    <!-- Dots Section -->
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <style>
+    .owl-carousel.pricing-carousel{
+      width: 50%;
+    }
+    /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+}
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.logo h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.logo .interior {
+  font-weight: 400;
+}
+
+.logo .objekts {
+  font-weight: 700;
+  color: #ff6f00;
+}
+
+.tagline {
+  color: #ff6f00;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.cta h2 {
+  font-size: 1.8rem;
+  text-align: right;
+}
+
+.cta .highlight {
+  font-weight: bold;
+  color: #ff6f00;
+}
+
+.arrows {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.arrows span {
+  font-size: 1.5rem;
+  color: #ff6f00;
+  margin-right: 5px;
+}
+
+/* Content Section */
+/* .content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; 
+} */
+
+.product {
+  flex: 1;
+  text-align: center;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Adjust left and right image sizes */
+.product-image {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.product.left img {
+  max-width: 100%;
+}
+
+.product.right img {
+  max-width: 100%; /* Right image will be slightly smaller */
+}
+
+/* Dots Section */
+.dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #ff6f00;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+  </style>
+   <script
+   src="https://code.jquery.com/jquery-3.7.1.min.js"
+   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+   crossorigin="anonymous">
+ </script>
+
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+<script>
+
+    // Pricing carousel
+    $(".pricing-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1500,
+        margin: 30,
+        loop: true,
+        dots: false,
+        nav: true,
+        navText: [
+          `<i class="fa fa-arrow-left"></i>`,  // Left arrow
+          `<i class="fa fa-arrow-right"></i>`  // Right arrow
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          576: {
+            items: 1,
+          },
+          768: {
+            items: 1,
+          },
+          1200: {
+            items: 1,
+          },
+        },
+      });
+  
+
+</script>
+
 </body>
 </html>
