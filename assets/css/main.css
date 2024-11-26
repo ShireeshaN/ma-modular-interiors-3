@@ -109,7 +109,7 @@ h6 {
   font-weight: 600;
 }
 .footeimg{
-  height: 80px;
+
   width:100%;
 }
 .php-email-form .loading {
@@ -158,7 +158,7 @@ h6 {
   
 }
 .logoclasss{
-  height:70px;
+  
   width:90%;
 }
 .bg1{
@@ -666,7 +666,8 @@ h6 {
 .light-background-1 {
 
   position: relative;
-  background: url('../img/about-banner.webp'); /* Replace 'your-image.jpg' with your image file path */
+ 
+  background-image: url("../img/production-images/60.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -680,7 +681,7 @@ h6 {
 .light-background-2 {
 
   position: relative;
-  background: url('../img/our-process.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-image: url("../img/production-images/64.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -694,7 +695,7 @@ h6 {
 .light-background-3 {
 
   position: relative;
-  background: url('../img/our-process.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-image: url("../img/production-images/37.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -708,7 +709,7 @@ h6 {
 .light-background-4 {
 
   position: relative;
-  background: url('../img/resources-banner.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-image: url("../img/production-images/44.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -722,7 +723,7 @@ h6 {
 .light-background-5 {
 
   position: relative;
-  background: url('../img/contact-banner.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-image: url("../img/production-images/59.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -736,7 +737,7 @@ h6 {
 .light-background-6 {
 
   position: relative;
-  background: url('../img/blog-banner.webp'); /* Replace 'your-image.jpg' with your image file path */
+  background-image: url("../img/production-images/58.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
