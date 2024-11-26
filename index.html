@@ -1214,36 +1214,36 @@
   
 </div>
 
-<script>
-  // JavaScript for Carousel Functionality
-  const carouselTrack = document.querySelector('.carousel-track-tablets');
-  const dots = document.querySelectorAll('.dots-tablets span');
-  let currentIndex = 0;
+ <script>
+    // JavaScript for Carousel Functionality
+    const carouselTrack = document.querySelector('.carousel-track');
+    const dots = document.querySelectorAll('.dots span');
+    let currentIndex = 0;
 
-  // Function to update the carousel
-  function updateCarousel(index) {
-    const slideWidth = document.querySelector('.carousel-item-tablets').clientWidth;
-    carouselTrack.style.transform = `translateX(-${index * slideWidth * 2}px)`;
+    // Function to update the carousel
+    function updateCarousel(index) {
+      const slideWidth = document.querySelector('.carousel-item').clientWidth;
+      carouselTrack.style.transform = `translateX(-${index * slideWidth * 2}px)`;
 
-    // Update active dot
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
-  }
+      // Update active dot
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
 
-  // Add click event for dots
-  dots.forEach(dot => {
-    dot.addEventListener('click', () => {
-      currentIndex = parseInt(dot.dataset.index);
-      updateCarousel(currentIndex);
+    // Add click event for dots
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.dataset.index);
+        updateCarousel(currentIndex);
+      });
     });
-  });
 
-  // Auto-scroll functionality
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % dots.length;
-    updateCarousel(currentIndex);
-  }, 3000); // Change every 3 seconds
-</script>
+    // Auto-scroll functionality
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % dots.length;
+      updateCarousel(currentIndex);
+    }, 3000); // Change every 3 seconds
+  </script>
 <!--new new-->
 
 
