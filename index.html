@@ -1213,7 +1213,6 @@
   </div>
   
 </div>
-
  <script>
     // JavaScript for Carousel Functionality
     const carouselTrack = document.querySelector('.carousel-track');
@@ -1244,7 +1243,6 @@
       updateCarousel(currentIndex);
     }, 3000); // Change every 3 seconds
   </script>
-
 <style>
 
 
@@ -1353,15 +1351,24 @@
   .carousel-track-tablets {
     gap: 0; /* Remove default gap between flex items */
   }
-</style>
 
+
+  @media (max-width: 768px) {
+ 
+  .main-content-tablets {
+   border-radius: 50px;
+   padding: 5px;
+   overflow: hidden;
+ }
+}
+  
+</style>
 <!--new new-->
 
 
 
 
 <!--not attach-->
-
 <div class="container-attachedimg">
   <div class="main-content-attachedimg">
     <!-- First Carousel -->
@@ -1414,7 +1421,6 @@
     <button onclick="switchCarousel(3)">3</button>
   </div>
 </div>
-
 <script>
   function switchCarousel(index) {
     // Hide all carousels
@@ -1428,12 +1434,36 @@
     }
   }
 </script>
-
 <style>
+
+@media (max-width: 768px) {
   .container-attachedimg {
     width: 100%;
     margin: 0 auto;
-    padding: 20px;
+   
+  }
+
+  
+  .carousel-item-attachedimg img {
+    width: 120%; /* Increase the image size */
+    height: auto;
+  }
+
+  .carousel-track-attachedimg {
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 10px; /* Add space between items */
+  }
+  
+  .left-image-attachedimg,
+  .right-image-attachedimg {
+    border-radius: 10px; /* Adjust border-radius for better appearance */
+  }
+}
+
+  .container-attachedimg {
+    width: 100%;
+    margin: 0 auto;
+   
   }
 
   .main-content-attachedimg {
@@ -1862,7 +1892,7 @@
 <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 <div class="container">
   <!-- Header Section -->
-  <div class="header">
+  <div class="">
     <div class="logo">
       <h1><span class="interior">Ma</span> <span class="objekts">Modulars</span></h1>
       <p class="tagline">Space Saving Furniture</p>
@@ -2069,13 +2099,13 @@
   </div>
 
   <!-- Dots Section -->
-  <div class="dots">
+  <!-- <div class="dots">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
     <span></span>
-  </div>
+  </div> -->
 </div>
 
 <style>
