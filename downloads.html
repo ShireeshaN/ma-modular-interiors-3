@@ -82,183 +82,310 @@
     <!-- Page Title -->
     <div class="page-title light-background-5">
       <div class="container">
-        <h1>Blogs</h1>
+        <h1>Downloads</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Blogs</li>
+            <li class="current">Downloads</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
+
     <style>
-      .card-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;  /* Allows wrapping if more than 3 cards are added */
-      margin-bottom: 30px;
-    }
+        
+.wallpaper-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.wallpaper-item {
+    position: relative;
+    margin: 10px;
+    perspective: 1000px; /* Enables 3D perspective */
+    transition: transform 0.5s ease-in-out;
+}
+
+.wallpaper-item img {
+    width: 100%;
+    max-width: 300px; /* Ensures images are large */
+    height: auto;
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* .wallpaper-item:hover img {
+    transform: rotateY(20deg) scale(1.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+} */
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
     
-    .card {
-      width: 30%; /* Ensures 3 cards fit in a row */
-      height: 300px;
-    
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .card a {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    .card-image {
-      height: 300px;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.3s ease;
-    }
-    
-    .card-content {
-      padding: 15px;
-      background-color: #000;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 1;
-    }
-    
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    
-    .card p {
-      font-size: 16px;
-      margin-bottom: 15px;
-      color: white;
-    }
-    
-    .card-button {
-      background-color: #fecb38;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    
-    .card-button:hover {
-      background-color: #e4b032;
-    }
-    
-    .card:hover .card-image {
-      transform: scale(1.1); /* Slight zoom effect on hover */
-    }
-    
-    @media (max-width: 768px) {
-      .card {
-        width: 48%; /* Adjust width for smaller screens */
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .card {                       
-        width: 100%; /* Stack the cards on very small screens */
-      }
-    }
-    
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-radius: 0 0 15px 15px;
+}
+
+.wallpaper-heading {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+.download-icon {
+    font-size: 30px;
+   
+    background-color: white;
+    color: #FC3441;
+    border-radius: 80px;
+    width:40px;
+    height:40px;
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-button:hover {
+    color: #FC3441;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    /* width: 100%; */
+    padding: 10px;
+    background-color: #FC3441; /* Your preferred button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333;
+}
+.ts{
+    text-align: start;
+}
+
+
     </style>
 
-    <!-- Contact Section -->
-    <section  class="contact section pt-5">
-      <div class="card-container container">
+   
 
-        <div class="card">
-          <a href="page1.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 1 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
+      <!-- Feature Start -->
+      <div class="container-fluid feature py-3">
+        <div class="container py-5">
+            <!-- <div class="text-start  pb-3 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h2 class="text-primary" style="font-weight: bold;"></h2>
+                <h3 class=" mb-4" style="font-weight: bold;">Enhance Your Space with Customized Curtains</h3>
+                <p class="mb-0">Tailored to your preferences, our customized curtains add the perfect finishing touch to any room. Experience the elegance and functionality of drapery designed just for you.
+                </p>
             </div>
-          </a>
+            -->
+              <div class="text-start">
+            <h2 class="ts">Our Archives</h2>
         </div>
-      
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
+            <section class="wallpaper-gallery contact section">
+               
+    
+                <div class="wallpaper-item">
+                    <a href="assets/img/new/1.png" data-lightbox="mygallery">
+                    <img src="assets/img/new/1.png" alt="3D Wallpaper 1"></a>
+                    <div class="overlay">
+                        <h3 class="wallpaper-heading">Customized Curtains</h3>
+                        <span class="download-icon " onclick="openForm('Interior - Doc/img/PROJECT REPORT.pdf')">⬇</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <a href="assets/img/new/1.png" data-lightbox="mygallery">
+                    <img src="assets/img/new/1.png" alt="3D Wallpaper 2"></a>
+                    <div class="overlay">
+                        <h3 class="wallpaper-heading">Customized Curtains</h3>
+                        <span class="download-icon" onclick="openForm('Interior - Doc/img/PROJECT REPORT.pdf')">⬇</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <a href="assets/img/new/1.png" data-lightbox="mygallery">
+                    <img src="assets/img/new/1.png" alt="3D Wallpaper 2"></a>
+                    <div class="overlay">
+                        <h3 class="wallpaper-heading">Customized Curtains</h3>
+                        <span class="download-icon" onclick="openForm('Interior - Doc/img/PROJECT REPORT.pdf')">⬇</span>
+                    </div>
+                </div>
+        
+                
+               
+                
+            </section>
 
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
+            <div class="text-start">
+                <h2 class="ts">Brochures</h2>
             </div>
-          </a>
-        </div>
 
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-      
-        <div class="card">
-          <a href="page3.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 3 Title</h3>
-                <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-             
-            </div>
-          </a>
-        </div>
-      </div>
+            <section class="wallpaper-gallery contact section">
+               
+    
+                <div class="wallpaper-item">
+                    <a href="assets/img/new/1.png" data-lightbox="mygallery">
+                    <img src="assets/img/new/1.png" alt="3D Wallpaper 1"></a>
+                    <div class="overlay">
+                        <h3 class="wallpaper-heading">Customized Curtains</h3>
+                        <span class="download-icon " onclick="openForm('Interior - Doc/img/PROJECT REPORT.pdf')">⬇</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <a href="assets/img/new/1.png" data-lightbox="mygallery">
+                    <img src="assets/img/new/1.png" alt="3D Wallpaper 2"></a>
+                    <div class="overlay">
+                        <h3 class="wallpaper-heading">Customized Curtains</h3>
+                        <span class="download-icon" onclick="openForm('Interior - Doc/img/PROJECT REPORT.pdf')">⬇</span>
+                    </div>
+                </div>
+                <div class="wallpaper-item">
+                    <a href="assets/img/new/1.png" data-lightbox="mygallery">
+                    <img src="assets/img/new/1.png" alt="3D Wallpaper 2"></a>
+                    <div class="overlay">
+                        <h3 class="wallpaper-heading">Customized Curtains</h3>
+                        <span class="download-icon" onclick="openForm('Interior - Doc/img/PROJECT REPORT.pdf')">⬇</span>
+                    </div>
+                </div>
+        
+               
+               
+                
+            </section>
 
 
-      
 
-     
+        
+            <div id="formModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-button" onclick="closeForm()">&times;</span>
+                    <h2>Enter Your Details</h2>
+                    <form id="userForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <input type="hidden" id="selectedPdf" name="selectedPdf">
+                        <button type="button" onclick="submitForm()">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <script>
+                function openForm(pdfSrc) {
+            document.getElementById("selectedPdf").value = pdfSrc;
+            document.getElementById("formModal").style.display = "flex";
+        }
+        
+        function closeForm() {
+            document.getElementById("formModal").style.display = "none";
+        }
+        
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phonePattern = /^\d{10}$/;
+        
+            if (!name.match(/^[A-Za-z\s]+$/)) {
+                alert("Name should contain only letters.");
+                return false;
+            }
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+            if (!phone.match(phonePattern)) {
+                alert("Phone number should be 10 digits long and contain only numbers.");
+                return false;
+            }
+            return true;
+        }
+        
+        function submitForm() {
+            if (validateForm()) {
+                const pdfSrc = document.getElementById("selectedPdf").value;
+                window.open(pdfSrc, '_blank');
+            }
+        }
+        
+            </script>
+
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
 
     </section><!-- /Contact Section -->
 
