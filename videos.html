@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ma Modular Interiors</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logooos.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+ 
+</head>
+
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+      <img src="assets/img/modulogo.png" alt="" class="logoclasss"> 
+        <!-- <h1 class="sitename">Active.</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html"  >Home</a></li>
+          <li><a href="about.html" >About Us</a></li>
+          <li><a href="our-process.html" >Our Process</a></li>
+          <li><a href="production.html" >Production</a></li>
+          <li><a href="resources.html" >Resources</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background-5">
+      <div class="container">
+        <h1>Videos</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Videos</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+
+    <style>
+        .card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 30%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-video {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire area */
+  transition: transform 0.3s ease;
+}
+
+.card-content {
+  padding: 15px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.card-button {
+  background-color: #fecb38;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card-button:hover {
+  background-color: #e4b032;
+}
+
+.card:hover .card-media {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 48%; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; /* Stack the cards on very small screens */
+  }
+}
+
+    </style>
+
+   
+
+    <!-- Contact Section -->
+    <section  class="contact section pt-5">
+     
+        <div class="card-container container">
+
+            <div class="card">
+              <a href="page1.html">
+                <div class="card-video">
+                  <video autoplay muted loop class="card-media">
+                    <source src="assets/img/blog-banner.webp" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <p>Click to explore more</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="card">
+              <a href="page2.html">
+                <div class="card-video">
+                  <video autoplay muted loop class="card-media">
+                    <source src="assets/img/blog-banner.webp" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <p>Click to explore more</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="card">
+              <a href="page3.html">
+                <div class="card-video">
+                  <video autoplay muted loop class="card-media">
+                    <source src="assets/img/blog-banner.webp" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <p>Click to explore more</p>
+                </div>
+              </a>
+            </div>
+          
+            <div class="card">
+              <a href="page4.html">
+                <div class="card-video">
+                  <video autoplay muted loop class="card-media">
+                    <source src="assets/img/blog-banner.webp" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <p>Click to explore more</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="card">
+                <a href="page4.html">
+                  <div class="card-video">
+                    <video autoplay muted loop class="card-media">
+                      <source src="assets/img/blog-banner.webp" type="video/mp4">
+                    </video>
+                  </div>
+                  <div class="card-content">
+                    <p>Click to explore more</p>
+                  </div>
+                </a>
+              </div>
+          
+            <div class="card">
+              <a href="page5.html">
+                <div class="card-video">
+                  <video autoplay muted loop class="card-media">
+                    <source src="assets/img/blog-banner.webp" type="video/mp4">
+                  </video>
+                </div>
+                <div class="card-content">
+                  <p>Click to explore more</p>
+                </div>
+              </a>
+            </div>
+          
+          </div>
+          
+
+      
+
+     
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background mt-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
+          <a href="https://maps.app.goo.gl/x4Hczhwv2ST8sEtL6" target="_blank">
+            <div class="widget">
+            <h3 class="widget-heading">Address</h3>
+            <p class="mb-4">
+              Plot No.7-1/2, 1st Floor, opposite Bharat Petrol Pump, Madeenaguda, Telangana 500049
+            </p>
+          </div></a>
+        </div>
+        <div class="col-md-4 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading">Quick links</h3>
+            <ul class="list-unstyled float-start me-5">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="production.html">Production</a></li>
+            </ul>
+            <ul class="list-unstyled float-start">
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="our-process.html">Our Process</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+       
+        <div class="col-md-4 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading">Connect</h3>
+            <ul class="list-unstyled social-icons light mb-3">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61552797685413&mibextid=ZbWKwL" target="_blank"><span class="bi bi-facebook"></span></a>
+              </li>
+              <!-- <li>
+                <a href="#"><span class="bi bi-twitter-x"></span></a>
+              </li> -->
+              <li>
+                <a href="https://www.linkedin.com/in/ma-modular-s-1a1640317/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><span class="bi bi-linkedin"></span></a>
+              </li>
+              <!-- <li>
+                <a href="#"><span class="bi bi-google"></span></a>
+              </li> -->
+              <li>
+                <a href="https://www.instagram.com/ma_modulars/profilecard/?igsh=NWN0bzNuY25tMHVj" target="_blank"><span class="bi bi-instagram"></span></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="widget">
+            
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
+         <img class="footeimg" src="assets/img/modulogo.png"/>
+        </div>
+        
+      </div>
+
+      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+        <p>© <span>Copyright</span> <a href="index.html" target="_blank"><strong class="px-1 sitename">Ma Modulars Interiors.</strong> </a><span>All Rights Reserved</span></p>
+        <div class="credits">
+       
+          Designed by   <a href="https://thepatternscompany.com/" target="_blank">The Patterns Company</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <div class="social-links">
+    <a href="https://wa.me/+919440887067" target="_blank" class="icon whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.instagram.com/ma_modulars/profilecard/?igsh=NWN0bzNuY25tMHVj" target="_blank" class="icon instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61552797685413&mibextid=ZbWKwL" target="_blank" class="icon facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/ma-modular-s-1a1640317/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+   
+  </div>
+
+  <style>
+    /* Social Links Container */
+  .social-links {
+    position: fixed;
+    right: 10px; /* Adjusted closer to the right */
+    bottom: 80px; /* Positioned below the scroll-to-top button */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between the icons */
+    z-index: 10; /* Ensure it appears above most elements */
+  }
+  
+  /* Style for Individual Icons */
+  .social-links .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Facebook Icon */
+  .social-links .facebook {
+    background-color: #4267B2; /* Facebook blue */
+  }
+  
+  /* LinkedIn Icon */
+  .social-links .linkedin {
+    background-color: #0077B5; /* LinkedIn blue */
+  }
+  
+  /* WhatsApp Icon */
+  .social-links .whatsapp {
+    background-color: #25D366; /* WhatsApp green */
+  }
+  
+  /* Instagram Icon */
+  .social-links .instagram {
+    background: radial-gradient(circle, #fdf497, #fd5949, #d6249f, #285aeb); /* Instagram gradient */
+  }
+  
+  /* Hover Effects */
+  .social-links .icon:hover {
+    transform: scale(1.1);
+  
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .social-links {
+    right: 5px; /* Move closer to the edge for smaller screens */
+    bottom: 70px; /* Adjust space below the scroll-to-top button */
+    gap: 8px; /* Slightly reduce the gap between icons */
+  }
+
+  .social-links .icon {
+    width: 40px; /* Smaller size for icons */
+    height: 40px;
+    font-size: 18px; /* Adjust icon size */
+  }
+}
+  
+  </style>
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
