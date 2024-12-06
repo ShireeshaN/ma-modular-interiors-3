@@ -147,7 +147,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: black;
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
@@ -159,7 +159,7 @@ h6 {
 }
 .logoclasss{
   
-  width:90%;
+  width:30%;
 }
 .bg1{
   background-image: url("assets/img/processimgs/3.jpg");
@@ -204,7 +204,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: green; /* Default green color for nav links */
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
@@ -214,6 +214,12 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: white; /* White color on hover or active */
   }
 
   .navmenu a i,
@@ -226,12 +232,6 @@ h6 {
 
   .navmenu li:last-child a {
     padding-right: 0;
-  }
-
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
   }
 
   .navmenu .dropdown ul {
@@ -258,17 +258,15 @@ h6 {
     padding: 10px 20px;
     font-size: 15px;
     text-transform: none;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .dropdown ul a i {
-    font-size: 12px;
+    color: green; /* Default green color for dropdown items */
+    transition: 0.3s;
+    font-weight: bold;
   }
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
   .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
+    color: white; /* White color on hover for dropdown items */
   }
 
   .navmenu .dropdown:hover>ul {
