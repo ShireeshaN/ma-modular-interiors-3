@@ -30,7 +30,13 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
- 
+  <!-- =======================================================
+  * Template Name: Active
+  * Template URL: https://bootstrapmade.com/active-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body class="contact-page">
@@ -90,181 +96,98 @@
     <!-- Page Title -->
     <div class="page-title light-background-5">
       <div class="container">
-        <h1>Blogs</h1>
+        <h1>Projects</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Blogs</li>
+            <li class="current">Projects</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
+
     <style>
-      .card-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;  /* Allows wrapping if more than 3 cards are added */
-      margin-bottom: 30px;
-    }
+        
+        
+
+       
+  .image-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.image-item {
+  width: 80%; /* Adjust as per your requirement */
+  height: 40%;
+  text-align: center;
+}
+
+.image-item img {
+  width: 600px;
+  height: 300px;
+  border-radius: 8px;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.image-item p {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #333;
+  text-align: start;
+}
+
+@media (max-width: 768px) {
+  .image-item {
+    width: 90%;
+  }
+}
+
+</style>
     
-    .card {
-      width: 30%; /* Ensures 3 cards fit in a row */
-      height: 300px;
     
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .card a {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    .card-image {
-      height: 300px;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.3s ease;
-    }
-    
-    .card-content {
-      padding: 15px;
-      background-color: #000;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 1;
-    }
-    
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    
-    .card p {
-      font-size: 16px;
-      margin-bottom: 15px;
-      color: white;
-    }
-    
-    .card-button {
-      background-color: #fecb38;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    
-    .card-button:hover {
-      background-color: #e4b032;
-    }
-    
-    .card:hover .card-image {
-      transform: scale(1.1); /* Slight zoom effect on hover */
-    }
-    
-    @media (max-width: 768px) {
-      .card {
-        width: 48%; /* Adjust width for smaller screens */
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .card {                       
-        width: 100%; /* Stack the cards on very small screens */
-      }
-    }
-    
-    </style>
 
     <!-- Contact Section -->
-    <section  class="contact section pt-5">
-      <div class="card-container container">
+    <section class="contact section pt-5">
 
-        <div class="card">
-          <a href="page1.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 1 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
+        <div class="container">
+            <div class="image-row">
+                <div class="image-item">
+                  <img src="assets/img/resourcessmallimgs/1.jpg" alt="Image 1">
+                  <h2 class="text-start">Project Name:</h2>
+                  <p>Year of installation</p>
+                  <p>Number of kitchens</p>
+                </div>
+                <div class="image-item">
+                  <img src="assets/img/resourcessmallimgs/1.jpg" alt="Image 2">
+                  <h2 class="text-start">Project Name:</h2>
+                  <p>Year of installation</p>
+                  <p>Number of kitchens</p>
+                </div>
+              </div>
               
-            </div>
-          </a>
-        </div>
-      
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
+              <div class="image-row">
+                <div class="image-item">
+                  <img src="assets/img/resourcessmallimgs/1.jpg" alt="Image 3">
+                  <h2 class="text-start">Project Name:</h2>
+                  <p>Year of installation</p>
+                  <p>Number of kitchens</p>
+                </div>
+                <div class="image-item">
+                  <img src="assets/img/resourcessmallimgs/1.jpg" alt="Image 4">
+                  <h2 class="text-start">Project Name:</h2>
+                  <p>Year of installation</p>
+                  <p>Number of kitchens</p>
+                </div>
+              </div>
 
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
+            
         </div>
+        
 
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-      
-        <div class="card">
-          <a href="page3.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 3 Title</h3>
-                <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-             
-            </div>
-          </a>
-        </div>
-      </div>
-
-
-      
+        
 
      
 
