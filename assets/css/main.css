@@ -64,6 +64,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  text-decoration: unset !important;
 }
 
 a {
@@ -292,7 +293,7 @@ h6 {
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
-    color: var(--nav-color);
+    color: white;
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
@@ -405,7 +406,7 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: white;
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -431,26 +432,26 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  background-color: var(--background-color);
-  color: var(--default-color);
-  padding: 60px 0;
+  background-color:black !important;
+  color: white;
+  padding: 10px 0;
   font-size: 14px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .footer a {
-  color: var(--default-color) !important;
+  color: #9FBC1A !important;
 }
 
 .footer a:hover {
-  color: var(--accent-color);
+  color:white;
 }
 
 .footer .copyright {
   margin-top: 50px;
   position: relative;
   padding-top: 20px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  /* border-top: 1px solid color-mix(in srgb, white, transparent 80%); */
 }
 
 .footer .copyright p,
@@ -509,11 +510,11 @@ h6 {
   height: 40px;
   position: relative;
   border-radius: 50%;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  background: color-mix(in srgb, white, transparent 90%);
 }
 
 .footer .social-icons li a span {
-  color: color-mix(in srgb, var(--heading-color), transparent 0%);
+  color: color-mix(in srgb, white, transparent 0%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2485,4 +2486,8 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+.colooo{
+  color:#9FBC1A !important;
 }
