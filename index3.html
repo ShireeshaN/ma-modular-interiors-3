@@ -87,14 +87,18 @@
 
 
 
- <!--banner-->
+<!--banner-->
 <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video class="d-block w-100" autoplay muted loop place in line>
+      <video class="d-block w-100" autoplay muted loop>
         <source src="assets/img/Ma Modulars (1).mp4" type="video/mp4">
-        Your browser does not support the video tag.
+       
       </video>
+      <!-- Heading on top of the video -->
+      <div class="carousel-caption">
+        <h2 class="heading-text">Modular Solutions for <br/><spam class="text-black">Modern Living</spam></h2>
+      </div>
     </div>
   </div>
 </div>
@@ -115,7 +119,57 @@
     height: 100vh;  /* Set your desired height here */
     object-fit: cover; /* Ensures the video covers the container without distortion */
   }
+
+  /* Mobile View Adjustments */
+  @media (max-width: 768px) {
+    .carousel-item video {
+      height: 70vh;  /* Adjust the height for smaller screens */
+      object-fit: cover; /* Ensures the video still covers the container properly */
+    }
+    
+  }
+
+  /* Styling for the heading inside the video banner */
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);  /* Center the heading vertically and horizontally */
+    text-align: left;
+    color: white;  /* Change the text color as needed */
+    z-index: 10;   /* Ensures the heading appears above the video */
+  }
+
+  /* Styling for the heading */
+  .heading-text {
+    font-size: 2.9rem;  /* Desktop font size */
+    font-weight: bold;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7); /* Optional: Adds shadow for better visibility on video */
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .heading-text {
+        font-size: 3.2rem;  /* Smaller font size for mobile */
+        letter-spacing: 2px; /* Reduced letter spacing for mobile */
+        line-height: 1.4; /* Adjust line height for mobile */
+    }
+}
+
+/* Extra small mobile view adjustments */
+@media (max-width: 480px) {
+    .heading-text {
+        font-size: 1.8rem;  /* Even smaller font size for small screens */
+        letter-spacing: 2px; /* Even more reduced letter spacing */
+        line-height: 1.3; /* Adjust line height further */
+    }
+}
+
 </style>
+
+
 
  
     <section style="background-color: white; padding: 8px;">
@@ -407,7 +461,7 @@
 
 /* Section Styling */
 .interior-section {
-  padding: 80px 20px;
+  padding: 30px 20px;
   background: linear-gradient(to bottom, #ffffff, #f8f8f8);
   text-align: center;
 }
@@ -434,7 +488,7 @@
 
 /* Process Container */
 .process-container {
-  display: flex;
+ 
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 50px;
@@ -622,8 +676,7 @@
         <img src="assets/img/processimgs/3.jpg" alt="Luxury Kitchen Interior">
       </div>
     </div>
-    <button class="carousel-prev">&#10094;</button>
-    <button class="carousel-next">&#10095;</button>
+   
   </div>
 </section>
 
@@ -796,7 +849,7 @@
   }
 }
 </style>
-
+ <!-- TV Units Card -->
 
 
 <!--Modular Kitchens-->
@@ -808,27 +861,27 @@
   <!-- <h2>Your Section Heading</h2> -->
   <div class="image-slider">
     <div class="image-container">
-      <img src="assets/banners/modu1 (34).jpg" alt="Image 1">
-      <img src="assets/banners/modu1 (35).jpg" alt="Image 2">
-      <img src="assets/banners/modu1 (34).jpg" alt="Image 3">
-      <img src="assets/banners/modu1 (34).jpg" alt="Image 4">
-      <img src="assets/banners/modu1 (34).jpg" alt="Image 5">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 6">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 7">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 8">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 9">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 10">
+      <img src="assets/img/modularkith/modu1 (1).jpg" alt="Image 1">
+      <img src="assets/img/modularkith/modu1 (2).jpg" alt="Image 2">
+      <img src="assets/img/modularkith/modu1 (4).jpg" alt="Image 3">
+      <img src="assets/img/modularkith/modu1 (5).jpg" alt="Image 4">
+    
+      <img src="assets/img/modularkith/modu1 (10).jpg" alt="Image 6">
+      <img src="assets/img/modularkith/modu1 (15).jpg" alt="Image 7">
+      <img src="assets/img/modularkith/modu1 (16).jpg" alt="Image 8">
+      <img src="assets/img/modularkith/modu1 (17).jpg" alt="Image 9">
+      <img src="assets/img/modularkith/modu1 (19).jpg" alt="Image 10">
       <!-- Duplicate images for continuous scrolling -->
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 1">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 2">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 3">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 4">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 5">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 6">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 7">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 8">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 9">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 10">
+      <img src="assets/img/modularkith/modu1 (29).jpg" alt="Image 1">
+      <img src="assets/img/modularkith/modu1 (30).jpg" alt="Image 2">
+      <img src="assets/img/modularkith/modu1 (31).jpg" alt="Image 3">
+      <img src="assets/img/modularkith/modu1 (32).jpg" alt="Image 4">
+      <img src="assets/img/modularkith/modu1 (40).jpg" alt="Image 5">
+      <img src="assets/img/modularkith/modu1 (43).jpg" alt="Image 6">
+      <img src="assets/img/modularkith/modu1 (44).jpg" alt="Image 7">
+      <img src="assets/img/modularkith/modu1 (46).jpg" alt="Image 8">
+      <img src="assets/img/modularkith/modu1 (49).jpg" alt="Image 9">
+      <img src="assets/img/modularkith/modu1 (52).jpg" alt="Image 10">
     </div>
     <div class="nav-buttons">
       <button class="prev">Prev</button>
@@ -945,407 +998,378 @@ setInterval(() => {
 </script>
 <!--Modular Kitchens-->
 
-<!--TV Units-->
-<div class="carousel-section">
-  <div class="carousel-container1">
-    <div class="carousel-images" id="carousel">
-      <img src="assets/banners/modubans1 (3).jpg" alt="Image 1">
-      <img src="assets/banners/modubans1 (2).jpg" alt="Image 2">
-      <img src="assets/banners/modubans1 (1).jpg" alt="Image 3">
-      <img src="assets/banners/modubans1 (4).jpg" alt="Image 4">
-      <img src="assets/banners/modubans1 (5).jpg" alt="Image 5">
-      <img src="assets/banners/modubans1 (6).jpg" alt="Image 6">
-      <img src="assets/banners/modubans1 (7).jpg" alt="Image 7">
-      <img src="assets/banners/modubans1 (8).jpg" alt="Image 8">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 9">
-      <img src="assets/banners/modubans1 (10).jpg" alt="Image 10">
+<!--TV units Section-->
+<div class="p-5 pb-2">
+  <h2 class="text-center">TV Units</h2>
+  <p class="text-center">TV Units</p>
+  </div>
+<div class="unique-carousel-section">
+  <div class="unique-carousel-container">
+    <div class="unique-carousel-images" id="uniqueCarousel">
+      <img src="assets/img/tvunits/tvunitsss1 (10).webp" alt="Image 1">
+      <img src="assets/img/tvunits/tvunitsss1 (9).webp" alt="Image 2">
+      <img src="assets/img/tvunits/tvunitsss1 (8).webp" alt="Image 3">
+      <img src="assets/img/tvunits/tvunitsss1 (8).jpeg" alt="Image 4">
+      <img src="assets/img/tvunits/tvunitsss1 (7).webp" alt="Image 5">
+      <img src="assets/img/tvunits/tvunitsss1 (6).jpeg" alt="Image 6">
+      <img src="assets/img/tvunits/tvunitsss1 (5).webp" alt="Image 7">
+
+      <img src="assets/img/tvunits/tvunitsss1 (4).webp" alt="Image 5">
+      <img src="assets/img/tvunits/tvunitsss1 (4).jpeg" alt="Image 6">
+      <img src="assets/img/tvunits/tvunitsss1 (3).png" alt="Image 7">
+      
     </div>
-    <button class="arrow-button" id="arrowBtn">↓</button>
+    <button class="unique-arrow-button" id="uniqueArrowBtn">↓</button>
   </div>
 </div>
 
-
 <style>
-  .carousel-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full screen height */
-}
+  .unique-carousel-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+  }
 
-.carousel-container1 {
-  width: 100%;
-  max-width: 800px;
-  height: 500px;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-}
+  .unique-carousel-container {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
 
-.carousel-images {
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.5s ease-in-out;
-}
+  .unique-carousel-images {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+  }
 
-.carousel-images img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-}
+  .unique-carousel-images img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
 
-.arrow-button {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s;
-}
+  .unique-arrow-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
 
-.arrow-button:hover {
-  background-color: #555;
-}
-
+  .unique-arrow-button:hover {
+    background-color: #555;
+  }
 </style>
 
 <script>
-  const carousel = document.getElementById("carousel");
-const arrowButton = document.getElementById("arrowBtn");
-const images = document.querySelectorAll(".carousel-images img");
-const totalImages = images.length;
-const imageHeight = 500; // Height of the container and each image
-let currentIndex = 0;
-let direction = 1; // 1 for forward, -1 for backward
-let isAutoSliding = true;
+  const uniqueCarousel = document.getElementById("uniqueCarousel");
+  const uniqueArrowButton = document.getElementById("uniqueArrowBtn");
+  const uniqueImages = document.querySelectorAll(".unique-carousel-images img");
+  const uniqueTotalImages = uniqueImages.length;
+  const uniqueImageHeight = 500; // Height of the container and each image
+  let uniqueCurrentIndex = 0;
+  let uniqueDirection = 1; // 1 for forward, -1 for backward
+  let uniqueIsAutoSliding = true;
 
-// Function to go to the next slide (or previous if reversing)
-function goToNextSlide() {
-  // Change direction at boundaries
-  if (currentIndex === totalImages - 1) {
-    direction = -1; // Reverse
-  } else if (currentIndex === 0) {
-    direction = 1; // Forward
+  // Function to go to the next slide (or previous if reversing)
+  function uniqueGoToNextSlide() {
+    // Change direction at boundaries
+    if (uniqueCurrentIndex === uniqueTotalImages - 1) {
+      uniqueDirection = -1; // Reverse
+    } else if (uniqueCurrentIndex === 0) {
+      uniqueDirection = 1; // Forward
+    }
+
+    // Update index based on direction
+    uniqueCurrentIndex += uniqueDirection;
+    uniqueCarousel.style.transition = "transform 0.5s ease-in-out";
+    uniqueCarousel.style.transform = `translateY(-${uniqueCurrentIndex * uniqueImageHeight}px)`;
   }
 
-  // Update index based on direction
-  currentIndex += direction;
-  carousel.style.transition = "transform 0.5s ease-in-out";
-  carousel.style.transform = `translateY(-${currentIndex * imageHeight}px)`;
-}
+  // Auto-slide every 3 seconds
+  const uniqueAutoSlide = setInterval(uniqueGoToNextSlide, 3000);
 
-// Auto-slide every 3 seconds
-const autoSlide = setInterval(goToNextSlide, 3000);
-
-// Manual control using the arrow button
-arrowButton.addEventListener("click", () => {
-  if (isAutoSliding) {
-    clearInterval(autoSlide); // Stop auto-sliding if the button is clicked
-    isAutoSliding = false;
-  }
-  goToNextSlide();
-});
-
+  // Manual control using the arrow button
+  uniqueArrowButton.addEventListener("click", () => {
+    if (uniqueIsAutoSliding) {
+      clearInterval(uniqueAutoSlide); // Stop auto-sliding if the button is clicked
+      uniqueIsAutoSliding = false;
+    }
+    uniqueGoToNextSlide();
+  });
 </script>
-<!--TV Units-->
+<!--TV units Section-->
 
 
+<!-- Wardrobe Section -->
+<div class="p-5 pb-5 scroll-section">
+  <h2 class="text-start">Wardrobe</h2>
+  <p class="text-start">Discover timeless wardrobe designs with a natural touch.</p>
 
-
-
-
-
-<!-- <section id="pro-servicess" class="pro-services section light-background">
-  <div class="container">
-    <div class="row gy-4 justify-content-center">
-
-      
-      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-        <div class="pro-services-item modular-bg" data-aos="fade-up">
-          <div class="pro-services-icon large-icon blink-icon">
-            <i class="bi bi-house-door text-dark"></i>
-          </div>
-          <div>
-            <h3>Modular Cabinetry & Storage</h3>
-            <ul class="ulls">
-              <li class="text-dark">Wardrobes</li>
-              <li class="text-dark">Kitchen cabinets</li>
-              <li class="text-dark">TV units</li>
-              <li class="text-dark">Storage cabinets</li>
-              <li class="text-dark">Bookshelves and display units</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-        <div class="pro-services-item wall-bg" data-aos="fade-up">
-          <div class="pro-services-icon large-icon blink-icon">
-            <i class="bi bi-bricks text-dark"></i>
-          </div>
-          <div>
-            <h3>Wall Units</h3>
-            <ul class="ulls">
-              <li class="text-dark">Wall paneling and decorative units</li>
-              <li class="text-dark">Floating shelves and racks</li>
-              <li class="text-dark">Wall-mounted desks and workspaces</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-        <div class="pro-services-item bedroom-bg" data-aos="fade-up">
-          <div class="pro-services-icon large-icon blink-icon">
-            <i class="bi bi-house-door"></i>
-          </div>
-          <div>
-            <h3 class="text-white">Beds & Bedroom Solutions</h3>
-            <ul class="ulls">
-              <li class="text-white">Storage beds</li>
-              <li class="text-white">Modular bedside tables</li>
-              <li class="text-white">Headboards with built-in storage or features</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-        <div class="pro-services-item workspace-bg" data-aos="fade-up">
-          <div class="pro-services-icon large-icon blink-icon">
-            <i class="bi bi-briefcase text-dark"></i>
-          </div>
-          <div>
-            <h3>Workspace Solutions</h3>
-            <ul class="ulls">
-              <li class="text-dark">Modular workstations and desks</li>
-              <li class="text-dark">Overhead storage units</li>
-              <li class="text-dark">File cabinets and organizers</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      
-      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-        <div class="pro-services-item table-bg" data-aos="fade-up">
-          <div class="pro-services-icon large-icon blink-icon">
-            <i class="bi bi-table text-dark"></i>
-          </div>
-          <div>
-            <h3>Modular Tables</h3>
-            <ul class="ulls">
-              <li>Side storage tables</li>
-              <li>Coffee tables with storage</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-        <div class="pro-services-item kitchen-bg" data-aos="fade-up">
-          <div class="pro-services-icon large-icon blink-icon">
-            <i class="fas fa-utensils text-dark"></i>
-          </div>
-          <div>
-            <h3>Kitchen Solutions</h3>
-            <ul class="ulls">
-              <li class="text-dark">Modular kitchen counters and islands</li>
-              <li class="text-dark">Pull-out pantries</li>
-              <li class="text-dark">Overhead and under-counter storage solutions</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-        <div class="pro-services-item bathroom-bg" data-aos="fade-up">
-          <div class="pro-services-icon large-icon blink-icon">
-            <i class="fas fa-toilet text-dark"></i>
-          </div>
-          <div>
-            <h3>Bathroom Solutions</h3>
-            <ul class="ulls">
-              <li class="text-dark">Vanity units</li>
-              <li class="text-dark">Modular storage cabinets</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
-        <div class="pro-services-item entertainment-bg" data-aos="fade-up">
-          <div class="pro-services-icon large-icon blink-icon">
-            <i class="fas fa-tv text-dark"></i>
-          </div>
-          <div>
-            <h3 class="">Entertainment Center</h3>
-            <ul class="ulls">
-              <li class="text-dark">TV wall units</li>
-              <li class="text-dark">Media storage solutions</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
+  <div class="scroll-container">
+    <!-- Image with mask (Repeated for seamless looping) -->
+    <div class="image-wrapper">
+      <img src="assets/img/wardrob/wardrob (1).jpeg" alt="Wardrobe 1">
+      <div class="mask"><span>Classic Elegance</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/img/wardrob/wardrob (8).jpeg" alt="Wardrobe 2">
+      <div class="mask"><span>Timeless Design</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/img/wardrob/wardrob (2).jpeg" alt="Wardrobe 3">
+      <div class="mask"><span>Natural Finish</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/img/wardrob/wardrob (3).jpeg" alt="Wardrobe 4">
+      <div class="mask"><span>Artisan Craft</span></div>
+    </div>
+    <!-- Duplicate images for seamless looping -->
+    <div class="image-wrapper">
+      <img src="assets/img/wardrob/wardrob (4).jpeg" alt="Wardrobe 5">
+      <div class="mask"><span>Classic Elegance</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/img/wardrob/wardrob (5).jpeg" alt="Wardrobe 6">
+      <div class="mask"><span>Timeless Design</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/img/wardrob/wardrob (6).jpeg" alt="Wardrobe 7">
+      <div class="mask"><span>Natural Finish</span></div>
+    </div>
+    <div class="image-wrapper">
+      <img src="assets/img/wardrob/wardrob (7).jpeg" alt="Wardrobe 8">
+      <div class="mask"><span>Artisan Craft</span></div>
     </div>
   </div>
-</section>
+</div>
+
 <style>
-
-
-  
-  .modular-bg {
-    background-image: url('assets/img/productionlargeimages/1.jpg');
+  .scroll-section {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f4f1ec, #e1dddd);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   }
 
-  .wall-bg {
-    background-image: url('assets/img/productionlargeimages/2.jpg');
+  .scroll-section h2 {
+    font-family: 'Roboto';
+    font-size: 2rem;
+    color: black;
   }
 
-  .bedroom-bg {
-    background-image: url('assets/img/productionlargeimages/3.jpg');
+  .scroll-section p {
+    font-family: 'Roboto';
+    color: #5a4d4a;
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
 
-  .workspace-bg {
-    background-image: url('assets/img/productionlargeimages/4.jpg');
+  .scroll-container {
+    display: flex;
+    animation: scroll-loop 20s linear infinite;
   }
 
-  .table-bg {
-    background-image: url('assets/img/productionlargeimages/5.jpg');
+  .image-wrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 400px;
+    height: 400px;
+    margin: 3px;
   }
 
-  .kitchen-bg {
-    background-image: url('assets/img/productionlargeimages/6.jpg');
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
   }
 
-  .bathroom-bg {
-    background-image: url('assets/img/productionlargeimages/7.jpg');
-  }
-
-  .entertainment-bg {
-    background-image: url('assets/img/productionlargeimages/8.jpg');
-  }
-
-  
-  .pro-services-item {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px;
+  .mask {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.6);
     color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
- 
-.ulls {
-  list-style: none;
-  padding: 0;
-}
+
+  @keyframes scroll-loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Duplicate the content to ensure a seamless loop */
+  .scroll-container:after {
+    content: "";
+    display: flex;
+    animation: none;
+  }
+</style>
+<!-- Wardrobe Section -->
 
 
-.ulls li {
-  font-size: 16px;
-  font-weight: normal;
-  color: #333;
-  transition: all 0.3s ease; 
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-}
+<!--crockery-->
+<h2 class="text-center">Crockery Units</h2>
+<p class="text-center">Crockery Units</p>
+<div class="crockery-section">
+  <!-- First Subsection -->
+  <div class="crockery-sub-section crockery-glassy">
+    <div class="crockery-image-slider crockery-rtl">
+      <img src="assets/img/crockery/cro1 (3).jpg" alt="Image 1">
+      <img src="assets/img/crockery/cro1 (18).jpg" alt="Image 2">
+      <img src="assets/img/crockery/cro1 (14).jpg" alt="Image 3">
+      <img src="assets/img/crockery/cro1 (13).jpg" alt="Image 4">
+      <img src="assets/img/crockery/cro1 (12).jpg" alt="Image 5">
 
+      <img src="assets/img/crockery/cro1 (3).jpg" alt="Image 6">
+      <img src="assets/img/crockery/cro1 (16).jpg" alt="Image 7">
+      <img src="assets/img/crockery/cro1 (14).jpg" alt="Image 8">
+      <img src="assets/img/crockery/cro1 (13).jpg" alt="Image 9">
+      <img src="assets/img/crockery/cro1 (12).jpg" alt="Image 10">
+    </div>
+  </div>
 
-.ulls li {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -1px -1px 5px rgba(255, 255, 255, 0.1);
-}
+  <!-- Second Subsection -->
+  <div class="crockery-sub-section crockery-glassy">
+    <div class="crockery-image-slider crockery-ltr">
+      <img src="assets/img/crockery/cro1 (10).jpg" alt="Image 11">
+      <img src="assets/img/crockery/cro1 (9).jpg" alt="Image 12">
+      <img src="assets/img/crockery/cro1 (8).jpg" alt="Image 13">
+      <img src="assets/img/crockery/cro1 (7).jpg" alt="Image 14">
+      <img src="assets/img/crockery/cro1 (4).jpg" alt="Image 15">
 
+      <img src="assets/img/crockery/cro1 (10).jpg" alt="Image 16">
+      <img src="assets/img/crockery/cro1 (9).jpg" alt="Image 17">
+      <img src="assets/img/crockery/cro1 (8).jpg" alt="Image 18">
+      <img src="assets/img/crockery/cro1 (7).jpg" alt="Image 19">
+      <img src="assets/img/crockery/cro1 (4).jpg" alt="Image 20">
+    </div>
+  </div>
+</div>
 
-.ulls li:hover {
-  font-weight: bold;
-  color: #1f1f1f; 
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6), -2px -2px 8px rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px); 
-}
+<style>
+  .crockery-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
 
-</style> -->
+  .crockery-sub-section {
+    width: 45%;
+    height: 550px; /* Height of the section */
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
 
+  .crockery-glassy {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
 
+  .crockery-image-slider {
+    display: flex;
+    position: absolute;
+    animation: crockery-scroll 12s ease-in-out infinite; /* Adjusted for 2-second gaps, total animation duration 12s */
+  }
 
+  .crockery-image-slider img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits the container */
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
 
+  .crockery-image-slider img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
 
+  .crockery-rtl {
+    animation-direction: normal;
+  }
 
+  .crockery-ltr {
+    animation-direction: reverse;
+  }
 
+  @keyframes crockery-scroll {
+    0%, 20% {
+      transform: translateX(0);
+    }
+    25%, 45% {
+      transform: translateX(-100%);
+    }
+    50%, 70% {
+      transform: translateX(-200%);
+    }
+    75%, 95% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(-400%);
+    }
+  }
 
-
-    <!-- Stats Section -->
-    <!-- <section id="stats" class="stats section light-background">
-
-      <div class="container">
-
-        <div class="row gy-4 justify-content-center">
-
-          <div class="col-lg-5">
-            <div class="images-overlap">
-              <img src="assets/img/bannersz1.jpg" alt="student" class="img-fluid img-1" data-aos="fade-up">
-            </div>
-          </div>
-
-          <div class="col-lg-4 ps-lg-5">
-            <span class="content-subtitle">Why Us</span>
-            <h2 class="content-title">Far far away Behind the Word Mountains</h2>
-            <p class="lead">
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia.
-            </p>
-            <p class="mb-5">
-              There live the blind texts. Separated they live in Bookmarksgrove
-              right at the coast of the Semantics, a large language ocean.
-            </p>
-            <div class="row mb-5 count-numbers">
-
-             
-              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="100">
-                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="3919" data-purecounter-duration="1" class="purecounter number"></span>
-                <span class="d-block">Coffee</span>
-              </div>
-             
-
-            
-              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="200">
-                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="2831" data-purecounter-duration="1" class="purecounter number"></span>
-                <span class="d-block">Codes</span>
-              </div>
-             
-
-       
-              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="300">
-                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="1914" data-purecounter-duration="1" class="purecounter number"></span>
-                <span class="d-block">Projects</span>
-              </div>
-             
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section> -->
-    <!-- /Stats Section -->
-
+  /* Mobile view adjustments */
+  @media (max-width: 768px) {
+    .crockery-section {
+      padding: 10px;
+    }
     
+    .crockery-sub-section {
+      width: 100%; /* Make each subsection take full width on mobile */
+      height: 350px; /* Reduce height on mobile */
+    }
+    
+    .crockery-image-slider {
+      animation: crockery-scroll 16s ease-in-out infinite; /* Slow down animation on mobile */
+    }
+  }
+
+</style>
+
+<!--crockery-->
+
 
  
 
@@ -1360,7 +1384,7 @@ arrowButton.addEventListener("click", () => {
     <div class="row gy-4">
       <div class="col-md-4 col-lg-4">
         <div class="post-entry" data-aos="fade-up" data-aos-delay="100">
-          <a href="#" class="thumb d-block"><img src="assets/img/bannersz1.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="#" class="thumb d-block"><img src="assets/img/blogs12 (1).jpg" alt="Image" class="img-fluid rounded"></a>
 
           <div class="post-content">
             <div class="meta">
@@ -1377,7 +1401,7 @@ arrowButton.addEventListener("click", () => {
                 <img src="assets/img/pro3.png" alt="Image" class="img-fluid rounded-circle">
               </div>
               <div class="author-name">
-                <strong class="d-block">Anil Kumar</strong>
+                <strong class="d-block">Aaaaaaaa</strong>
                
               </div>
             </div>
@@ -1387,7 +1411,7 @@ arrowButton.addEventListener("click", () => {
 
       <div class="col-md-4 col-lg-4">
         <div class="post-entry" data-aos="fade-up" data-aos-delay="200">
-          <a href="#" class="thumb d-block"><img src="assets/img/bannersz1.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="#" class="thumb d-block"><img src="assets/img/blogs12 (2).jpg" alt="Image" class="img-fluid rounded"></a>
 
           <div class="post-content">
             <div class="meta">
@@ -1404,7 +1428,7 @@ arrowButton.addEventListener("click", () => {
                 <img src="assets/img/pro3.png" alt="Image" class="img-fluid rounded-circle">
               </div>
               <div class="author-name">
-                <strong class="d-block">Srinivas Rao</strong>
+                <strong class="d-block">Bbbbbbb</strong>
                 
               </div>
             </div>
@@ -1414,7 +1438,7 @@ arrowButton.addEventListener("click", () => {
 
       <div class="col-md-4 col-lg-4">
         <div class="post-entry" data-aos="fade-up" data-aos-delay="300">
-          <a href="#" class="thumb d-block"><img src="assets/img/bannersz1.jpg" alt="Image" class="img-fluid rounded"></a>
+          <a href="#" class="thumb d-block"><img src="assets/img/crockery/cro1 (8).jpg" alt="Image" class="img-fluid rounded"></a>
 
           <div class="post-content">
             <div class="meta">
@@ -1431,7 +1455,7 @@ arrowButton.addEventListener("click", () => {
                 <img src="assets/img/pro3.png" alt="Image" class="img-fluid rounded-circle">
               </div>
               <div class="author-name">
-                <strong class="d-block">Ajay Manthri</strong>
+                <strong class="d-block">Cccccc</strong>
           
               </div>
             </div>
