@@ -1,12 +1,199 @@
-   <!--banner-->
-   <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <video class="d-block w-100" controls>
-          <source src="assets/img/Ma Modulars.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </div>
-   <!--banner-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+           
+        }
+
+        .timeline-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        .main-heading {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .timeline {
+            position: relative;
+            width: 100%;
+            padding: 50px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: #007bff;
+            z-index: 1;
+            transform: translateX(-50%);
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-left, .timeline-right {
+            width: 45%;
+        }
+
+        .timeline-left {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .timeline-right {
+            text-align: left;
+            padding-left: 60px;
+        }
+
+        .timeline-left h3, .timeline-right h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-left h3 {
+            color: #007bff;
+        }
+
+        .timeline-right h3 {
+            color: #ff5722;
+        }
+
+        .timeline-right p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .timeline-right img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-icon {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #ff5722;
+            border-radius: 50%;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+            transition: top 0.5s ease-in-out;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="timeline-section">
+        <h1 class="main-heading">Journey to Success</h1>
+        <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-step" id="step1">
+                <div class="timeline-left">
+                    <h3>Step 1</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Concept & Design</h3>
+                    <p>Start by defining your vision and planning your design approach.</p>
+                    <img src="assets/img/resources4.png" alt="Concept & Design">
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="timeline-step" id="step2">
+                <div class="timeline-left">
+                    <h3>Step 2</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Development</h3>
+                    <p>Turn your concepts into reality with precise execution.</p>
+                    <img src="assets/img/resources4.png" alt="Development">
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="timeline-step" id="step3">
+                <div class="timeline-left">
+                    <h3>Step 3</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Testing</h3>
+                    <p>Ensure everything works flawlessly through rigorous testing.</p>
+                    <img src="assets/img/resources4.png" alt="Testing">
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="timeline-step" id="step4">
+                <div class="timeline-left">
+                    <h3>Step 4</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Launch</h3>
+                    <p>Roll out the project for the world to see and experience.</p>
+                    <img src="assets/img/resources4.png" alt="Launch">
+                </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="timeline-step" id="step5">
+                <div class="timeline-left">
+                    <h3>Step 5</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Maintenance</h3>
+                    <p>Keep everything running smoothly with ongoing support.</p>
+                    <img src="assets/img/resources4.png" alt="Maintenance">
+                </div>
+            </div>
+            <!-- Scrolling Icon -->
+            <div class="timeline-icon"></div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const steps = document.querySelectorAll(".timeline-step");
+            const icon = document.querySelector(".timeline-icon");
+
+            const handleScroll = () => {
+                const windowHeight = window.innerHeight;
+                let activeStepFound = false;
+
+                steps.forEach((step) => {
+                    const stepTop = step.getBoundingClientRect().top;
+                    const stepHeight = step.offsetHeight;
+
+                    if (!activeStepFound && stepTop < windowHeight / 2 && stepTop > -stepHeight / 2) {
+                        const offsetTop = step.offsetTop;
+                        icon.style.top = `${offsetTop + stepHeight / 2}px`;
+                        activeStepFound = true;
+                    }
+                });
+            };
+
+            window.addEventListener("scroll", handleScroll);
+        });
+    </script>
+</body>
+</html>

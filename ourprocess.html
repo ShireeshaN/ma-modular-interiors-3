@@ -30,7 +30,13 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
- 
+  <!-- =======================================================
+  * Template Name: Active
+  * Template URL: https://bootstrapmade.com/active-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body class="contact-page">
@@ -40,7 +46,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-      <img src="assets/img/logooos.png" alt="" class="logoclasss"> 
+      <img src="assets/img/modulogo.png" alt="" class="logoclasss"> 
         <!-- <h1 class="sitename">Active.</h1> -->
       </a>
 
@@ -90,185 +96,177 @@
     <!-- Page Title -->
     <div class="page-title light-background-5">
       <div class="container">
-        <h1>News & Media</h1>
+        <h1>Contact</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">News & Media</li>
+            <li class="current">Contact</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
+
+    <section class="timeline-section">
+        <h1 class="main-heading">Journey to Success</h1>
+        <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-step" id="step1">
+                <div class="timeline-left">
+                    <h2>1. Initial Consultation</h2>
+                </div>
+                <div class="timeline-right">
+                    <h3>Discuss goals and style preferences</h3>
+                    <p>Start by understanding the client's needs, preferences, and budget. This meeting lays the groundwork for a tailored design  that aligns with their vision.</p>
+                    <img src="assets/img/resources4.png" alt="Concept & Design">
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="timeline-step" id="step2">
+                <div class="timeline-left">
+                    <h2>2. Custom Design & Planning</h2>
+                </div>
+                <div class="timeline-right">
+                    <h3>Present Custom designs and digital renderings</h3>
+                    <p>Develop a detailed design plan with 3d renderings and Material samples to give  clients a preview of the final look.
+                        Adjustments are made based on the client feedback.</p>
+                    <img src="assets/img/resources4.png" alt="Development">
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="timeline-step" id="step3">
+                <div class="timeline-left">
+                    <h2>3. Production & Assembly</h2>
+                </div>
+                <div class="timeline-right">
+                    <h3>Manufacturing with quality control at each stage.</h3>>
+                    <p>Once Approved, the design moves to Production.your skilled team works with the advanced Equipment to ensure quality and precision in every piece.</p>
+                    <img src="assets/img/resources4.png" alt="Testing">
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="timeline-step" id="step4">
+                <div class="timeline-left">
+                    <h2>4. Delivery & Installation</h2>
+                </div>
+                <div class="timeline-right">
+                    <h3>Safe, Timely delivery of all components</h3>
+                    <p>Your team handles all logistics, including delivery and Professional installation. you ensure that each ecpie fits seamlessly into the client’s space.</p>
+                    <img src="assets/img/resources4.png" alt="Launch">
+                </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="timeline-step" id="step5">
+                <div class="timeline-left">
+                    <h2>5. Post-Installation Support</h2>
+                </div>
+                <div class="timeline-right">
+                    <h3>Maintainance tips and customer support</h3>
+                    <p>Provide Ongoing support after installation, including follow-up visits, maintainance, and guidance on care to ensure longevity and customer satiesfaction.</p>
+                    <img src="assets/img/resources4.png" alt="Maintenance">
+                </div>
+            </div>
+            <!-- Scrolling Icon -->
+            <div class="timeline-icon"></div>
+        </div>
+    </section>
+
+
     <style>
-      .card-container {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;  /* Allows wrapping if more than 3 cards are added */
-      margin-bottom: 30px;
-    }
-    
-    .card {
-      width: 30%; /* Ensures 3 cards fit in a row */
-      height: 300px;
-    
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    
-    .card a {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    .card-image {
-      height: 300px;
-      background-size: cover;
-      background-position: center;
-      transition: transform 0.3s ease;
-    }
-    
-    .card-content {
-      padding: 15px;
-      background-color: #000;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      z-index: 1;
-    }
-    
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    
-    .card p {
-      font-size: 16px;
-      margin-bottom: 15px;
-      color: white;
-    }
-    
-    .card-button {
-      background-color: #fecb38;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    
-    .card-button:hover {
-      background-color: #e4b032;
-    }
-    
-    .card:hover .card-image {
-      transform: scale(1.1); /* Slight zoom effect on hover */
-    }
-    
-    @media (max-width: 768px) {
-      .card {
-        width: 48%; /* Adjust width for smaller screens */
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .card {                       
-        width: 100%; /* Stack the cards on very small screens */
-      }
-    }
-    
+         .timeline-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
+
+        .main-heading {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .timeline {
+            position: relative;
+            width: 100%;
+            padding: 50px 0;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: #007bff;
+            z-index: 1;
+            transform: translateX(-50%);
+        }
+
+        .timeline-step {
+            position: relative;
+            margin-bottom: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-left, .timeline-right {
+            width: 45%;
+        }
+
+        .timeline-left {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .timeline-right {
+            text-align: left;
+            padding-left: 80px;
+        }
+
+        .timeline-left h3, .timeline-right h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-left h3 {
+            color: #007bff;
+        }
+
+        .timeline-right h3 {
+            color: #ff5722;
+        }
+
+        .timeline-right p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .timeline-right img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-icon {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #ff5722;
+            border-radius: 50%;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+            transition: top 0.5s ease-in-out;
+        }
     </style>
 
-    <!-- Contact Section -->
-    <section  class="contact section pt-5">
-      <div class="card-container container">
-
-        <div class="card">
-          <a href="page1.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 1 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-      
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-        <div class="card">
-          <a href="page2.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 2 Title</h3>
-               <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-              
-            </div>
-          </a>
-        </div>
-      
-        <div class="card">
-          <a href="page3.html">
-            <div class="card-image" style="background-image: url('assets/img/our-process.webp');"></div>
-            <div class="card-content">
-              <!-- <h3>Card 3 Title</h3>
-                <button class="card-button">Go</button> -->
-              <p>Click to explore more</p>
-             
-            </div>
-          </a>
-        </div>
-      </div>
-
-
-      
-
-     
-
-    </section><!-- /Contact Section -->
+   
 
   </main>
 
@@ -448,6 +446,31 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const steps = document.querySelectorAll(".timeline-step");
+        const icon = document.querySelector(".timeline-icon");
+
+        const handleScroll = () => {
+            const windowHeight = window.innerHeight;
+            let activeStepFound = false;
+
+            steps.forEach((step) => {
+                const stepTop = step.getBoundingClientRect().top;
+                const stepHeight = step.offsetHeight;
+
+                if (!activeStepFound && stepTop < windowHeight / 2 && stepTop > -stepHeight / 2) {
+                    const offsetTop = step.offsetTop;
+                    icon.style.top = `${offsetTop + stepHeight / 2}px`;
+                    activeStepFound = true;
+                }
+            });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+    });
+</script>
 
 </body>
 
