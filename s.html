@@ -1,118 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smooth Scrolling Images with Horizontal Masks</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+           
+        }
 
-    .scroll-section {
-      position: relative;
-      overflow: hidden;
-      background-color: #ffffff;
-      padding: 20px 0;
-    }
+        .timeline-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+            scroll-behavior: smooth;
+        }
 
-    .scroll-container {
-      display: flex;
-      gap: 20px;
-      animation: scroll-left 20s linear infinite;
-    }
+        .main-heading {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 50px;
+        }
 
-    .scroll-container .image-wrapper {
-      position: relative;
-      width: 350px;
-      height: 350px;
-      flex-shrink: 0;
-    }
+        .timeline {
+            position: relative;
+            width: 100%;
+            padding: 50px 0;
+        }
 
-    .scroll-container img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: #007bff;
+            z-index: 1;
+            transform: translateX(-50%);
+        }
 
-    .scroll-container .mask {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 30px;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-    }
+        .timeline-step {
+            position: relative;
+            margin-bottom: 100px;
+            display: flex;
+            align-items: center;
+        }
 
-    .scroll-container .mask span {
-      color: #fff;
-      font-size: 0.8rem;
-      text-align: center;
-    }
+        .timeline-left, .timeline-right {
+            width: 45%;
+        }
 
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
+        .timeline-left {
+            text-align: right;
+            padding-right: 20px;
+        }
 
-    /* Smooth transition for hovering effect */
-    .scroll-container .image-wrapper:hover img {
-      transform: scale(1.1);
-      transition: transform 0.3s ease-in-out;
-    }
-  </style>
+        .timeline-right {
+            text-align: left;
+            padding-left: 60px;
+        }
+
+        .timeline-left h3, .timeline-right h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-left h3 {
+            color: #007bff;
+        }
+
+        .timeline-right h3 {
+            color: #ff5722;
+        }
+
+        .timeline-right p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .timeline-right img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-icon {
+            position: fixed;
+            top: 20%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: #ff5722;
+            border-radius: 50%;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+            transition: top 0.5s ease-in-out;
+        }
+
+    </style>
 </head>
 <body>
+    <section class="timeline-section">
+        <h1 class="main-heading">Journey to Success</h1>
+        <div class="timeline">
+            <!-- Step 1 -->
+            <div class="timeline-step" id="step1">
+                <div class="timeline-left">
+                    <h3>Step 1</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Concept & Design</h3>
+                    <p>Start by defining your vision and planning your design approach.</p>
+                    <img src="assets/img/resources4.png" alt="Concept & Design">
+                </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="timeline-step" id="step2">
+                <div class="timeline-left">
+                    <h3>Step 2</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Development</h3>
+                    <p>Turn your concepts into reality with precise execution.</p>
+                    <img src="assets/img/resources4.png" alt="Development">
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="timeline-step" id="step3">
+                <div class="timeline-left">
+                    <h3>Step 3</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Testing</h3>
+                    <p>Ensure everything works flawlessly through rigorous testing.</p>
+                    <img src="assets/img/resources4.png" alt="Testing">
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="timeline-step" id="step4">
+                <div class="timeline-left">
+                    <h3>Step 4</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Launch</h3>
+                    <p>Roll out the project for the world to see and experience.</p>
+                    <img src="assets/img/resources4.png" alt="Launch">
+                </div>
+            </div>
+            <!-- Step 5 -->
+            <div class="timeline-step" id="step5">
+                <div class="timeline-left">
+                    <h3>Step 5</h3>
+                </div>
+                <div class="timeline-right">
+                    <h3>Maintenance</h3>
+                    <p>Keep everything running smoothly with ongoing support.</p>
+                    <img src="assets/img/resources4.png" alt="Maintenance">
+                </div>
+            </div>
+            <!-- Scrolling Icon -->
+            <div class="timeline-icon"></div>
+        </div>
+    </section>
 
-<div class="scroll-section">
-  <div class="scroll-container">
-    <!-- Image with mask -->
-    <div class="image-wrapper">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 1">
-      <div class="mask"><span>Text 1</span></div>
-    </div>
-    <div class="image-wrapper">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 2">
-      <div class="mask"><span>Text 2</span></div>
-    </div>
-    <div class="image-wrapper">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 3">
-      <div class="mask"><span>Text 3</span></div>
-    </div>
-    <div class="image-wrapper">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 4">
-      <div class="mask"><span>Text 4</span></div>
-    </div>
-    <div class="image-wrapper">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 5">
-      <div class="mask"><span>Text 5</span></div>
-    </div>
-    <div class="image-wrapper">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 6">
-      <div class="mask"><span>Text 6</span></div>
-    </div>
-    <div class="image-wrapper">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 7">
-      <div class="mask"><span>Text 7</span></div>
-    </div>
-    <div class="image-wrapper">
-      <img src="assets/banners/modubans1 (9).jpg" alt="Image 8">
-      <div class="mask"><span>Text 8</span></div>
-    </div>
-  </div>
-</div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const steps = document.querySelectorAll(".timeline-step");
+            const icon = document.querySelector(".timeline-icon");
 
+            const handleScroll = () => {
+                const windowHeight = window.innerHeight;
+                let activeStepFound = false;
+
+                steps.forEach((step) => {
+                    const stepTop = step.getBoundingClientRect().top;
+                    const stepHeight = step.offsetHeight;
+
+                    if (!activeStepFound && stepTop < windowHeight / 2 && stepTop > -stepHeight / 2) {
+                        const offsetTop = step.offsetTop;
+                        icon.style.top = `${offsetTop + stepHeight / 2}px`;
+                        activeStepFound = true;
+                    }
+                });
+            };
+
+            window.addEventListener("scroll", handleScroll);
+        });
+    </script>
 </body>
 </html>
