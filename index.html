@@ -32,7 +32,9 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
+ <!-- Add Bootstrap JS (Ensure correct order) -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
  
 </head>
 
@@ -43,7 +45,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-      <img src="assets/img/modulogo.png" alt="modular logo" class="logoclasss"> 
+      <img src="assets/img/logooos.png" alt="" class="logoclasss"> 
         <!-- <h1 class="sitename">Active.</h1> -->
       </a>
 
@@ -55,7 +57,23 @@
           <li><a href="production.html">Production</a></li>
           <li><a href="resources.html">Resources</a></li>
           <li><a href="blog.html">Blog</a></li>
-         
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -65,1845 +83,721 @@
   </header>
 
   <main class="main">
+  
 
-<!--BannerSection-->
-<div class="container-banners">
-    <!-- Left Side Text -->
-    <div class="text-banners">
-        <p class="crafting-banners">CRAFTING</p>
-        <p class="brilliance-banners">BRILLIANCE</p>
-        <p class="with-precision-banners">with <span class="precision-banners">PRECISION</span></p>
-        <p class="and-innovation-banners">AND INNOVATION</p>
-    </div>
 
-    <!-- Right Side Image -->
-    <div class="image-banners">
-        <img src="assets/img/mainbanners.jpg" alt="Interior Design Image">
+
+ <!--banner-->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <video class="d-block w-100" autoplay muted loop place in line>
+        <source src="assets/img/Ma Modulars (1).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
+  </div>
 </div>
+<!--banner-->
+
+<!-- Optional: Customize auto-scroll interval -->
+<script>
+  var myCarousel = document.querySelector('#carouselExample');
+  var carousel = new bootstrap.Carousel(myCarousel, {
+    interval: 3000,  // Adjust the time between slides (in milliseconds)
+    ride: 'carousel' // Enables auto-scrolling
+  });
+</script>
 
 <style>
+  /* Set a fixed height for the carousel */
+  .carousel-item video {
+    height: 100vh;  /* Set your desired height here */
+    object-fit: cover; /* Ensures the video covers the container without distortion */
+  }
+</style>
 
-  
-  .container-banners {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 50px;
-      gap: 30px;
-  }
-  
-  .text-banners {
-      width: 50%;
-  }
-  
-  .text-banners p {
-      margin: 0;
-      text-align: left;
-      color: #4a4a4a; /* Neutral gray for regular text */
-  }
-  
-  .crafting-banners {
-      font-size: 80px;
-      color: #4a4a4a; /* Dark gray */
-      font-weight: 300;
-      letter-spacing: 2px;
-      line-height: 1.6; /* Add line-height for proper spacing */
-      margin-bottom: 20px; /* Adjust spacing between lines */
-  }
-  
-  .brilliance-banners {
-      font-size: 80px;
-      color: #4a4a4a; /* Dark gray */
-      font-weight: bold;
-      letter-spacing: 1px;
-      line-height: 1.6;
-      margin-bottom: 15px;
-  }
-  
-  .with-precision-banners {
-      font-size: 80px;
-      color: #4a4a4a;
-      line-height: 1.6;
-      margin-bottom: 15px;
-  }
-  
-  .with-precision-banners .precision-banners {
-      color: #ff6a33; /* Orange for emphasis */
-      font-weight: bold;
-      letter-spacing: 2px; /* Increase spacing for emphasis */
-  }
-  
-  .and-innovation-banners {
-      font-size: 80px;
-      color: #4a4a4a;
-      font-weight: bold;
-      letter-spacing: 1.5px; /* Add subtle spacing */
-      line-height: 1.6;
-      margin-top: 20px; /* Adjust vertical alignment */
-  }
-  
-  .image-banners {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  
-  .image-banners img {
-      max-width: 100%;
-      height: 600px;
-      border-radius: 15px; /* Optional: Add slight rounding for elegance */
-  }
-  
-  /* Mobile View */
-  @media (max-width: 768px) {
-      .container-banners {
-          flex-direction: column; /* Stack image and text vertically */
-          align-items: center;
-          padding: 20px; /* Reduce padding for smaller screens */
-          gap: 20px; /* Adjust gap between text and image */
-      }
-  
-      .text-banners {
-          width: 100%; /* Full width for text */
-          text-align: center; /* Center-align text */
-      }
-  
-      .text-banners p {
-          font-size: 40px; /* Adjust font size for smaller screens */
-          line-height: 1.5;
-      }
-  
-      .crafting-banners {
-          font-size: 28px;
-          margin-bottom: 10px;
-      }
-  
-      .brilliance-banners {
-          font-size: 32px;
-          margin-bottom: 10px;
-      }
-  
-      .with-precision-banners {
-          font-size: 24px;
-          margin-bottom: 10px;
-      }
-  
-      .and-innovation-banners {
-          font-size: 24px;
-          margin-top: 10px;
-      }
-  
-      .image-banners {
-          width: 100%; /* Full width for image */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-  
-      .image-banners img {
-          max-width: 100%;
-          height: auto;
-      }
-  }
-  
-  </style>
-  
-<!--BannerSection-->
+ 
+    <section style="background-color: white; padding: 8px;">
 
-<!--about-->
-<section class="hero-section-aboutusto">
-    <!-- Top Heading Section -->
-    <div class="quote-container-aboutusto">
-      <p class="quote-aboutusto">
-        <span>“ </span><strong style="color: #ff6a33;">REVOLUTIONIZING</strong><br><strong>DESIGN AND</strong><br><strong style="color: #ff6a33;">MANUFACTURING</strong> ” 
-      </p>
-    </div>
-
-    <!-- Main Content Section -->
-    <div class="main-content-aboutusto">
-      <!-- Left Section -->
-      <div class="left-panel-aboutusto">
-        <h2>About<br>Ma <strong style="color: #ff6a33;">Modulars</strong></h2>
-        <div class="content-row-aboutusto">
-          <p class="description-aboutusto">
-            At Interior Objekts, we are more than just a manufacturing company;
-            we’re a catalyst for innovation. Our mission is to streamline design
-            and manufacturing, empowering businesses to achieve their full potential.
-          </p>
-
-          <!-- Pipe and Circle Connection -->
-          <div class="pipe-circle-container-aboutusto">
-            <div class="pipe-aboutusto"></div>
-            <div class="circle-info-aboutusto">
-              <p class="area-aboutusto">2.5-Acre</p>
-              <p class="factory-aboutusto">FACTORY</p>
-              <p class="details-aboutusto">60,000 sq. ft.<br>production space</p>
-            </div>
+    <section id="image-heading-text" class="section container" >
+      <div>
+        <div class="row align-items-center">
+        
+          <div class="col-lg-6 col-md-6">
+            <img src="assets/banners/modubans1 (7).jpg" alt="Image Description" class="img-fluid rounded">
+          </div>
+      
+          <div class="col-lg-6 col-md-6 p-5">
+            <h3 class="headspro">Innovating Interiors, Empowering Businesses.</h3>
+            <p class="text-dark">
+              Maximize Efficiency, Minimize Waste – Modular Solutions That Deliver for Your Business   From Concept to Completion – Your Trusted Partner in Modular Interior Solutions for Businesses.   </p>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Right Section -->
-      <div class="right-panel-aboutusto ">
-        <div class="feature-aboutusto">
-            <div class="icon-aboutusto">⚙️</div>
-            <p>Cutting-Edge Technology</p>
-        </div>
-        <div class="feature-aboutusto">
-            <div class="icon-aboutusto">👨‍🔧</div>
-            <p>Expert Craftsmanship</p>
-        </div>
-        <div class="feature-aboutusto">
-            <div class="icon-aboutusto">🏭</div>
-            <p>Advanced Machinery</p>
-        </div>
-        <div class="feature-aboutusto">
-            <div class="icon-aboutusto">🤖</div>
-            <p>Automation Expertise</p>
-        </div>
-    </div>
+   
+  </section>
 
+    <style>
+    
+#image-heading-text {
+  padding: 50px 0;
+}
+
+
+.headspro {
+  font-size: 28px; 
+
+  color: #333;
+  text-align: left; 
+  font-family:'Montserrat',sans-serif; 
+  margin-bottom: 15px;
+}
+
+#image-heading-text img {
+  
+  max-width: 100%; 
+  border-radius: 8px;
+ 
+
+#image-heading-text p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left; 
+}
+
+
+@media (max-width: 768px) {
+  #image-heading-text .row {
+    flex-direction: column;
+  }
+
+  #image-heading-text img {
+    margin-bottom: 20px; 
+  }
+
+  #image-heading-text .col-lg-6 {
+    text-align: center; 
+  }
+}
+
+@media (max-width: 480px) {
+  .headspro {
+    font-size: 28px; 
+  }
+  #image-heading-text p {
+    font-size: 16px;/* Smaller text for mobile screens */
+  }
+}
+}
+    </style>
+    
+
+<!-- <section style="background-color: #807c7c;">
+    <div class="container pt-5 pb-5">
+      <div class="main-header text-dark container">
+          <h2 class="text-white">`` REVOLUTIONIZING <br/> DESIGN AND MANUFACTURING ``</h2>
+      </div>
+      <div class="row content-section align-items-center container" style="background-color: #93C572; border-radius: 10px;">
+          <div class="about-section col-md-8">
+              <div class="about-text">
+                  <h2 class="text-dark">About Interior Objekts</h2>
+                  <p class="text-dark">At Interior Objekts, we're more than just a manufacturing company; we're a catalyst for innovation. Our mission is to streamline the design and manufacturing process, empowering businesses to achieve their full potential.</p>
+              </div>
+              <div class="factory-info">
+                  1-Acre<br>
+                  <strong>FACTORY</strong><br>
+                  <span>60,000 sq. ft.<br/> production space</span>
+              </div>
+          </div>
+          <div class="feature-list col-md-4">
+              <div class="feature-item">
+                  <div class="feature-icon">⚙️</div>
+                  <div class="feature-text">Cutting-Edge Technology</div>
+              </div>
+              <div class="feature-item">
+                  <div class="feature-icon">👨‍🔧</div>
+                  <div class="feature-text">Expert Craftsmanship</div>
+              </div>
+              <div class="feature-item">
+                  <div class="feature-icon">🏭</div>
+                  <div class="feature-text">Advanced Machinery</div>
+              </div>
+              <div class="feature-item">
+                  <div class="feature-icon">🤖</div>
+                  <div class="feature-text">Automation Expertise</div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  <style>
+     
+     
+  
+     
+      .main-header {
+          font-size: 2.5rem;
+          font-weight: bold;
+          text-align: center;
+          color: #333;
+          transform: rotateY(20deg);
+          animation: slideIn 1.5s ease-out;
+          font-family: 'Playfair Display', serif; 
+          letter-spacing: 1px;
+      }
+  
+      @keyframes slideIn {
+          0% { transform: translateY(-50px) rotateY(-20deg); opacity: 0; }
+          100% { transform: translateY(0) rotateY(0); opacity: 1; }
+      }
+  
+     
+      .about-section {
+          transition: transform 0.3s ease;
+      }
+  
+      .about-text h2 {
+          font-size: 2rem;
+          font-weight: 600;
+          color: #fff;
+          transform: translateZ(40px);
+          font-family: 'Playfair Display', serif; 
+      }
+  
+      .about-text p {
+          font-size: 1.1rem;
+          color: #ccc;
+          margin-top: 15px;
+          font-family: 'Lora', serif; 
+      }
+  
+      
+      .factory-info {
+          font-size: 1.2rem;
+          font-weight: 500;
+          color: #fff;
+          margin-top: 5px;
+          transition: transform 0.4s ease-in-out;
+
+          font-family: 'Lora', serif;
+      }
+  
+      
+      .feature-list {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+      }
+  
+      .feature-item {
+          background: #f0e403;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+          text-align: center;
+          transform: translateZ(0);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+  
+      .feature-item:hover {
+          transform: translateZ(20px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+  
+      .feature-icon {
+          font-size: 3rem;
+          margin-bottom: 10px;
+          transition: transform 0.3s ease;
+      }
+  
+      .feature-text {
+          font-size: 1.2rem;
+          font-weight: 600;
+          color: #fff;
+          font-family: 'Roboto', sans-serif;
+      }
+  
+   
+      .feature-item:hover .feature-icon {
+          transform: rotate(360deg);
+      }
+  
+   
+      @media (max-width: 768px) {
+          .main-header {
+              font-size: 2rem;
+          }
+  
+          .about-section {
+              margin-top: 20px;
+          }
+  
+          .feature-list {
+              gap: 20px;
+          }
+  
+          .feature-item {
+              padding: 15px;
+          }
+      }
+  </style> -->
+  
+
+ 
+
+<h1 class="text-center process-heading">Our Process</h1>
+<section class="interior-section container">
+  <div class="process-container">
+    <div class="text-content">
+      <h1 class="main-heading">Crafting Your Dream Space</h1>
+      <p class="description">
+        Step into a world where functionality meets elegance. Our seamless process ensures your interiors are designed with precision and executed to perfection, turning your vision into reality.
+      </p>
+      <button class="cta-button">Get Started</button>
     </div>
+    <div class="image-gallery">
+      <div class="image-box">
+        <div class="icon-circle">
+          <i class="fas fa-comments"></i>
+        </div>
+        <p>Initial Consultation</p>
+      </div>
+      <div class="image-box">
+        <div class="icon-circle">
+          <i class="fas fa-pencil-ruler"></i>
+        </div>
+        <p>Custom Design & Planning</p>
+      </div>
+      <div class="image-box">
+        <div class="icon-circle">
+          <i class="fas fa-tools"></i>
+        </div>
+        <p>Production & Assembly</p>
+      </div>
+      <div class="image-box">
+        <div class="icon-circle">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <p>Delivery & Installation</p>
+      </div>
+      <div class="image-box">
+        <div class="icon-circle">
+          <i class="fas fa-truck"></i>
+        </div>
+        <p>Post-Installation Support</p>
+      </div>
+      <div class="image-box">
+        <div class="icon-circle">
+          <i class="fas fa-couch"></i>
+        </div>
+        <p>Custom Furniture</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style>
 /* General Styling */
 
-.hero-section-aboutusto {
-    padding: 50px;
-    text-align: start;
-    background-color: #e6edf3; /* Light background color */
-    align-items: center;
-   
+
+
+/* Section Styling */
+.interior-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+  text-align: center;
 }
 
-.quote-container-aboutusto {
-    margin-bottom: 40px;
+.process-heading {
+  font-size: 25px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
 }
 
-.quote-aboutusto {
-    font-size: 36px;
-    line-height: 1.5;
-    color: #333333;
-    font-weight: 400;
+.process-heading::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #ffc107;
+  display: block;
+  margin: 15px auto 0;
+  border-radius: 5px;
 }
 
-.quote-aboutusto span {
-    font-size: 48px;
-    vertical-align: top;
-    color: #333333;
-   
+/* Process Container */
+.process-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 50px;
 }
 
-.quote-aboutusto strong {
-    font-weight: 700;
-    color: #1e1e1e; /* Dark color for emphasis */
+.text-content {
+  flex: 1 1 45%;
+  text-align: left;
 }
 
-.main-content-aboutusto {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 40px;
+.main-heading {
+  font-size: 25px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
 }
 
-.left-panel-aboutusto {
-    background-color: #f3f4f6; /* Lighter background color */
-    color: #333333;
-    padding: 30px;
-    border-radius: 12px;
-    width: 55%;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); /* Light shadow */
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
 }
 
-.left-panel-aboutusto h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #000000; /* Dark color for the heading */
+.cta-button {
+  padding: 15px 35px;
+  background-color: #ffc107;
+  color: #222;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
 }
 
-.content-row-aboutusto {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
+.cta-button:hover {
+  background-color: #e6ac00;
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.5);
+  transform: translateY(-2px);
 }
 
-.description-aboutusto {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555555;
-    text-align: justify;
+/* Image Gallery Styling */
+.image-gallery {
+  flex: 1 1 50%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
 }
 
-/* Pipe and Circle Connection */
-.pipe-circle-container-aboutusto {
-    display: flex;
-    align-items: center;
-    position: relative;
-   
-   
+.image-box {
+  background-color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-.pipe-aboutusto {
-    position: absolute;
-    top: 50%;
-    left: -50px;
-    width: 100px;
-    height: 2px;
-    background-color: #333333;
-    animation: drawPipe-aboutusto 1.5s ease-out forwards;
+.image-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
-.circle-info-aboutusto {
-    background-color: #ffffff;
-    color: #333333;
-    text-align: center;
-    padding: 30px;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background-color: #ffc107;
+  color: #222;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: 0 auto 15px;
+  box-shadow: 0 5px 10px rgba(255, 193, 7, 0.3);
+  transition: transform 0.3s ease;
 }
 
-.circle-info-aboutusto:hover {
-    transform: scale(1.1); /* 3D hover effect */
+.image-box:hover .icon-circle {
+  transform: scale(1.1);
 }
 
-.circle-info-aboutusto .area-aboutusto {
-    font-size: 16px;
-    font-weight: 500;
+.image-box p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  margin: 10px 0 0;
 }
 
-.circle-info-aboutusto .factory-aboutusto {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.circle-info-aboutusto .details-aboutusto {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-/* Right Panel */
-.right-panel-aboutusto {
-    display: flex;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .process-container {
     flex-direction: column;
-    gap: 10px;
-    width: 45%;
-    margin-top: -80px; /* Moves the section upwards */
-    padding-top: 20px;
-    padding-left: 50px;
-   
-    
-}
-
-.feature-aboutusto {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    color: #333333;
-    padding: 15px;
-    border-radius: 12px;
-    border-top-right-radius: 40px;
-    border-bottom-right-radius: 40px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transform: scale(1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.feature-aboutusto:hover {
-    transform: scale(1.05); /* 3D hover effect */
-}
-
-.feature-aboutusto .icon-aboutusto {
-    width: 80px;
-    height: 80px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 20px;
-    font-size: 32px; /* Increased icon size */
-}
-
-.feature-aboutusto p {
-    font-size: 18px;
-    font-weight: 500;
-}
-
-/* Pipe and Circle Connection - Animation */
-@keyframes drawPipe-aboutusto {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 100px;
-    }
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .hero-section-aboutusto {
-        padding: 20px;
-        text-align: center;
-    }
-
-    .quote-aboutusto {
-        font-size: 28px;
-    }
-
-    .quote-aboutusto span {
-        font-size: 36px;
-    }
-
-    .main-content-aboutusto {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-
-    .left-panel-aboutusto,
-    .right-panel-aboutusto {
-        width: 100%;
-        padding-top: 100px;
-        padding-left: 20px;
-    }
-
-    .content-row-aboutusto {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .pipe-circle-container-aboutusto {
-        display: block;
-        align-items: center;
-        position: relative;
-    }
-
-    .pipe-aboutusto {
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        width: 80px;
-        height: 2px;
-        background-color: #333333;
-    }
-
-    .circle-info-aboutusto {
-        width: 200px;
-        height: 200px;
-        font-size: 12px;
-    
-     
-    }
-
-    .feature-aboutusto {
-        
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-        padding: 20px 10px;
-    }
-
-    .feature-aboutusto .icon-aboutusto {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 10px;
-        font-size: 28px;
-        padding: 10px;
-    }
-
-    .feature-aboutusto p {
-        font-size: 14px;
-    }
-}
-</style>
-<!--about-->
-
-
-<!--did you know-->
-<div class="diiduu-container">
-  <!-- Left Part -->
-  <div class="diiduu-left-part">
-    <img src="assets/img/Did You Know.jpg" alt="best interior">
-    <h2>We Delivered</h2>
-    <p>100+ flats in just <strong style="color: #ff6a32;">45 days</strong></p>
-  </div>
-
-  <!-- Right Part -->
-  <div class="diiduu-right-part">
-    <!-- Row 1 -->
-    <div class="diiduu-row">
-      <img src="assets/img/diduknow/2.jpg" alt="interior">
-      <div class="diiduu-content">
-        <h3>3 X YOUR REVENUE</h3>
-        <p>Partner with us to significantly increase your revenue through our innovative solutions</p>
-      </div>
-    </div>
-
-    <!-- Row 2 -->
-    <div class="diiduu-row">
-      <div class="diiduu-content">
-        <h3>UNMATCHED SPEED</h3>
-        <p>Experience rapid turnaround time with our 4-day delivery promise on kitchen cabinets.</p>
-      </div>
-      <img src="assets/img/diduknow/3.jpg" alt="modulars">
-    </div>
-
-    <!-- Row 3 -->
-    <div class="diiduu-row">
-      <img src="assets/img/diduknow/4.jpg" alt="wardrobe">
-      <div class="diiduu-content">
-        <h3>SUPERIOR QUALITY</h3>
-        <p>Our commitment to excellence ensures that every product meets the highest standards.</p>
-      </div>
-    </div>
-
-    <!-- Row 4 -->
-    <div class="diiduu-row">
-      <div class="diiduu-content">
-        <h3>PROVEN EXPERIENCE</h3>
-        <p>With over 9 years in the industry and thousands of successful projects, our track record speaks for itself.</p>
-      </div>
-      <img src="assets/img/diduknow/5.jpg" alt="interior">
-    </div>
-
-    <!-- Row 5 -->
-    <div class="diiduu-row">
-      <img src="assets/img/diduknow/6.jpg" alt="modular">
-      <div class="diiduu-content">
-        <h3>SCALABILITY</h3>
-        <p>Our facility and streamlined processes allow us to efficiently handle projects of all sizes. Over 9 years and 300+ projects, Interior Ma Modulars has partnered with over 15 builders, adding 1 lakh+ sq. ft. of space.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<style>
- 
-
-  .diiduu-container {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+    gap: 30px;
   }
 
-  .diiduu-left-part, .diiduu-right-part {
-    flex: 1;
-    padding: 15px;
-  }
-
-  .diiduu-left-part img {
-    width: 80%;
-    border-radius: 8px;
-  }
-
-  .diiduu-left-part h2 {
-    margin-top: 15px;
-    font-size: 100px; /* Reduced for better mobile view */
-    font-weight: lighter;
+  .text-content {
     text-align: center;
-    letter-spacing: 10px;
+    flex: 1 1 100%;
   }
 
-  .diiduu-left-part p {
-    font-size: 45px ; /* Reduced for mobile */
-    margin-top: 10px;
-    text-align: center;
+  .main-heading {
+    font-size: 2rem;
   }
 
-  .diiduu-right-part .diiduu-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: -25px;
-  }
-
-  .diiduu-right-part .diiduu-content {
-    flex: 1;
-  }
-
-  .diiduu-right-part img {
-    max-width: 250px;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 9px;
-  }
-
-  .diiduu-right-part h3 {
-    margin: 0;
-    font-size: 30px; /* Adjusted for mobile */
-    color: gray;
-  }
-
-  .diiduu-right-part p {
-    margin: 5px 0 0;
-    font-size: 20px; /* Adjusted for mobile */
-    text-align: justify;
-  }
-
-  /* Mobile View Adjustments */
-  @media (max-width: 768px) {
-    .diiduu-container {
-      flex-direction: column;
-    }
-
-    .diiduu-left-part, .diiduu-right-part {
-      padding: 10px;
-    }
-
-    .diiduu-right-part .diiduu-row {
-      flex-direction: column; /* Stack content vertically */
-      align-items: center;
-      margin-bottom: 5px; /* Reduce spacing between rows */
-    }
-
-    .diiduu-right-part img {
-      margin-bottom: 10px;
-      max-width: 50%; /* Full width on mobile */
-      height: auto;
-    }
-
-    .diiduu-right-part h3 {
-      text-align: center;
-      font-size: 18px; /* Adjusted font size */
-    }
-
-    .diiduu-right-part p {
-      text-align: center;
-      font-size: 14px; /* Smaller font for mobile */
-    }
-
-    .diiduu-left-part h2 {
-      font-size: 36px; /* Smaller heading for mobile */
-    }
-
-    .diiduu-left-part p {
-      font-size: 18px; /* Adjusted for mobile readability */
-    }
-  }
-</style>
-<!--did you know-->
-
-
-
-
-
-<!--new-->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<div class="container3 " style="background-color: #eee6e6;">
-  <div class="main-content">
-      <div class="label">Laminate Finish</div>
-      <div class="swiper">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide"><img class="curvedd" src="assets/img/styleimgs/1.png" alt="Image 1"></div>
-              <div class="swiper-slide"><img class="curvedd" src="assets/img/production-images/102.png" alt="Image 2"></div>
-              <div class="swiper-slide"><img class="curvedd" src="assets/img/free5.jpg" alt="Image 3"></div>
-          </div>
-          <div class="swiper-pagination"></div>
-      </div>
-      <div class="color-palette">
-          <div class="color-circle" style="background-color: #d4d4d4;"></div>
-          <div class="color-circle" style="background-color: #f0b75e;"></div>
-          <div class="color-circle" style="background-color: #e4a23a;"></div>
-          <div class="color-circle" style="background-color: #005f73;"></div>
-          <div class="color-circle" style="background-color: #023047;"></div>
-      </div>
-  </div>
-  <div class="sidebar">
-      <div class="animated animate-fade">
-          <img src="assets/img/free1.jpg" alt="Premium Plus">
-          <p>Premium Plus</p>
-      </div>
-      <div class="animated animate-slide">
-          <img src="assets/img/free3.jpg" alt="Premium">
-          <p>Premium</p>
-      </div>
-      <div class="animated animate-zoom">
-          <img src="assets/img/free5.jpg" alt="Standard">
-          <p>Standard</p>
-      </div>
-  </div>
-</div>
-
-<style>
-
-  .container3 {
-      display: flex;
-      gap: 20px;
-      padding: 20px;
-      flex-wrap: wrap;
-  }
-  .main-content {
-      flex: 3;
-      border-radius: 20px;
-      overflow: hidden;
-      padding: 20px;
-  }
-  .swiper {
-      width: 100%;
-      height: auto;
-  }
-  .swiper-slide img.curvedd {
-      width: 80%;
-      height: 700px;
-      display: block;
-      object-fit: cover;
-      border-top-right-radius: 48%;
-      border-bottom-right-radius: 48%;
-  }
-  .label {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background-color: #ff7a29;
-      color: white;
-      padding: 5px 15px;
-      border-radius: 15px;
-      font-weight: bold;
-      z-index: 2;
-  }
-  .sidebar {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-  }
-  .sidebar img {
-      width: 70%;
-      border-radius: 10px;
-      object-fit: cover;
-  }
-  .sidebar p {
-      margin: 5px 0;
-      text-align: start;
-  }
-  .color-palette {
-      display: flex;
-      gap: 10px;
-      padding-top: 20px;
-  }
-  .color-circle {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-  }
-  @media (max-width: 768px) {
-      .container3 {
-          flex-direction: column;
-          gap: 20px;
-          text-align: center;
-      }
-      .main-content {
-          width: 100%;
-          padding: 10px;
-      }
-      .swiper-slide img.curvedd {
-          width: 100%;
-          height: auto;
-          border-top-right-radius: 43%;
-          border-bottom-right-radius: 43%;
-      }
-      .sidebar {
-          width: 100%;
-          flex-direction: row;
-          justify-content: space-between;
-          flex-wrap: wrap;
-          gap: 10px;
-      }
-      .sidebar p {
-          margin: 5px 0;
-          text-align: center;
-      }
-      .sidebar img {
-          width: 70%;
-      }
-      .color-palette {
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 15px;
-      }
-      .color-circle {
-          width: 25px;
-          height: 25px;
-      }
-      .label {
-          font-size: 14px;
-          top: 10px;
-          right: 10px;
-      }
-  }
-</style>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper', {
-            loop: true,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-        });
-    </script>
-<!--new-->
-
-
-
-
-<!--attchimg-->
-
-<div class="container-attached container pt-5 pb-5">
-  <div class="main-content-attached">
-    <div class="carousel-track-attached">
-      <div class="carousel-item-attached">
-        <img src="assets/img/productionimags/11.jpg" alt="Image 1">
-      </div>
-      <div class="carousel-item-attached">
-        <img src="assets/img/productionimags/12.jpg" alt="Image 2">
-      </div>
-      <div class="carousel-item-attached">
-        <img src="assets/img/productionimags/10.jpg" alt="Image 3">
-      </div>
-    </div>
-  </div>
-
-  <!-- Carousel Controls -->
-  <div class="controls-attached">
-    <button class="prev-attached">❮</button>
-    <button class="next-attached">❯</button>
-  </div>
-</div>
-
-<style>
-  /* Capsule Container */
-  .main-content-attached {
-    overflow: hidden;
-    width: 90%;
-    height: 500px;
-    border-radius: 250px; /* Capsule effect */
-    position: relative;
-    margin: 0 auto;
-  }
-
-  /* Carousel Track */
-  .carousel-track-attached {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    height: 100%;
-  }
-
-  /* Carousel Item */
-  .carousel-item-attached {
-    flex: 0 0 100%; /* Each image takes 100% of the container */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
-
-  .carousel-item-attached img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 250px; /* Capsule effect for images */
-  }
-
-  /* Controls */
-  .controls-attached {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
-
-  .controls-attached button {
-    border: none;
-    background-color: #ff7f50;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-  }
-
-  .controls-attached button:hover {
-    background-color: #ff4500;
-  }
-
-  /* Mobile View Adjustments */
-  @media (max-width: 768px) {
-    .main-content-attached {
-      height: 250px; /* Adjust height for smaller screens */
-      border-radius: 125px; /* Smaller radius for capsule effect */
-    }
-
-    .carousel-item-attached img {
-      object-fit: cover; /* Ensure the image fits properly */
-    }
-
-    .controls-attached {
-      gap: 10px;
-    }
-
-    .controls-attached button {
-      padding: 8px;
-      font-size: 1rem;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .main-content-attached {
-      height: 200px; /* Further reduce height for very small devices */
-      border-radius: 100px;
-    }
-
-    .controls-attached {
-      flex-direction: column; /* Stack buttons vertically on very small screens */
-      gap: 8px;
-    }
-
-    .controls-attached button {
-      width: 40px;
-      height: 40px;
-      font-size: 0.9rem;
-    }
-  }
-</style>
-
-<script>
-  const track = document.querySelector('.carousel-track-attached');
-  const items = document.querySelectorAll('.carousel-item-attached');
-  const prevButton = document.querySelector('.prev-attached');
-  const nextButton = document.querySelector('.next-attached');
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    const slideWidth = items[0].clientWidth;
-    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-  }
-
-  nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % items.length; // Loop to the first slide
-    updateCarousel();
-  });
-
-  prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + items.length) % items.length; // Loop to the last slide
-    updateCarousel();
-  });
-
-  // Auto-scroll every 3 seconds
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % items.length;
-    updateCarousel();
-  }, 3000);
-</script>
-
-
-<!--attachimg-->
-
-
-<!-- Right Effect with Text on Left -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
-<div class="container-madu">
-  <!-- Left Text Section -->
-  <div class="text-content-madu">
-    <h2>Laminate Finish</h2>
-    <p>
-      Discover the elegance and durability of laminate finishes, designed to enhance your interiors with a modern touch. 
-      Easy to maintain and versatile, they are perfect for every space.
-    </p>
-  </div>
-
-  <!-- Right Image Slider Section -->
-  <div class="main-content-madu">
-    <div class="label-madu">Laminate Finish</div>
-    <div class="swiper-madu">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img class="curvedd-madu" src="assets/img/production-images/102.png" alt="Image 1">
-        </div>
-        <div class="swiper-slide">
-          <img class="curvedd-madu" src="assets/img/production-images/1.png" alt="Image 2">
-        </div>
-        <div class="swiper-slide">
-          <img class="curvedd-madu" src="assets/img/production-images/17.png" alt="Image 3">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<style>
-  /* General Container Styles */
-  .container-madu {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #eee6e6;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Left Text Section */
-  .text-content-madu {
-    flex: 1;
-    max-width: 40%;
-    padding: 20px;
-    text-align: left;
-    font-family: Arial, sans-serif;
-  }
-
-  .text-content-madu h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-
-  .text-content-madu p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-  }
-
-  /* Right Main Content */
-  .main-content-madu {
-    flex: 1;
-    max-width: 50%;
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center; /* Center content */
-    align-items: center; /* Vertical alignment */
-  }
-
-  /* Swiper Styles */
-  .swiper-madu {
-    width: 100%;
-    height: auto;
-    display: flex;
-  }
-
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-  }
-
-  .swiper-slide img.curvedd-madu {
-    width: 100%; /* Take 90% width of the container */
-    max-height: 950px;
-    object-fit: cover;
-    border-top-right-radius: 48%;
-    border-bottom-right-radius: 48%;
-    transform: scaleX(-1); /* Flip image horizontally */
-    padding: 20px; 
-  }
-
-  /* Label Styling */
-  .label-madu {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ff7a29;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 14px;
-    z-index: 2;
-  }
-
-  /* Mobile Styles */
-  @media (max-width: 768px) {
-    .container-madu {
-      flex-direction: column;
-      padding: 5px;
-    }
-
-    .text-content-madu {
-      max-width: 100%;
-      padding: 10px;
-      text-align: center;
-    }
-
-    .main-content-madu {
-      max-width: 100%;
-      padding: 0;
-    }
-
-    .swiper-slide img.curvedd-madu {
-      width: 95%; /* Take up less width on mobile */
-      max-height: 400px;
-      border-top-right-radius: 40%;
-      border-bottom-right-radius: 40%;
-    }
-
-    .label-madu {
-      top: 5px;
-      right: 5px;
-      padding: 3px 10px;
-      font-size: 12px;
-    }
-  }
-</style>
-
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-  var swiper = new Swiper('.swiper-madu', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination-madu',
-      clickable: true,
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-  });
-</script>
-
-
-
-
-
-
-
-<!--new new-->
-<div class="container-tablets">
-  <!-- Main Content Section -->
-  <div class="main-content-tablets">
-    <div class="carousel-tablets">
-      <div class="carousel-track-tablets">
-        <!-- First Set of Images -->
-        <div class="carousel-item-tablets">
-          <img src="assets/img/production-images/105.png" alt="Image 1" class="left-image-tablets">
-          <!-- <div class="badge-tablets badge-left-tablets">Label 1</div> -->
-        </div>
-        <div class="carousel-item-tablets">
-          <img src="assets/img/production-images/114.png" alt="Image 2" class="right-image-tablets">
-          <!-- <div class="badge-tablets badge-right-tablets">Label 2</div> -->
-        </div>
-
-        <!-- First Set of Images -->
-        <div class="carousel-item-tablets">
-          <img src="assets/img/production-images/99.png" alt="Image 1" class="left-image-tablets">
-          <!-- <div class="badge-tablets badge-left-tablets">Label 1</div> -->
-        </div>
-        <div class="carousel-item-tablets">
-          <img src="assets/img/production-images/88.png" alt="Image 2" class="right-image-tablets">
-          <!-- <div class="badge-tablets badge-right-tablets">Label 2</div> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Navigation Dots -->
-    <div class="dots-tablets">
-      <span class="active" data-index="0"></span>
-      <span data-index="1"></span>
-    </div>
-  </div>
-  
-</div>
- <script>
-    // JavaScript for Carousel Functionality
-    const carouselTrack = document.querySelector('.carousel-track');
-    const dots = document.querySelectorAll('.dots span');
-    let currentIndex = 0;
-
-    // Function to update the carousel
-    function updateCarousel(index) {
-      const slideWidth = document.querySelector('.carousel-item').clientWidth;
-      carouselTrack.style.transform = `translateX(-${index * slideWidth * 2}px)`;
-
-      // Update active dot
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    }
-
-    // Add click event for dots
-    dots.forEach(dot => {
-      dot.addEventListener('click', () => {
-        currentIndex = parseInt(dot.dataset.index);
-        updateCarousel(currentIndex);
-      });
-    });
-
-    // Auto-scroll functionality
-    setInterval(() => {
-      currentIndex = (currentIndex + 1) % dots.length;
-      updateCarousel(currentIndex);
-    }, 3000); // Change every 3 seconds
-  </script>
-<style>
-
-
-  .container-tablets {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  /* Logo styling */
-  .logo-container-tablets {
-    text-align: center;
-    margin-bottom: 20px; /* Adjust the spacing below the logo */
-  }
-
-  .logo-container-tablets img {
-    max-width: 200px;
-    height: auto;
-  }
-
-  .main-content-tablets {
-   
-    border-radius: 50px;
-    padding: 30px;
-
-    overflow: hidden;
-  }
-
-  .carousel-tablets {
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .carousel-track-tablets {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .carousel-item-tablets {
-    flex: 0 0 50%; /* Show two items at a time */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 0; /* Remove all margins */
-    padding: 0 5px;
-  }
-
-  .carousel-item-tablets img {
-    width: 100%; /* Adjust to fill the carousel item */
-    height: auto;
-    object-fit: cover;
-  }
-
-  .dots-tablets {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 10px;
-  }
-
-  .dots-tablets span {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #ddd;
-    cursor: pointer;
-  }
-
-  .dots-tablets span.active {
-    background-color: #ff7f50;
-  }
-
-  .badge-tablets {
-    position: absolute;
-    bottom: 10px;
-    background-color: #ff7f50;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-  }
-
-  .badge-left-tablets {
-    left: 10%;
-  }
-
-  .badge-right-tablets {
-    right: 10%;
-  }
-
-  /* Adjust border-radius for left and right images */
-  .left-image-tablets {
-    border-top-left-radius: 150px;
-    border-bottom-left-radius: 150px;
-  }
-
-  .right-image-tablets {
-    border-top-right-radius: 150px;
-    border-bottom-right-radius: 150px;
-  }
-
-  /* Remove gap between images */
-  .carousel-track-tablets {
-    gap: 0; /* Remove default gap between flex items */
-  }
-
-
-  @media (max-width: 768px) {
- 
-  .main-content-tablets {
-   border-radius: 50px;
-   padding: 5px;
-   overflow: hidden;
- }
-}
-  
-</style>
-<!--new new-->
-
-
-
-
-<!--not attach-->
-<div class="container-attachedimg">
-  <div class="main-content-attachedimg">
-    <!-- First Carousel -->
-    <div class="carousel-attachedimg active" id="carousel-1">
-      <div class="carousel-track-attachedimg">
-        <div class="carousel-item-attachedimg">
-          <img src="assets/img/styleimgs/5.png" alt="Image 1" class="left-image-attachedimg">
-          <!-- <div class="badge-attachedimg badge-left-attachedimg">Label 1</div> -->
-        </div>
-        <div class="carousel-item-attachedimg">
-          <img src="assets/img/styleimgs/2.png" alt="Image 2" class="right-image-attachedimg">
-          <!-- <div class="badge-attachedimg badge-right-attachedimg">Label 2</div> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Second Carousel -->
-    <div class="carousel-attachedimg" id="carousel-2">
-      <div class="carousel-track-attachedimg">
-        <div class="carousel-item-attachedimg">
-          <img src="assets/img/styleimgs/6.png" alt="Image 3" class="left-image-attachedimg">
-          <!-- <div class="badge-attachedimg badge-left-attachedimg">Label 3</div> -->
-        </div>
-        <div class="carousel-item-attachedimg">
-          <img src="assets/img/styleimgs/3.png" alt="Image 4" class="right-image-attachedimg">
-          <!-- <div class="badge-attachedimg badge-right-attachedimg">Label 4</div> -->
-        </div>
-      </div>
-    </div>
-
-    <!-- Third Carousel -->
-    <div class="carousel-attachedimg" id="carousel-3">
-      <div class="carousel-track-attachedimg">
-        <div class="carousel-item-attachedimg">
-          <img src="assets/img/styleimgs/4.png" alt="Image 5" class="left-image-attachedimg">
-          <!-- <div class="badge-attachedimg badge-left-attachedimg">Label 5</div> -->
-        </div>
-        <div class="carousel-item-attachedimg">
-          <img src="assets/img/styleimgs/1.png" alt="Image 6" class="right-image-attachedimg">
-          <!-- <div class="badge-attachedimg badge-right-attachedimg">Label 6</div> -->
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Controls to Switch Between Carousels -->
-  <div class="controls-attachedimg">
-    <button onclick="switchCarousel(1)">1</button>
-    <button onclick="switchCarousel(2)">2</button>
-    <button onclick="switchCarousel(3)">3</button>
-  </div>
-</div>
-<script>
-  function switchCarousel(index) {
-    // Hide all carousels
-    const carousels = document.querySelectorAll('.carousel-attachedimg');
-    carousels.forEach(carousel => carousel.classList.remove('active'));
-
-    // Show the selected carousel
-    const activeCarousel = document.getElementById(`carousel-${index}`);
-    if (activeCarousel) {
-      activeCarousel.classList.add('active');
-    }
-  }
-</script>
-<style>
-
-@media (max-width: 768px) {
-  .container-attachedimg {
-    width: 100%;
-    margin: 0 auto;
-   
-  }
-
-  
-  .carousel-item-attachedimg img {
-    width: 120%; /* Increase the image size */
-    height: auto;
-  }
-
-  .carousel-track-attachedimg {
-    flex-wrap: nowrap; /* Prevent wrapping */
-    gap: 10px; /* Add space between items */
-  }
-  
-  .left-image-attachedimg,
-  .right-image-attachedimg {
-    border-radius: 10px; /* Adjust border-radius for better appearance */
-  }
-}
-
-  .container-attachedimg {
-    width: 100%;
-    margin: 0 auto;
-   
-  }
-
-  .main-content-attachedimg {
-    border-radius: 20px;
-    padding: 30px;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .carousel-attachedimg {
-    display: none; /* Only one carousel visible at a time */
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .carousel-attachedimg.active {
-    display: flex; /* Show the active carousel */
-  }
-
-  .carousel-track-attachedimg {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    gap: 0;
-  }
-
-  .carousel-item-attachedimg {
-    flex: 0 0 50%; /* Show two items at a time */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .carousel-item-attachedimg img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .badge-attachedimg {
-    position: absolute;
-    bottom: 10px;
-    background-color: #ff7f50;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-  }
-
-  .badge-left-attachedimg {
-    left: 10%;
-  }
-
-  .badge-right-attachedimg {
-    right: 10%;
-  }
-
-  .left-image-attachedimg {
-    border-top-left-radius: 150px;
-    border-bottom-left-radius: 150px;
-  }
-
-  .right-image-attachedimg {
-    border-top-right-radius: 150px;
-    border-bottom-right-radius: 150px;
-  }
-
-  .controls-attachedimg {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    gap: 15px;
-  }
-
-  .controls-attachedimg button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #ff7f50;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+  .description {
     font-size: 1rem;
   }
 
-  .controls-attachedimg button:hover {
-    background-color: #ff4500;
+  .image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
+}
 </style>
-<!--not attach-->
 
 
-<!--materials-->
-<div class="materials-container">
-  <!-- Section 1 -->
-  <div class="materials-section">
-    <div class="line"></div>
-    <h2>PLYWOOD</h2>
-    <div class="materials-section-content">
-      <p>
-        BWR (Boiling Water Resistant) and BWP (Boiling Water Proof). Both grades offer superior durability, strength, and moisture resistance.
+
+<section class="modular-kitchen-section">
+  <div class="container">
+    <!-- Text Content on Top -->
+    <div class="text-content">
+      <h1 class="text-center process-heading">Production</h1>
+      <p class="description">
+        Discover our expertly crafted modular kitchens, wardrobe cabinets, crockery units, and TV units that offer a blend of style and functionality.
       </p>
-      <img src="assets/img/Untitled.png" alt="Plywood">
+      <button class="cta-button">Explore Our Designs</button>
     </div>
   </div>
 
-  <!-- Section 2 -->
-  <div class="materials-section">
-    <div class="line"></div>
-    <h2>HDHMR</h2>
-    <div class="materials-section-content materials-section-content-left">
-      <img src="assets/img/Untitled (1).png" alt="HDHMR" class="even-image">
-      <p class="text-even">
-        HDHMR (High-Density High Moisture Resistance) board is a moisture-resistant wood product known for its superior strength and durability.
-      </p>
+  <!-- Category Cards -->
+  <div class="kitchen-cards">
+    <!-- Modular Kitchens Card -->
+    <div class="card">
+      <div class="card-content">
+        <i class="fas fa-utensils"></i>
+        <h3>Modular Kitchens</h3>
+        <p>Tailored designs for modern kitchens.</p>
+      </div>
+    </div>
+    
+    <!-- Wardrobe Cabinets Card -->
+    <div class="card">
+      <div class="card-content">
+        <i class="fas fa-wardrobe"></i>
+        <h3>Wardrobe Cabinets</h3>
+        <p>Maximize your space with custom wardrobe solutions.</p>
+      </div>
+    </div>
+    
+    <!-- Crockery Units Card -->
+    <div class="card">
+      <div class="card-content">
+        <i class="fas fa-cabinet"></i>
+        <h3>Crockery Units</h3>
+        <p>Elegant and functional crockery units for every home.</p>
+      </div>
+    </div>
+
+    <!-- TV Units Card -->
+    <div class="card">
+      <div class="card-content">
+        <i class="fas fa-tv"></i>
+        <h3>TV Units</h3>
+        <p>Stylish TV units to enhance your living room.</p>
+      </div>
     </div>
   </div>
 
-  <!-- Section 3 -->
-  <div class="materials-section">
-    <div class="line"></div>
-    <h2>EXT - MDF</h2>
-    <div class="materials-section-content">
-      <p>
-        Exterior MDF is specifically designed for outdoor or high-moisture environments. It is treated with water-resistant resins and additives to prevent swelling, warping, and degradation when exposed to moisture.
-      </p>
-      <img src="assets/img/Untitled (2).png" alt="EXT - MDF">
+  <!-- Carousel Section -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="assets/img/processimgs/3.jpg" alt="Modern Kitchen Design">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/processimgs/3.jpg" alt="Elegant Kitchen Setup">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/processimgs/3.jpg" alt="Stylish Modular Kitchen">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/processimgs/3.jpg" alt="Luxury Kitchen Interior">
+      </div>
     </div>
+    <button class="carousel-prev">&#10094;</button>
+    <button class="carousel-next">&#10095;</button>
   </div>
+</section>
 
-  <!-- Section 4 -->
-  <div class="materials-section">
-    <div class="line"></div>
-    <h2>MDF</h2>
-    <div class="materials-section-content materials-section-content-left">
-      <img src="assets/img/Untitled (3).png" alt="MDF" class="even-image">
-      <p class="text-even">
-        MDF (Medium Density Fiberboard) is commonly used in furniture, cabinetry, and interior applications due to its smooth surface and ease of machining.
-      </p>
-    </div>
-  </div>
-</div>
 <style>
+/* General Styling */
 
 
-  .materials-container {
-    width: 90%;
-    margin: 20px auto;
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
-  }
+/* Modular Section Styling */
+.modular-kitchen-section {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
-  .materials-section {
-    flex: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    position: relative;
-    text-align: center;
-    margin-bottom: 20px; /* Spacing between sections */
-  }
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
 
-  .materials-section .line {
-    width: 40px;
-    height: 7px;
-    background-color: #FF7D3E;
-    margin-right: 10px;
-    position: absolute;
-    top: 30px; /* Adjusted to provide consistent spacing for all sections */
-    left: 20px; /* Positioned on the left */
-  }
+.text-content {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-  .materials-section h2 {
-    font-size: 20px;
-    font-weight: bold;
-    color: #FF7D3E;
-    margin-left: 3.4rem !important; 
-    margin-bottom: 10px;
-    text-align: left;
-  }
+.heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-  .materials-section-content {
-    display: flex;
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  padding: 15px 40px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(255, 126, 95, 0.4);
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(255, 126, 95, 0.6);
+}
+
+/* Category Cards */
+.kitchen-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: linear-gradient(to bottom right, #ffffff, #e6e6e6);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+  color: #333;
+}
+
+.card-content i {
+  font-size: 3rem;
+  color: #ff7e5f;
+  margin-bottom: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Carousel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: 80vh;
+ 
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    align-items: center;
-    margin-top: 20px; /* Adjusted to space out the content */
   }
 
-  .materials-section-content-left {
-    flex-direction: reverse; /* Images on the right side for even sections */
-  }
-
-  .materials-section p {
-    font-size: 14px;
-    margin-bottom: 15px;
-    text-align: justify;
-  }
-
-  .materials-section img {
-    width: 100%;
-    max-width: 300px; /* Adjusted to make the image consistent across all sections */
-    height: auto;
-    display: block;
-    margin: 0 ;
-    border-radius: 4px;
-  }
-
-  .even-image {
-    padding-bottom: 5px;
-  }
-
-  .text-even {
-    text-align: justify;
-    padding-top: 5px;
-    margin-bottom: 0 !important;
-  }
-
-  /* Mobile responsiveness */
-  @media screen and (max-width: 768px) {
-    .materials-container {
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .materials-section {
-      flex: none;
-      width: 100%;
-    }
-
-    .materials-section h2 {
-      font-size: 18px;
-      margin-left: 1.4rem !important; 
-    }
-
-    .materials-section-content {
-      flex-direction: column;
-    }
-
-    .materials-section-content-left {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .materials-section img {
-      max-width: 100%; /* Ensure images are responsive */
-      margin-bottom: 15px;
-    }
-  }
-</style>
-
-<!--materials-->
-
-
-
-
-<!--secmate-->
-
-<!--secmate-->
-<!--secmate-->
-<section class="section-container">
-  <div class="content-wrapper">
-    <div class="text-section">
-      <p class="line1  text-start">RESULTS-DRIVEN</p>
-      <p class="line2 text-start">SOLUTIONS</p>
-      <p class="line3 text-start">FOR INTERIOR</p>
-      <p class="line4 text-start">DESIGNERS</p>
-    </div>
-    <div class="image-section">
-      <img src="assets/img/RESULTS.png" alt="Image description" />
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Basic section styles */
-  .section-container {
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .content-wrapper {
-    display: flex;
-    justify-content: space-between; /* Space between text and image */
-    align-items: center;
-    width: 100%; /* Ensure full-width layout */
-    max-width: 1200px; /* Restrict maximum width */
-    gap: 20px; /* Add spacing between elements */
-  }
-
-  .text-section {
-    text-align: center; /* Center text content */
-    flex: 1; /* Allow flexible space for text */
-  }
-
-  .line1 {
-    font-size: 50px;
-    margin: 8px 0;
-    color:#ff6a33 ;
-  }
-  
-  .line2 {
-    font-size: 50px;
-    margin: 8px 0;
-  }
-  
-  .line3 {
-    font-size: 50px;
-    margin: 8px 0;
-  }
-  
-  .line4 {
-    font-size: 50px;
-    margin: 8px 0;
-    color: #ff6a33;
-  }
-
-  .image-section {
-    flex: 1; /* Allow flexible space for image */
+  .text-content {
     text-align: center;
-  }
-
-  .image-section img {
-    max-width: 80%;
-    height: auto;
-    border-radius: 8px;
-  }
-
-  /* Mobile view adjustments */
-  @media (max-width: 768px) {
-    .content-wrapper {
-      flex-direction: column; /* Stack text and image vertically */
-      align-items: center;
-      text-align: center;
-    }
-
-    .text-section {
-      margin-bottom: 20px; /* Add space below text */
-      text-align: start;
-    }
-
-    .line {
-      font-size: 30px; /* Reduce font size for smaller screens */
-      
-    }
-
-    .image-section img {
-      max-width: 80%; /* Adjust image size for mobile */
-    }
-  }
-</style>
-<!--secmate-->
-
-<!--secmate1-->
-<section class="section-container">
-  <div class="content-wrapper">
-    <!-- Left Image -->
-    <div class="image-section">
-      <img src="assets/img/FLAT-Officio-4-removebg-preview (1).png" alt="Image Description">
-    </div>
-    <!-- Right Text -->
-    <div class="text-section">
-      <h2 class="heading">Eazy Cabinates</h2>
-      <p class="paragraph">Eazy Cabinets offers custom-built cabinetry designed to enhance both style and functionality. Our expert team creates elegant, tailored solutions to fit your unique needs. With precision craftsmanship, we bring your vision to life, transforming your space into a beautiful, functional home.</p>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Basic section styles */
-  .section-container {
-    padding: 30px;
-    background-color: #f9f9f9; /* Light background for better contrast */
-  }
-
-  .content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
-    gap: 30px; /* Space between elements */
-    max-width: 1200px;
-    margin: 0 auto; /* Center section */
-  }
-
-  .image-section img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    flex: 1;
-  }
-
-  .text-section {
-    flex: 1;
-    text-align: left;
   }
 
   .heading {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 2rem;
   }
 
-  .paragraph {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
+  .description {
+    font-size: 1rem;
   }
 
-  /* Mobile view adjustments */
-  @media (max-width: 768px) {
-    .content-wrapper {
-      flex-direction: column; /* Stack elements vertically */
-      text-align: center; /* Center text for better alignment */
-    }
-
-    .image-section img {
-      max-width: 80%; /* Smaller image size for mobile */
-      margin-bottom: 20px;
-    }
-
-    .text-section {
-      text-align: center; /* Center text on mobile */
-    }
-
-    .heading {
-      font-size: 24px; /* Adjust heading size */
-    }
-
-    .paragraph {
-      font-size: 14px; /* Smaller text size for mobile */
-    }
+  .kitchen-cards {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+}
 </style>
-<!--secmate1-->
 
+<<<<<<< HEAD
 <!--spacesaving-->
 <link href="lib/animate/animate.min.css" rel="stylesheet" />
 <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
@@ -1915,409 +809,803 @@
     <div class="logo">
       <h1><span class="interior">Ma</span> <span class="objekts">Modulars</span></h1>
       <p class="tagline">Space Saving Furniture</p>
-    </div>
-    <div class="cta">
-      <h2>Add <span class="highlight">Space</span> to <br>Your Life</h2>
-      <div class="arrows">
-        <span>&#9658;</span>
-        <span>&#9658;</span>
-        <span>&#9658;</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- Content Section -->
-  <div class="content">
-    <!-- Sofabed Section (Left side) -->
-     <div class="owl-carousel pricing-carousel">
-      <div class="product left">
-     
-        <img src="assets/img/new/2.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/3.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/6.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      
-      
-    
-
-      <div class="product left">
-     
-        <img src="assets/img/new/7.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/8.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/9.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/10.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/13.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/14.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-    
-
-     <div class="product left">
-     
-      <img src="assets/img/new/22.png" alt="Sofabed" class="product-image">
-    
-    
-      <h3>Sofabed</h3>
-      <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-    </div>
-     
-    </div>
-    
-   
- 
-
-     <div class="owl-carousel pricing-carousel">
-      <div class="product left">
-     
-        <img src="assets/img/new/1.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/4.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/5.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/11.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/12.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/15.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
+=======
 
 
-      <div class="product left">
-     
-        <img src="assets/img/new/16.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/17.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/18.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/19.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/20.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-      <div class="product left">
-     
-        <img src="assets/img/new/21.png" alt="Sofabed" class="product-image">
-      
-      
-        <h3>Sofabed</h3>
-        <p>Our sofa bed converts into a recliner, double bed, king-size bed, and has built-in storage.</p>
-      </div>
-     </div>
-    
-   
-  </div>
-
-  <!-- Dots Section -->
-  <!-- <div class="dots">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div> -->
+<!--Modular Kitchens-->
+<div class="p-5 pb-2">
+<h2> Modular Kitchens</h2>
+<p>Modular Kitchens</p>
 </div>
-
+<section class="scroll-section">
+  <!-- <h2>Your Section Heading</h2> -->
+  <div class="image-slider">
+    <div class="image-container">
+      <img src="assets/banners/modu1 (34).jpg" alt="Image 1">
+      <img src="assets/banners/modu1 (35).jpg" alt="Image 2">
+      <img src="assets/banners/modu1 (34).jpg" alt="Image 3">
+      <img src="assets/banners/modu1 (34).jpg" alt="Image 4">
+      <img src="assets/banners/modu1 (34).jpg" alt="Image 5">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 6">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 7">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 8">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 9">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 10">
+      <!-- Duplicate images for continuous scrolling -->
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 1">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 2">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 3">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 4">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 5">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 6">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 7">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 8">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 9">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 10">
+>>>>>>> c38e9f7628936a3d37fafeb41e1577c991bdce8b
+    </div>
+    <div class="nav-buttons">
+      <button class="prev">Prev</button>
+      <button class="next">Next</button>
+    </div>
+  </div>
+</section>
 <style>
-  .owl-carousel.pricing-carousel{
-    width: 50%;
-  }
-  /* General Reset */
-
-
-.container {
-padding: 20px;
-max-width: 1200px;
-margin: 0 auto;
-}
-.content{
-display: flex;
-flex-direction: row;
-}
-/* Header Section */
-.header {
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-margin-bottom: 20px;
-padding: 20px;
+  .scroll-section {
+  text-align: center;
+  margin: 50px 0;
 }
 
-.logo h1 {
-font-size: 2rem;
-color: #333;
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
-.logo .interior {
-font-weight: 400;
+.image-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.logo .objekts {
-font-weight: 700;
-color: #ff6f00;
+.image-container {
+  display: flex;
+  transition: transform 1s ease-in-out; /* Smooth transition */
 }
 
-.tagline {
-color: #ff6f00;
-font-size: 1.2rem;
-margin-top: 5px;
+.image-container img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 15px;
+  object-fit: cover;
 }
 
-.cta h2 {
-font-size: 1.8rem;
-text-align: right;
+.nav-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-.cta .highlight {
-font-weight: bold;
-color: #ff6f00;
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
-.arrows {
-margin-top: 10px;
-text-align: right;
+button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.arrows span {
-font-size: 1.5rem;
-color: #ff6f00;
-margin-right: 5px;
+/* Duplicate images for continuous scroll */
+.image-container {
+  display: flex;
 }
 
-/* Content Section */
-/* .content {
-display: flex;
-justify-content: space-between;
-gap: 20px;
-flex-wrap: wrap; 
-} */
-
-.product {
-flex: 1;
-text-align: center;
-max-width: 500px;
-margin-bottom: 40px;
-}
-.owl-carousel.pricing-carousel .owl-nav{
-  display: none;
-
-}
-
-.product img {
-width: 100%;
-border-radius: 8px;
-margin-bottom: 15px;
-
-}
-
-.product h3 {
-font-size: 1.2rem;
-margin-bottom: 10px;
-color: #333;
-}
-
-.product p {
-font-size: 1rem;
-color: #666;
-}
-
-/* Adjust left and right image sizes */
-.product-image {
-width: 100%;
-transition: all 0.3s ease-in-out;
-}
-
-.product.left img {
-max-width: 100%;
-}
-
-.product.right img {
-max-width: 100%; /* Right image will be slightly smaller */
-}
-
-/* Dots Section */
-.dots {
-margin-top: 20px;
-text-align: center;
-}
-
-.dots span {
-display: inline-block;
-width: 8px;
-height: 8px;
-background-color: #ff6f00;
-border-radius: 50%;
-margin: 0 5px;
+.image-container img {
+  flex-shrink: 0; /* Prevent images from shrinking */
 }
 
 </style>
- <script
- src="https://code.jquery.com/jquery-3.7.1.min.js"
- integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
- crossorigin="anonymous">
-</script>
+<script>
+  const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const imageContainer = document.querySelector('.image-container');
+let index = 0;  // Start index for images
+const images = document.querySelectorAll('.image-container img');
+const totalImages = images.length / 2;  // Half the number of images because they're duplicated
 
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/counterup/counterup.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="lib/tempusdominus/js/moment.min.js"></script>
-<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+// Function to move the slider by adjusting the transform property
+function moveSlider() {
+  const slideWidth = images[0].clientWidth + 30; // Add margin to width
+  imageContainer.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+// Move to next image
+nextButton.addEventListener('click', () => {
+  if (index < totalImages - 1) {
+    index++;
+  } else {
+    index = 0; // Loop back to the first image
+  }
+  moveSlider();
+});
+
+// Move to previous image
+prevButton.addEventListener('click', () => {
+  if (index > 0) {
+    index--;
+  } else {
+    index = totalImages - 1; // Loop back to the last image
+  }
+  moveSlider();
+});
+
+// Auto-scroll every 3 seconds for continuous movement
+setInterval(() => {
+  if (index < totalImages - 1) {
+    index++;
+  } else {
+    index = 0; // Loop back to the first image
+  }
+  moveSlider();
+}, 3000); // 3 seconds interval for auto-scroll
+
+</script>
+<!--Modular Kitchens-->
+
+<!--TV Units-->
+<div class="carousel-section">
+  <div class="carousel-container1">
+    <div class="carousel-images" id="carousel">
+      <img src="assets/banners/modubans1 (3).jpg" alt="Image 1">
+      <img src="assets/banners/modubans1 (2).jpg" alt="Image 2">
+      <img src="assets/banners/modubans1 (1).jpg" alt="Image 3">
+      <img src="assets/banners/modubans1 (4).jpg" alt="Image 4">
+      <img src="assets/banners/modubans1 (5).jpg" alt="Image 5">
+      <img src="assets/banners/modubans1 (6).jpg" alt="Image 6">
+      <img src="assets/banners/modubans1 (7).jpg" alt="Image 7">
+      <img src="assets/banners/modubans1 (8).jpg" alt="Image 8">
+      <img src="assets/banners/modubans1 (9).jpg" alt="Image 9">
+      <img src="assets/banners/modubans1 (10).jpg" alt="Image 10">
+    </div>
+    <button class="arrow-button" id="arrowBtn">↓</button>
+  </div>
+</div>
+
+
+<style>
+  .carousel-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+}
+
+.carousel-container1 {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+.carousel-images {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.arrow-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.arrow-button:hover {
+  background-color: #555;
+}
+
+</style>
 
 <script>
+  const carousel = document.getElementById("carousel");
+const arrowButton = document.getElementById("arrowBtn");
+const images = document.querySelectorAll(".carousel-images img");
+const totalImages = images.length;
+const imageHeight = 500; // Height of the container and each image
+let currentIndex = 0;
+let direction = 1; // 1 for forward, -1 for backward
+let isAutoSliding = true;
 
-  // Pricing carousel
-  $(".pricing-carousel").owlCarousel({
-      autoplay: true,
-      smartSpeed: 1500,
-      margin: 30,
-      loop: true,
-      dots: false,
-      nav: true,
-      // navText: [
-      //   `<i class="fa fa-arrow-left"></i>`,  
-      //   `<i class="fa fa-arrow-right"></i>`  
-      // ],
-      responsive: {
-        0: {
-          items: 1,
-        },
-        576: {
-          items: 1,
-        },
-        768: {
-          items: 1,
-        },
-        1200: {
-          items: 1,
-        },
-      },
-    });
+// Function to go to the next slide (or previous if reversing)
+function goToNextSlide() {
+  // Change direction at boundaries
+  if (currentIndex === totalImages - 1) {
+    direction = -1; // Reverse
+  } else if (currentIndex === 0) {
+    direction = 1; // Forward
+  }
 
+  // Update index based on direction
+  currentIndex += direction;
+  carousel.style.transition = "transform 0.5s ease-in-out";
+  carousel.style.transform = `translateY(-${currentIndex * imageHeight}px)`;
+}
+
+// Auto-slide every 3 seconds
+const autoSlide = setInterval(goToNextSlide, 3000);
+
+// Manual control using the arrow button
+arrowButton.addEventListener("click", () => {
+  if (isAutoSliding) {
+    clearInterval(autoSlide); // Stop auto-sliding if the button is clicked
+    isAutoSliding = false;
+  }
+  goToNextSlide();
+});
 
 </script>
-<!--spacesaving-->
+<!--TV Units-->
 
 
+
+
+
+
+
+<!-- <section id="pro-servicess" class="pro-services section light-background">
+  <div class="container">
+    <div class="row gy-4 justify-content-center">
+
+      
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item modular-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-house-door text-dark"></i>
+          </div>
+          <div>
+            <h3>Modular Cabinetry & Storage</h3>
+            <ul class="ulls">
+              <li class="text-dark">Wardrobes</li>
+              <li class="text-dark">Kitchen cabinets</li>
+              <li class="text-dark">TV units</li>
+              <li class="text-dark">Storage cabinets</li>
+              <li class="text-dark">Bookshelves and display units</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item wall-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-bricks text-dark"></i>
+          </div>
+          <div>
+            <h3>Wall Units</h3>
+            <ul class="ulls">
+              <li class="text-dark">Wall paneling and decorative units</li>
+              <li class="text-dark">Floating shelves and racks</li>
+              <li class="text-dark">Wall-mounted desks and workspaces</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item bedroom-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-house-door"></i>
+          </div>
+          <div>
+            <h3 class="text-white">Beds & Bedroom Solutions</h3>
+            <ul class="ulls">
+              <li class="text-white">Storage beds</li>
+              <li class="text-white">Modular bedside tables</li>
+              <li class="text-white">Headboards with built-in storage or features</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item workspace-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-briefcase text-dark"></i>
+          </div>
+          <div>
+            <h3>Workspace Solutions</h3>
+            <ul class="ulls">
+              <li class="text-dark">Modular workstations and desks</li>
+              <li class="text-dark">Overhead storage units</li>
+              <li class="text-dark">File cabinets and organizers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item table-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="bi bi-table text-dark"></i>
+          </div>
+          <div>
+            <h3>Modular Tables</h3>
+            <ul class="ulls">
+              <li>Side storage tables</li>
+              <li>Coffee tables with storage</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item kitchen-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="fas fa-utensils text-dark"></i>
+          </div>
+          <div>
+            <h3>Kitchen Solutions</h3>
+            <ul class="ulls">
+              <li class="text-dark">Modular kitchen counters and islands</li>
+              <li class="text-dark">Pull-out pantries</li>
+              <li class="text-dark">Overhead and under-counter storage solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item bathroom-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="fas fa-toilet text-dark"></i>
+          </div>
+          <div>
+            <h3>Bathroom Solutions</h3>
+            <ul class="ulls">
+              <li class="text-dark">Vanity units</li>
+              <li class="text-dark">Modular storage cabinets</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="pro-services-item entertainment-bg" data-aos="fade-up">
+          <div class="pro-services-icon large-icon blink-icon">
+            <i class="fas fa-tv text-dark"></i>
+          </div>
+          <div>
+            <h3 class="">Entertainment Center</h3>
+            <ul class="ulls">
+              <li class="text-dark">TV wall units</li>
+              <li class="text-dark">Media storage solutions</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+
+
+  
+  .modular-bg {
+    background-image: url('assets/img/productionlargeimages/1.jpg');
+  }
+
+  .wall-bg {
+    background-image: url('assets/img/productionlargeimages/2.jpg');
+  }
+
+  .bedroom-bg {
+    background-image: url('assets/img/productionlargeimages/3.jpg');
+  }
+
+  .workspace-bg {
+    background-image: url('assets/img/productionlargeimages/4.jpg');
+  }
+
+  .table-bg {
+    background-image: url('assets/img/productionlargeimages/5.jpg');
+  }
+
+  .kitchen-bg {
+    background-image: url('assets/img/productionlargeimages/6.jpg');
+  }
+
+  .bathroom-bg {
+    background-image: url('assets/img/productionlargeimages/7.jpg');
+  }
+
+  .entertainment-bg {
+    background-image: url('assets/img/productionlargeimages/8.jpg');
+  }
+
+  
+  .pro-services-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+ 
+.ulls {
+  list-style: none;
+  padding: 0;
+}
+
+
+.ulls li {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  transition: all 0.3s ease; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+
+.ulls li {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), -1px -1px 5px rgba(255, 255, 255, 0.1);
+}
+
+
+.ulls li:hover {
+  font-weight: bold;
+  color: #1f1f1f; 
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6), -2px -2px 8px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px); 
+}
+
+</style> -->
+
+
+
+
+
+
+
+
+
+    <!-- Stats Section -->
+    <!-- <section id="stats" class="stats section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-5">
+            <div class="images-overlap">
+              <img src="assets/img/bannersz1.jpg" alt="student" class="img-fluid img-1" data-aos="fade-up">
+            </div>
+          </div>
+
+          <div class="col-lg-4 ps-lg-5">
+            <span class="content-subtitle">Why Us</span>
+            <h2 class="content-title">Far far away Behind the Word Mountains</h2>
+            <p class="lead">
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia.
+            </p>
+            <p class="mb-5">
+              There live the blind texts. Separated they live in Bookmarksgrove
+              right at the coast of the Semantics, a large language ocean.
+            </p>
+            <div class="row mb-5 count-numbers">
+
+             
+              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="100">
+                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="3919" data-purecounter-duration="1" class="purecounter number"></span>
+                <span class="d-block">Coffee</span>
+              </div>
+             
+
+            
+              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="200">
+                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="2831" data-purecounter-duration="1" class="purecounter number"></span>
+                <span class="d-block">Codes</span>
+              </div>
+             
+
+       
+              <div class="col-4 counter" data-aos="fade-up" data-aos-delay="300">
+                <span data-purecounter-separator="true" data-purecounter-start="0" data-purecounter-end="1914" data-purecounter-duration="1" class="purecounter number"></span>
+                <span class="d-block">Projects</span>
+              </div>
+             
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- /Stats Section -->
+
+    
+
+ 
+
+<section id="blog-posts" class="blog-posts section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+
+    <h2>Blog Posts</h2>
+  </div><!-- End Section Title -->
+  <div class="container">
+
+    <div class="row gy-4">
+      <div class="col-md-4 col-lg-4">
+        <div class="post-entry" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="thumb d-block"><img src="assets/img/bannersz1.jpg" alt="Image" class="img-fluid rounded"></a>
+
+          <div class="post-content">
+            <div class="meta">
+              <a href="#" class="cat">Development</a> •
+              <span class="date">July 20, 2024</span>
+            </div>
+            <h3><a href="#">The Journey of Hidden Spaces: Transforming Dreams into Designs</a></h3>
+            <p>
+              "Far, far away in homes untapped, behind the walls of clutter and chaos, live spaces waiting to breathe anew."
+            </p>
+
+            <div class="d-flex author align-items-center">
+              <div class="pic">
+                <img src="assets/img/pro3.png" alt="Image" class="img-fluid rounded-circle">
+              </div>
+              <div class="author-name">
+                <strong class="d-block">Anil Kumar</strong>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-4">
+        <div class="post-entry" data-aos="fade-up" data-aos-delay="200">
+          <a href="#" class="thumb d-block"><img src="assets/img/bannersz1.jpg" alt="Image" class="img-fluid rounded"></a>
+
+          <div class="post-content">
+            <div class="meta">
+              <a href="#" class="cat">Development</a> •
+              <span class="date">July 20, 2024</span>
+            </div>
+            <h3><a href="#">Beyond the Obvious: The Art of Personalizing Interiors</a></h3>
+            <p>
+              "Behind the surface of every room lies a story untold, waiting to be brought to life."
+            </p>
+
+            <div class="d-flex author align-items-center">
+              <div class="pic">
+                <img src="assets/img/pro3.png" alt="Image" class="img-fluid rounded-circle">
+              </div>
+              <div class="author-name">
+                <strong class="d-block">Srinivas Rao</strong>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-lg-4">
+        <div class="post-entry" data-aos="fade-up" data-aos-delay="300">
+          <a href="#" class="thumb d-block"><img src="assets/img/bannersz1.jpg" alt="Image" class="img-fluid rounded"></a>
+
+          <div class="post-content">
+            <div class="meta">
+              <a href="#" class="cat">Development</a> •
+              <span class="date">July 20, 2024</span>
+            </div>
+            <h3><a href="#">Colors, Comfort, and Clarity: Building Harmonious Living Spaces</a></h3>
+            <p>
+              "Over the hills of choices and behind the mountains of trends, true harmony finds its place."
+            </p>
+
+            <div class="d-flex author align-items-center">
+              <div class="pic">
+                <img src="assets/img/pro3.png" alt="Image" class="img-fluid rounded-circle">
+              </div>
+              <div class="author-name">
+                <strong class="d-block">Ajay Manthri</strong>
+          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Blog Posts Section -->
+
+   
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <p>Plans</p>
+        <h2>Frequently Asked Questions</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-12">
+            <div class="custom-accordion" id="accordion-faq">
+              <div class="accordion-item">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-1">
+                    What is modular interior design?
+                  </button>
+                </h2>
+
+                <div id="collapse-faq-1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    Modular interior design involves using pre-fabricated units or modules that can be customized and assembled to suit your space and style.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="mb-0">
+                  <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-1">
+                    Can I customize the designs?
+                  </button>
+                </h2>
+
+                <div id="collapse-faq-1" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    Absolutely! Our modular solutions are fully customizable to fit your preferences and requirements.
+                  </div>
+                </div>
+              </div>
+              <!-- .accordion-item -->
+
+              
+            <!-- .accordion-item -->
+
+            <div class="accordion-item">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-3">
+                  What types of spaces do you work on?
+                </button>
+              </h2>
+
+              <div id="collapse-faq-3" class="collapse" aria-labelledby="headingThree" data-parent="#accordion-faq">
+                <div class="accordion-body">
+                  We design for both residential and commercial spaces, including living rooms, kitchens, offices, and more.
+                </div>
+              </div>
+            </div>
+            <!-- .accordion-item -->
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </section><!-- /Faq Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <p>Happy Customers</p>
+        <h2>Testimonials</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  },
+                  "breakpoints": {
+                    "320": {
+                      "slidesPerView": 1,
+                      "spaceBetween": 40
+                    },
+                    "1200": {
+                      "slidesPerView": 1,
+                      "spaceBetween": 1
+                    }
+                  }
+                }
+              </script>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="testimonial mx-auto">
+                    <figure class="img-wrap">
+                      <img src="assets/img/pro3.png" alt="Image" class="img-fluid">
+                    </figure>
+                    <h3 class="name">Radhika</h3>
+                    <blockquote>
+                      <p>
+                        "We never imagined our small apartment could look so spacious and elegant! The modular kitchen and living room designs exceeded our expectations. Truly professional and creative work!"
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial mx-auto">
+                    <figure class="img-wrap">
+                      <img src="assets/img/pro3.png" alt="Image" class="img-fluid">
+                    </figure>
+                    <h3 class="name"> Priya Menon</h3>
+                    <blockquote>
+                      <p>
+                        "Their designs brought our vision to life! The attention to detail, quality materials, and unique layouts made our home look like it’s straight out of a magazine."
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="testimonial mx-auto">
+                    <figure class="img-wrap">
+                      <img src="assets/img/pro3.png" alt="Image" class="img-fluid">
+                    </figure>
+                    <h3 class="name">Anil </h3>
+                    <blockquote>
+                      <p>
+                        "The entire process, from design to installation, was seamless. The team understood our requirements perfectly and delivered exactly what we wanted. Highly recommend them!"
+                      </p>
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /Testimonials Section -->
 
   </main>
 
@@ -2325,13 +1613,13 @@ margin: 0 5px;
     <div class="container">
       <div class="row g-4">
         <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
-          <a href="https://maps.app.goo.gl/x4Hczhwv2ST8sEtL6" target="_blank">
-            <div class="widget">
+          <div class="widget">
             <h3 class="widget-heading">Address</h3>
             <p class="mb-4">
-              Plot No.7-1/2, 1st Floor, opposite Bharat Petrol Pump, Madeenaguda, Telangana 500049
+             Bachupally, Hyderabad
             </p>
-          </div></a>
+            
+          </div>
         </div>
         <div class="col-md-4 col-lg-3 ps-lg-5 mb-3 mb-md-0">
           <div class="widget">
@@ -2354,19 +1642,19 @@ margin: 0 5px;
             <h3 class="widget-heading">Connect</h3>
             <ul class="list-unstyled social-icons light mb-3">
               <li>
-                <a href="https://www.facebook.com/profile.php?id=61552797685413&mibextid=ZbWKwL" target="_blank"><span class="bi bi-facebook"></span></a>
+                <a href="#"><span class="bi bi-facebook"></span></a>
               </li>
-              <!-- <li>
+              <li>
                 <a href="#"><span class="bi bi-twitter-x"></span></a>
-              </li> -->
-              <li>
-                <a href="https://www.linkedin.com/in/ma-modular-s-1a1640317/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><span class="bi bi-linkedin"></span></a>
               </li>
-              <!-- <li>
-                <a href="#"><span class="bi bi-google"></span></a>
-              </li> -->
               <li>
-                <a href="https://www.instagram.com/ma_modulars/profilecard/?igsh=NWN0bzNuY25tMHVj" target="_blank"><span class="bi bi-instagram"></span></a>
+                <a href="#"><span class="bi bi-linkedin"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-google"></span></a>
+              </li>
+              <li>
+                <a href="#"><span class="bi bi-google-play"></span></a>
               </li>
             </ul>
           </div>
@@ -2377,13 +1665,13 @@ margin: 0 5px;
         </div>
 
         <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
-         <img class="footeimg" src="assets/img/modulogo.png"/>
+         <img class="footeimg" src="assets/img/logooos.png"/>
         </div>
         
       </div>
 
       <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
-        <p>© <span>Copyright</span> <a href="index.html" target="_blank"><strong class="px-1 sitename">Ma Modulars Interiors.</strong> </a><span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <a href="index.html" target="_blank"><strong class="px-1 sitename">Ma Madulars Interiors.</strong> </a><span>All Rights Reserved</span></p>
         <div class="credits">
        
           Designed by   <a href="https://thepatternscompany.com/" target="_blank">The Patterns Company</a>
@@ -2394,94 +1682,7 @@ margin: 0 5px;
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-   
 
-  <div class="social-links">
-    <a href="https://wa.me/+919440887067" target="_blank" class="icon whatsapp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://www.instagram.com/ma_modulars/profilecard/?igsh=NWN0bzNuY25tMHVj" target="_blank" class="icon instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61552797685413&mibextid=ZbWKwL" target="_blank" class="icon facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/ma-modular-s-1a1640317/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon linkedin">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-   
-  </div>
-
-  <style>
-    /* Social Links Container */
-  .social-links {
-    position: fixed;
-    right: 10px; /* Adjusted closer to the right */
-    bottom: 80px; /* Positioned below the scroll-to-top button */
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between the icons */
-    z-index: 10; /* Ensure it appears above most elements */
-  }
-  
-  /* Style for Individual Icons */
-  .social-links .icon {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    border-radius: 50%;
-    font-size: 22px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  /* Facebook Icon */
-  .social-links .facebook {
-    background-color: #4267B2; /* Facebook blue */
-  }
-  
-  /* LinkedIn Icon */
-  .social-links .linkedin {
-    background-color: #0077B5; /* LinkedIn blue */
-  }
-  
-  /* WhatsApp Icon */
-  .social-links .whatsapp {
-    background-color: #25D366; /* WhatsApp green */
-  }
-  
-  /* Instagram Icon */
-  .social-links .instagram {
-    background: radial-gradient(circle, #fdf497, #fd5949, #d6249f, #285aeb); /* Instagram gradient */
-  }
-  
-  /* Hover Effects */
-  .social-links .icon:hover {
-    transform: scale(1.1);
-  
-  
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Mobile View Adjustments */
-@media (max-width: 768px) {
-  .social-links {
-    right: 5px; /* Move closer to the edge for smaller screens */
-    bottom: 70px; /* Adjust space below the scroll-to-top button */
-    gap: 8px; /* Slightly reduce the gap between icons */
-  }
-
-  .social-links .icon {
-    width: 40px; /* Smaller size for icons */
-    height: 40px;
-    font-size: 18px; /* Adjust icon size */
-  }
-}
-  
-  </style>
   <!-- Preloader -->
   <div id="preloader"></div>
 

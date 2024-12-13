@@ -1,199 +1,211 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylish Timeline</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-           
-        }
+<section class="timeline-section">
+  <h1 class="main-heading">Journey to Success</h1>
+  <div class="timeline">
+      <!-- Step 1 -->
+      <div class="timeline-step" id="step1">
+          <div class="timeline-left">
+              <h2>1. Initial Consultation</h2>
+          </div>
+          <div class="timeline-right">
+              <h3>Discuss goals and style preferences</h3>
+              <p>Start by understanding the client's needs, preferences, and budget. This meeting lays the groundwork for a tailored design that aligns with their vision.</p>
+              <img src="assets/img/processimgs/friends-studying-together-cozy-s-removebg-preview.png" alt="Concept & Design">
+          </div>
+      </div>
+      <!-- Step 2 -->
+      <div class="timeline-step" id="step2">
+          <div class="timeline-left">
+              <h2>2. Custom Design & Planning</h2>
+          </div>
+          <div class="timeline-right">
+              <h3>Present Custom designs and digital renderings</h3>
+              <p>Develop a detailed design plan with 3D renderings and material samples to give clients a preview of the final look. Adjustments are made based on the client feedback.</p>
+              <img src="assets/img/processimgs/outline-illustration-online-digi-removebg-preview.png" alt="Development">
+          </div>
+      </div>
+      <!-- Step 3 -->
+      <div class="timeline-step" id="step3">
+          <div class="timeline-left">
+              <h2>3. Production & Assembly</h2>
+          </div>
+          <div class="timeline-right">
+              <h3>Manufacturing with quality control at each stage.</h3>
+              <p>Once approved, the design moves to production. Your skilled team works with advanced equipment to ensure quality and precision in every piece.</p>
+              <img src="assets/img/processimgs/male-engineer-supervising-constr-removebg-preview.png" alt="Testing">
+          </div>
+      </div>
+      <!-- Step 4 -->
+      <div class="timeline-step" id="step4">
+          <div class="timeline-left">
+              <h2>4. Delivery & Installation</h2>
+          </div>
+          <div class="timeline-right">
+              <h3>Safe, Timely delivery of all components</h3>
+              <p>Your team handles all logistics, including delivery and professional installation. You ensure that each piece fits seamlessly into the client’s space.</p>
+              <img src="assets/img/processimgs/delivery-man-silhouettes-vector-removebg-preview.png" alt="Launch">
+          </div>
+      </div>
+      <!-- Step 5 -->
+      <div class="timeline-step" id="step5">
+          <div class="timeline-left">
+              <h2>5. Post-Installation Support</h2>
+          </div>
+          <div class="timeline-right">
+              <h3>Maintenance tips and customer support</h3>
+              <p>Provide ongoing support after installation, including follow-up visits, maintenance, and guidance on care to ensure longevity and customer satisfaction.</p>
+              <img src="assets/img/processimgs/company-culture-icon-style_11341-removebg-preview.png" alt="Maintenance">
+          </div>
+      </div>
+      <!-- Scrolling Icon -->
+      <div class="timeline-icon"></div>
+  </div>
+</section>
 
-        .timeline-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 50px 20px;
-            text-align: center;
-            scroll-behavior: smooth;
-        }
+<style>
+/* General Timeline Styling */
+.timeline-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  scroll-behavior: smooth;
+}
 
-        .main-heading {
-            font-size: 36px;
-            color: #333;
-            margin-bottom: 50px;
-        }
+.main-heading {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 50px;
+}
 
-        .timeline {
-            position: relative;
-            width: 100%;
-            padding: 50px 0;
-        }
+.timeline {
+  position: relative;
+  width: 100%;
+  padding: 50px 0;
+}
 
-        .timeline::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: #007bff;
-            z-index: 1;
-            transform: translateX(-50%);
-        }
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: #000000;
+  z-index: 1;
+  transform: translateX(-50%);
+}
 
-        .timeline-step {
-            position: relative;
-            margin-bottom: 100px;
-            display: flex;
-            align-items: center;
-        }
+.timeline-step {
+  position: relative;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  animation: fadeInUp 1s ease-in-out;
+}
 
-        .timeline-left, .timeline-right {
-            width: 45%;
-        }
+.timeline-left, .timeline-right {
+  width: 45%;
+}
 
-        .timeline-left {
-            text-align: right;
-            padding-right: 20px;
-        }
+.timeline-left {
+  text-align: right;
+  padding-right: 20px;
+}
 
-        .timeline-right {
-            text-align: left;
-            padding-left: 60px;
-        }
+.timeline-right {
+  text-align: left;
+  padding-left: 80px;
+}
 
-        .timeline-left h3, .timeline-right h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
+.timeline-left h3, .timeline-right h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
 
-        .timeline-left h3 {
-            color: #007bff;
-        }
+.timeline-left h2 {
+  color: #000000;
+}
 
-        .timeline-right h3 {
-            color: #ff5722;
-        }
+.timeline-right h3 {
+  color: rgba(159,191,19,255);
+}
 
-        .timeline-right p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 10px;
-        }
+.timeline-right p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
 
-        .timeline-right img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.timeline-right img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
 
-        .timeline-icon {
-            position: fixed;
-            top: 20%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            background: #ff5722;
-            border-radius: 50%;
-            z-index: 10;
-            transform: translate(-50%, -50%);
-            transition: top 0.5s ease-in-out;
-        }
+.timeline-icon {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #f5de4c;
+  border-radius: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  transition: top 0.5s ease-in-out;
+}
 
-    </style>
-</head>
-<body>
-    <section class="timeline-section">
-        <h1 class="main-heading">Journey to Success</h1>
-        <div class="timeline">
-            <!-- Step 1 -->
-            <div class="timeline-step" id="step1">
-                <div class="timeline-left">
-                    <h3>Step 1</h3>
-                </div>
-                <div class="timeline-right">
-                    <h3>Concept & Design</h3>
-                    <p>Start by defining your vision and planning your design approach.</p>
-                    <img src="assets/img/resources4.png" alt="Concept & Design">
-                </div>
-            </div>
-            <!-- Step 2 -->
-            <div class="timeline-step" id="step2">
-                <div class="timeline-left">
-                    <h3>Step 2</h3>
-                </div>
-                <div class="timeline-right">
-                    <h3>Development</h3>
-                    <p>Turn your concepts into reality with precise execution.</p>
-                    <img src="assets/img/resources4.png" alt="Development">
-                </div>
-            </div>
-            <!-- Step 3 -->
-            <div class="timeline-step" id="step3">
-                <div class="timeline-left">
-                    <h3>Step 3</h3>
-                </div>
-                <div class="timeline-right">
-                    <h3>Testing</h3>
-                    <p>Ensure everything works flawlessly through rigorous testing.</p>
-                    <img src="assets/img/resources4.png" alt="Testing">
-                </div>
-            </div>
-            <!-- Step 4 -->
-            <div class="timeline-step" id="step4">
-                <div class="timeline-left">
-                    <h3>Step 4</h3>
-                </div>
-                <div class="timeline-right">
-                    <h3>Launch</h3>
-                    <p>Roll out the project for the world to see and experience.</p>
-                    <img src="assets/img/resources4.png" alt="Launch">
-                </div>
-            </div>
-            <!-- Step 5 -->
-            <div class="timeline-step" id="step5">
-                <div class="timeline-left">
-                    <h3>Step 5</h3>
-                </div>
-                <div class="timeline-right">
-                    <h3>Maintenance</h3>
-                    <p>Keep everything running smoothly with ongoing support.</p>
-                    <img src="assets/img/resources4.png" alt="Maintenance">
-                </div>
-            </div>
-            <!-- Scrolling Icon -->
-            <div class="timeline-icon"></div>
-        </div>
-    </section>
+/* Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const steps = document.querySelectorAll(".timeline-step");
-            const icon = document.querySelector(".timeline-icon");
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline {
+      padding: 20px 0;
+  }
 
-            const handleScroll = () => {
-                const windowHeight = window.innerHeight;
-                let activeStepFound = false;
+  .timeline::before {
+      left: 5%;
+      width: 2px;
+  }
 
-                steps.forEach((step) => {
-                    const stepTop = step.getBoundingClientRect().top;
-                    const stepHeight = step.offsetHeight;
+  .timeline-step {
+      flex-direction: column;
+  }
 
-                    if (!activeStepFound && stepTop < windowHeight / 2 && stepTop > -stepHeight / 2) {
-                        const offsetTop = step.offsetTop;
-                        icon.style.top = `${offsetTop + stepHeight / 2}px`;
-                        activeStepFound = true;
-                    }
-                });
-            };
+  .timeline-left, .timeline-right {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+  }
 
-            window.addEventListener("scroll", handleScroll);
-        });
-    </script>
-</body>
-</html>
+  .timeline-right {
+      margin-top: 20px;
+  }
+
+  .timeline-left h2 {
+      font-size: 18px;
+  }
+
+  .timeline-right h3 {
+      font-size: 18px;
+  }
+
+  .timeline-right p {
+      font-size: 14px;
+  }
+
+  .timeline-right img {
+      max-width: 90%;
+  }
+}
+</style>
