@@ -439,7 +439,7 @@ h6 {
 }
 
 .footer a {
-  color: var(--default-color) !important;
+  color: #9FBC1A !important;
 }
 
 .footer a:hover {
@@ -2485,4 +2485,8 @@ section,
   padding-left: 5px;
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
+}
+
+.colooo{
+  color:#9FBC1A !important;
 }
