@@ -1,221 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Team</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Ma Modular Interiors</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-        }
+  <!-- Favicons -->
+  <link href="assets/img/logooos.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        .header {
-            background: linear-gradient(90deg, #1f2b7b, #fecb38);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-        .header h1 {
-            font-size: 36px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
-        .header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-        .section-title {
-            text-align: center;
-            font-size: 28px;
-            color: #1f2b7b;
-            margin: 40px 0 20px;
-        }
 
-        .job-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            padding: 0 20px;
-        }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-        .job-item {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            padding: 25px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .job-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .job-item h3 {
-            font-size: 22px;
-            font-weight: 600;
-            color: #1f2b7b;
-            margin-bottom: 12px;
-        }
-
-        .job-item p {
-            font-size: 14px;
-            color: #777;
-            margin-bottom: 20px;
-        }
-
-        .apply-btn {
-            background-color: #fecb38;
-            color: #1f2b7b;
-            padding: 10px 20px;
-            font-size: 14px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .apply-btn:hover {
-            background-color: #f8a800;
-        }
-
-        .form-container {
-            width: 1000px;
-            background-color: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-            margin: 0 20px 50px;
-           
-        }
-
-        .form-container h2 {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            color: #1f2b7b;
-            margin-bottom: 25px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            font-size: 16px;
-            font-weight: 500;
-            color: #333;
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            color: #333;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            background-color: #1f2b7b;
-            color: white;
-            padding: 12px 25px;
-            font-size: 16px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            width: 100%;
-            transition: background-color 0.3s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #fecb38;
-        }
-        .form-g{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            margin: 0 20px 50px;
-           
-            margin-top: 10px;
-        }
-
-        .footer {
-            background-color: #1f2b7b;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 30px;
-            }
-
-            .section-title {
-                font-size: 24px;
-            }
-
-            .job-item {
-                padding: 18px;
-            }
-
-            .form-container {
-                padding: 30px;
-            }
-        }
-    </style>
+  <!-- =======================================================
+  * Template Name: Active
+  * Template URL: https://bootstrapmade.com/active-bootstrap-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
 
-    <div class="header">
+<body class="contact-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+      <img src="assets/img/logooos.png" alt="" class="logoclasss"> 
+        <!-- <h1 class="sitename">Active.</h1> -->
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html"  >Home</a></li>
+          <li><a href="about.html" >About Us</a></li>
+          <li><a href="our-process.html" >Our Process</a></li>
+          <li class="dropdown"><a href="production.html" class="active">Production<i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="downloads.html">Downloads</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="videos.html">Videos</a></li>
+              <li><a href="newsandmedia.html">News & Media</a></li>
+            </ul>
+          </li>
+          <li><a href="resources.html" >Resources</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background-5">
+      <div class="container">
+        <h1>Join Our Team</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Join Our Team</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+
+    <!-- <div class="header">
         <h1>Join Our Team</h1>
         <p>We are always looking for talented individuals to be part of our dynamic team. Explore open positions and apply now!</p>
-    </div>
+    </div> -->
 
     <div class="container">
         <div class="section-title">
-            <h2>Open Positions</h2>
+            <h2>Join Our Team</h2>
+            <p>We are always looking for talented individuals to be part of our dynamic team. Explore open positions and apply now!</p>
         </div>
 
         <div class="job-list">
             <div class="job-item">
-                <h3>Web Developer</h3>
-                <p>Join our development team to build innovative and cutting-edge websites and applications.</p>
-                <button class="apply-btn">Apply Now</button>
+                <h3>Sales and Marketing Executive</h3>
+                <p>As a Sales and Marketing Executive, you will be responsible for driving sales growth through innovative marketing strategies, client engagement, and market analysis. </p>
+                <!-- <button class="apply-btn">Apply Now</button> -->
             </div>
 
             <div class="job-item">
-                <h3>Project Manager</h3>
-                <p>Lead and manage projects, working with a team to deliver on client requirements effectively.</p>
-                <button class="apply-btn">Apply Now</button>
+                <h3>Design Specialist</h3>
+                <p>The Sales and Marketing Executive will focus on generating new leads, nurturing relationships with potential clients, and executing sales strategies to achieve targets.</p>
+                <!-- <button class="apply-btn">Apply Now</button> -->
             </div>
 
             <div class="job-item">
-                <h3>Graphic Designer</h3>
-                <p>Help create visually appealing designs for a range of projects, bringing our client visions to life.</p>
-                <button class="apply-btn">Apply Now</button>
+                <h3>Technical Supervisor</h3>
+                <p>The Design Specialist will be responsible for creating visually compelling designs that align with client needs and business objectives. </p>
+                <!-- <button class="apply-btn">Apply Now</button> -->
             </div>
         </div>
          <div class="form-g">
@@ -252,5 +172,359 @@
         <p>&copy; 2024 Company Name. All Rights Reserved.</p>
     </div>
 
+    <style>
+         }
+
+.header {
+    background: linear-gradient(90deg, #1f2b7b, #fecb38);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.section-title h2{
+    text-align: center;
+    font-size: 28px;
+    color: #000000;
+    margin: 40px 0 20px;
+}
+
+.job-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.job-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.job-item h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.job-item p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.apply-btn {
+    background-color: #fecb38;
+    color: #1f2b7b;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #f8a800;
+}
+
+.form-container {
+    width: 1000px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    margin: 0 20px 50px;
+   
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #333;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background-color: #9FBC1A ;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #fecb38;
+}
+.form-g{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0 20px 50px;
+   
+    margin-top: 10px;
+}
+
+.footer {
+    background-color: #1f2b7b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .job-item {
+        padding: 18px;
+    }
+
+    .form-container {
+        padding: 30px;
+    }
+}
+    </style>
+
+    
+
+  </main>
+
+  <footer id="footer" class="footer light-background mt-3">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
+          <a href="https://maps.app.goo.gl/x4Hczhwv2ST8sEtL6" target="_blank">
+            <div class="widget">
+            <h3 class="widget-heading">Address</h3>
+            <p class="mb-4">
+              Plot No.7-1/2, 1st Floor, opposite Bharat Petrol Pump, Madeenaguda, Telangana 500049
+            </p>
+          </div></a>
+        </div>
+        <div class="col-md-4 col-lg-3 ps-lg-5 mb-3 mb-md-0">
+          <div class="widget">
+            <h3 class="widget-heading">Quick links</h3>
+            <ul class="list-unstyled float-start me-5">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="production.html">Production</a></li>
+            </ul>
+            <ul class="list-unstyled float-start">
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="our-process.html">Our Process</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+       
+        <div class="col-md-4 col-lg-3 pl-lg-5">
+          <div class="widget">
+            <h3 class="widget-heading">Connect</h3>
+            <ul class="list-unstyled social-icons light mb-3">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61552797685413&mibextid=ZbWKwL" target="_blank"><span class="bi bi-facebook"></span></a>
+              </li>
+              <!-- <li>
+                <a href="#"><span class="bi bi-twitter-x"></span></a>
+              </li> -->
+              <li>
+                <a href="https://www.linkedin.com/in/ma-modular-s-1a1640317/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><span class="bi bi-linkedin"></span></a>
+              </li>
+              <!-- <li>
+                <a href="#"><span class="bi bi-google"></span></a>
+              </li> -->
+              <li>
+                <a href="https://www.instagram.com/ma_modulars/profilecard/?igsh=NWN0bzNuY25tMHVj" target="_blank"><span class="bi bi-instagram"></span></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="widget">
+            
+          </div>
+        </div>
+
+        <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
+         <img class="footeimg" src="assets/img/modulogo.png"/>
+        </div>
+        
+      </div>
+
+      <div class="copyright d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+        <p>© <span>Copyright</span> <a href="index.html" target="_blank"><strong class="px-1 sitename">Ma Modulars Interiors.</strong> </a><span>All Rights Reserved</span></p>
+        <div class="credits">
+       
+          Designed by   <a href="https://thepatternscompany.com/" target="_blank">The Patterns Company</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+  <div class="social-links">
+    <a href="https://wa.me/+919440887067" target="_blank" class="icon whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.instagram.com/ma_modulars/profilecard/?igsh=NWN0bzNuY25tMHVj" target="_blank" class="icon instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61552797685413&mibextid=ZbWKwL" target="_blank" class="icon facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/ma-modular-s-1a1640317/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="icon linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+   
+  </div>
+
+  <style>
+    /* Social Links Container */
+  .social-links {
+    position: fixed;
+    right: 10px; /* Adjusted closer to the right */
+    bottom: 80px; /* Positioned below the scroll-to-top button */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between the icons */
+    z-index: 10; /* Ensure it appears above most elements */
+  }
+  
+  /* Style for Individual Icons */
+  .social-links .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Facebook Icon */
+  .social-links .facebook {
+    background-color: #4267B2; /* Facebook blue */
+  }
+  
+  /* LinkedIn Icon */
+  .social-links .linkedin {
+    background-color: #0077B5; /* LinkedIn blue */
+  }
+  
+  /* WhatsApp Icon */
+  .social-links .whatsapp {
+    background-color: #25D366; /* WhatsApp green */
+  }
+  
+  /* Instagram Icon */
+  .social-links .instagram {
+    background: radial-gradient(circle, #fdf497, #fd5949, #d6249f, #285aeb); /* Instagram gradient */
+  }
+  
+  /* Hover Effects */
+  .social-links .icon:hover {
+    transform: scale(1.1);
+  
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .social-links {
+    right: 5px; /* Move closer to the edge for smaller screens */
+    bottom: 70px; /* Adjust space below the scroll-to-top button */
+    gap: 8px; /* Slightly reduce the gap between icons */
+  }
+
+  .social-links .icon {
+    width: 40px; /* Smaller size for icons */
+    height: 40px;
+    font-size: 18px; /* Adjust icon size */
+  }
+}
+  
+  </style>
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
+
 </html>
