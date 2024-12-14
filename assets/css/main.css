@@ -736,7 +736,49 @@ h6 {
 .light-background-6 {
 
   position: relative;
-  background-image: url("../img/production-images/58.png");
+  background-image: url("../img/modularkith/image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-7 {
+
+  position: relative;
+  background-image: url("../img/modularkith/modu1 (10).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-8 {
+
+  position: relative;
+  background-image: url("../img/modularkith/modu1 (9).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-9 {
+
+  position: relative;
+  background-image: url("../img/modularkith/modu1 (2).jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
