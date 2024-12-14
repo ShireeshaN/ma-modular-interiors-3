@@ -723,7 +723,7 @@ h6 {
 .light-background-5 {
 
   position: relative;
-  background-image: url("../img/modularkith/modu1 (54).jpg");
+  background-image: url("../img/wardrob/wardrob (2).jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -737,7 +737,7 @@ h6 {
 .light-background-6 {
 
   position: relative;
-  background-image: url("../img/modularkith/image.jpg");
+  background-image: url("../img/tvunits/tvunitsss1 (4).jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -748,10 +748,25 @@ h6 {
  
   
 }
-.light-background-7 {
+
+.light-background-6 {
 
   position: relative;
-  background-image: url("../img/modularkith/modu1 (10).jpg");
+  background-image: url("../img/tvunits/tvunitsss1 (4).jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+  height: 400px;
+ 
+  
+}
+.light-background-66 {
+
+  position: relative;
+  background-image: url("../img/modularkith/modu1 (6).jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
