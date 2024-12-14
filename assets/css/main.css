@@ -1313,6 +1313,9 @@ section,
   font-weight: 400;
   color: var(--heading-color);
 }
+.a{
+  text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 # Pricing Section
