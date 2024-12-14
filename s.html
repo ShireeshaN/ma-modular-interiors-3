@@ -1,211 +1,80 @@
-<section class="timeline-section">
-  <h1 class="main-heading">Journey to Success</h1>
-  <div class="timeline">
-      <!-- Step 1 -->
-      <div class="timeline-step" id="step1">
-          <div class="timeline-left">
-              <h2>1. Initial Consultation</h2>
-          </div>
-          <div class="timeline-right">
-              <h3>Discuss goals and style preferences</h3>
-              <p>Start by understanding the client's needs, preferences, and budget. This meeting lays the groundwork for a tailored design that aligns with their vision.</p>
-              <img src="assets/img/processimgs/friends-studying-together-cozy-s-removebg-preview.png" alt="Concept & Design">
-          </div>
-      </div>
-      <!-- Step 2 -->
-      <div class="timeline-step" id="step2">
-          <div class="timeline-left">
-              <h2>2. Custom Design & Planning</h2>
-          </div>
-          <div class="timeline-right">
-              <h3>Present Custom designs and digital renderings</h3>
-              <p>Develop a detailed design plan with 3D renderings and material samples to give clients a preview of the final look. Adjustments are made based on the client feedback.</p>
-              <img src="assets/img/processimgs/outline-illustration-online-digi-removebg-preview.png" alt="Development">
-          </div>
-      </div>
-      <!-- Step 3 -->
-      <div class="timeline-step" id="step3">
-          <div class="timeline-left">
-              <h2>3. Production & Assembly</h2>
-          </div>
-          <div class="timeline-right">
-              <h3>Manufacturing with quality control at each stage.</h3>
-              <p>Once approved, the design moves to production. Your skilled team works with advanced equipment to ensure quality and precision in every piece.</p>
-              <img src="assets/img/processimgs/male-engineer-supervising-constr-removebg-preview.png" alt="Testing">
-          </div>
-      </div>
-      <!-- Step 4 -->
-      <div class="timeline-step" id="step4">
-          <div class="timeline-left">
-              <h2>4. Delivery & Installation</h2>
-          </div>
-          <div class="timeline-right">
-              <h3>Safe, Timely delivery of all components</h3>
-              <p>Your team handles all logistics, including delivery and professional installation. You ensure that each piece fits seamlessly into the client’s space.</p>
-              <img src="assets/img/processimgs/delivery-man-silhouettes-vector-removebg-preview.png" alt="Launch">
-          </div>
-      </div>
-      <!-- Step 5 -->
-      <div class="timeline-step" id="step5">
-          <div class="timeline-left">
-              <h2>5. Post-Installation Support</h2>
-          </div>
-          <div class="timeline-right">
-              <h3>Maintenance tips and customer support</h3>
-              <p>Provide ongoing support after installation, including follow-up visits, maintenance, and guidance on care to ensure longevity and customer satisfaction.</p>
-              <img src="assets/img/processimgs/company-culture-icon-style_11341-removebg-preview.png" alt="Maintenance">
-          </div>
-      </div>
-      <!-- Scrolling Icon -->
-      <div class="timeline-icon"></div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery with Lightbox</title>
+    <!-- Lightbox2 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
 
-<style>
-/* General Timeline Styling */
-.timeline-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  text-align: center;
-  scroll-behavior: smooth;
-}
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+            gap: 15px; /* Space between images */
+            max-width: 1200px;
+            margin: 30px auto; /* Center the gallery */
+            padding: 0 15px;
+        }
 
-.main-heading {
-  font-size: 36px;
-  color: #000000;
-  margin-bottom: 50px;
-}
+        .gallery-container a img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.timeline {
-  position: relative;
-  width: 100%;
-  padding: 50px 0;
-}
+        .gallery-container a img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4px;
-  height: 100%;
-  background: #000000;
-  z-index: 1;
-  transform: translateX(-50%);
-}
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+            }
+        }
 
-.timeline-step {
-  position: relative;
-  margin-bottom: 100px;
-  display: flex;
-  align-items: center;
-  animation: fadeInUp 1s ease-in-out;
-}
+        @media (max-width: 480px) {
+            .gallery-container {
+                grid-template-columns: 1fr; /* 1 image per row */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <a href="assets/img/modularkith/modu1 (1).jpg" data-lightbox="image" data-title="Kitchen 1">
+            <img src="assets/img/modularkith/modu1 (1).jpg" alt="Kitchen 1">
+        </a>
+        <a href="assets/img/modularkith/modu1 (4).jpg" data-lightbox="kitchen-gallery" data-title="Kitchen 2">
+            <img src="assets/img/modularkith/modu1 (4).jpg" alt="Kitchen 2">
+        </a>
+        <a href="assets/img/modularkith/modu1 (7).jpg" data-lightbox="kitchen-gallery" data-title="Kitchen 3">
+            <img src="assets/img/modularkith/modu1 (7).jpg" alt="Kitchen 3">
+        </a>
+        <a href="assets/img/modularkith/modu1 (10).jpg" data-lightbox="kitchen-gallery" data-title="Kitchen 4">
+            <img src="assets/img/modularkith/modu1 (10).jpg" alt="Kitchen 4">
+        </a>
+        <a href="assets/img/modularkith/modu1 (13).jpg" data-lightbox="kitchen-gallery" data-title="Kitchen 5">
+            <img src="assets/img/modularkith/modu1 (13).jpg" alt="Kitchen 5">
+        </a>
+        <a href="assets/img/modularkith/modu1 (15).jpg" data-lightbox="kitchen-gallery" data-title="Kitchen 6">
+            <img src="assets/img/modularkith/modu1 (15).jpg" alt="Kitchen 6">
+        </a>
+    </div>
 
-.timeline-left, .timeline-right {
-  width: 45%;
-}
-
-.timeline-left {
-  text-align: right;
-  padding-right: 20px;
-}
-
-.timeline-right {
-  text-align: left;
-  padding-left: 80px;
-}
-
-.timeline-left h3, .timeline-right h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.timeline-left h2 {
-  color: #000000;
-}
-
-.timeline-right h3 {
-  color: rgba(159,191,19,255);
-}
-
-.timeline-right p {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.timeline-right img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.timeline-icon {
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background: #f5de4c;
-  border-radius: 50%;
-  z-index: 10;
-  transform: translate(-50%, -50%);
-  transition: top 0.5s ease-in-out;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from {
-      opacity: 0;
-      transform: translateY(50px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .timeline {
-      padding: 20px 0;
-  }
-
-  .timeline::before {
-      left: 5%;
-      width: 2px;
-  }
-
-  .timeline-step {
-      flex-direction: column;
-  }
-
-  .timeline-left, .timeline-right {
-      width: 100%;
-      text-align: center;
-      padding: 0;
-  }
-
-  .timeline-right {
-      margin-top: 20px;
-  }
-
-  .timeline-left h2 {
-      font-size: 18px;
-  }
-
-  .timeline-right h3 {
-      font-size: 18px;
-  }
-
-  .timeline-right p {
-      font-size: 14px;
-  }
-
-  .timeline-right img {
-      max-width: 90%;
-  }
-}
-</style>
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+</body>
+</html>
