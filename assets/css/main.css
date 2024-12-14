@@ -220,7 +220,7 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: white; /* White color on hover or active */
+    color: white !important; /* White color on hover or active */
   }
 
   .navmenu a i,
@@ -238,7 +238,7 @@ h6 {
   .navmenu .dropdown ul {
     margin: 0;
     padding: 10px 0;
-    background: var(--nav-dropdown-background-color);
+    background-color:black;
     display: block;
     position: absolute;
     visibility: hidden;
@@ -1370,7 +1370,7 @@ section,
 
 .pricing .pricing-item ul .na {
   color: color-mix(in srgb, var(--default-color), transparent 60%);
-  text-decoration: line-through;
+  
 }
 
 .pricing .pricing-item .btn-wrap {
