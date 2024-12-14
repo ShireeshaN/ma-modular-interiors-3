@@ -622,7 +622,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 99999;
-  background-color: var(--accent-color);
+  background-color: #9FBC1A;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -1907,7 +1907,7 @@ section,
   width: 40px;
   height: 40px;
   position: relative;
-  background: var(--accent-color);
+  background: #9FBC1A;
   border-radius: 4px;
   transition: 0.2s all ease;
   display: flex;
