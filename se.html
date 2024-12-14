@@ -1,0 +1,84 @@
+<section class="brands1-section">
+    <div class="brands1-box">
+      <h3>Established Year</h3>
+      <div class="count" data-target="2021">0</div>
+    </div>
+    <div class="brands1-box">
+      <h3>Completed Projects</h3>
+      <div class="count" data-target="500">0</div>
+    </div>
+    <div class="brands1-box">
+      <h3>Covered States</h3>
+      <div class="count" data-target="4">0</div>
+    </div>
+</section>
+
+<style>
+  .brands1-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+  }
+
+  .brands1-box {
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+
+  .brands1-box:hover {
+    transform: perspective(1000px) rotateY(15deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .brands1-box h3 {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+  }
+
+  .brands1-box .count {
+    font-size: 30px;
+    color: #007BFF;
+    font-weight: bold;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .brands1-section {
+      flex-direction: column;
+    }
+    .brands1-box {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+</style>
+
+<script>
+  const counters = document.querySelectorAll('.count');
+
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = Math.ceil(target / 150); // Adjust speed
+
+      if (current < target) {
+        counter.innerText = current + increment;
+        setTimeout(updateCount, 20); // Update every 20ms
+      } else {
+        counter.innerText = target; // Final value
+      }
+    };
+
+    updateCount();
+  });
+</script>
