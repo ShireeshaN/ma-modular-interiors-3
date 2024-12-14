@@ -3795,7 +3795,7 @@ fieldset:disabled .btn {
     --bs-btn-disabled-border-color: transparent;
     --bs-btn-box-shadow: 0 0 0 #000;
     --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    text-decoration: underline
+   
 }
 
 .btn-link:focus-visible {
