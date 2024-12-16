@@ -1,10 +1,9 @@
-/**
-* Template Name: Active
-* Template URL: https://bootstrapmade.com/active-bootstrap-website-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
+// * Template Name: Active
+// * Template URL: https://bootstrapmade.com/active-bootstrap-website-template/
+// * Updated: Aug 07 2024 with Bootstrap v5.3.3
+// * Author: BootstrapMade.com
+// * License: https://bootstrapmade.com/license/
 
 (function() {
   "use strict";
@@ -217,8 +216,40 @@
     });
 
   });
- 
+
+
+
 
    
 
 })();
+
+$(document).ready(function() {
+  // Pricing carousel
+  $(".pricing-carousel").owlCarousel({
+      autoplay: true,
+      smartSpeed: 1500,
+      margin: 30,
+      loop: true,
+      dots: false,
+      nav: true,
+      navText: [
+        `<i class="fa fa-arrow-left"></i>`,  // Left arrow
+        `<i class="fa fa-arrow-right"></i>`  // Right arrow
+      ],
+      responsive: {
+        0: {
+          items: 1,
+        },
+        576: {
+          items: 1,
+        },
+        768: {
+          items: 2,
+        },
+        1200: {
+          items: 3,
+        },
+      },
+    });
+  })
