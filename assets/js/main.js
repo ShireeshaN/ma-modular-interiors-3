@@ -222,3 +222,8 @@
    
 
 })();
+
+
+    // Initialize WOW.js
+    new WOW().init();
+
