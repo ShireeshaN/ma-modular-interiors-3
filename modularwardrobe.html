@@ -57,7 +57,7 @@
           <li><a href="index.html"  >Home</a></li>
           <li><a href="about.html" >About Us</a></li>
           <li><a href="ourprocess.html" >Our Process</a></li>
-          <li class="dropdown"><a href=""  class="active">Resources<i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href=""  class="active">Production<i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="modularkitchen.html">Modular Kitchens</a></li>
               <li><a href="modularwardrobe.html" class="active">Modular Wardrobes</a></li>
@@ -66,7 +66,7 @@
              
             </ul>
           </li>
-          <li class="dropdown"><a href="production.html" >Production<i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="production.html" >Resources<i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="downloads.html">Downloads</a></li>
               <li><a href="projects.html">Projects</a></li>
@@ -230,6 +230,27 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
             cursor: pointer;
         }
+         /* Responsive Design for Tablets */
+  @media (max-width: 768px) {
+      .gallery-container {
+          grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+      }
+
+      .gallery-container img {
+          height: 250px; /* Adjust height for smaller screens */
+      }
+  }
+
+  /* Responsive Design for Mobile Devices */
+  @media (max-width: 480px) {
+      .gallery-container {
+          grid-template-columns: 1fr; /* 1 image per row */
+      }
+
+      .gallery-container img {
+          height: 200px; /* Adjust height for mobile screens */
+      }
+  }
 </style>
 
    
