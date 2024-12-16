@@ -2608,3 +2608,32 @@ section,
 .colooo{
   color:#9FBC1A !important;
 }
+
+
+@keyframes fadeLeft {
+  0% {
+      transform: translateX(0);
+      opacity: 0;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      transform: translateX(-50px);
+      opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+      transform: translateX(0);
+      opacity: 0;
+  }
+  50% {
+      opacity: 0.5;
+  }
+  100% {
+      transform: translateX(50px);
+      opacity: 1;
+  }
+}
