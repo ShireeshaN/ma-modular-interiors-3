@@ -230,6 +230,27 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
             cursor: pointer;
         }
+         /* Responsive Design for Tablets */
+  @media (max-width: 768px) {
+      .gallery-container {
+          grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+      }
+
+      .gallery-container img {
+          height: 250px; /* Adjust height for smaller screens */
+      }
+  }
+
+  /* Responsive Design for Mobile Devices */
+  @media (max-width: 480px) {
+      .gallery-container {
+          grid-template-columns: 1fr; /* 1 image per row */
+      }
+
+      .gallery-container img {
+          height: 200px; /* Adjust height for mobile screens */
+      }
+  }
 </style>
 
    

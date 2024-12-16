@@ -183,49 +183,65 @@
 
 
 <div class="g">
-    <div class="gallery-container">
-     
-            <img src="assets/img/modularkith/12796451870299_w384h295.jpg" alt="Kitchen 1">
-
-            <img src="assets/img/modularkith/antis-bookcase-alf-dafre-20.jpg" alt="Kitchen 2">
-
-            <img src="assets/img/modularkith/cottage-style-walk-in-closet.jpg" alt="Kitchen 3">
-
-            <img src="assets/img/modularkith/image.jpg" alt="Kitchen 4">
-     
-            <img src="assets/img/modularkith/LuxuryWalkInCloset4.png" alt="Kitchen 5">
-
-            <img src="assets/img/modularkith/m_closet-baseball-cap-shelves.jpg" alt="Kitchen 6">
-       
-       
-    </div>
+  <div class="gallery-container">
+      <img src="assets/img/modularkith/12796451870299_w384h295.jpg" alt="Kitchen 1">
+      <img src="assets/img/modularkith/antis-bookcase-alf-dafre-20.jpg" alt="Kitchen 2">
+      <img src="assets/img/modularkith/cottage-style-walk-in-closet.jpg" alt="Kitchen 3">
+      <img src="assets/img/modularkith/image.jpg" alt="Kitchen 4">
+      <img src="assets/img/modularkith/LuxuryWalkInCloset4.png" alt="Kitchen 5">
+      <img src="assets/img/modularkith/m_closet-baseball-cap-shelves.jpg" alt="Kitchen 6">
+  </div>
 </div>
 
-
 <style>
-    .g {
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 images per row */
-            gap: 15px; /* Spacing between images */
-            max-width: 1200px; /* Limit the container width */
-            margin: auto;
-        }
-        .gallery-container img {
-            width: 100%; /* Images adapt to grid column size */
-            height: 300px; /* Uniform height */
-            object-fit: cover; /* Ensures proper cropping */
-            border-radius: 8px; /* Optional rounded corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
-            cursor: pointer;
-        }
+  .g {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+
+  .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Default: 3 images per row */
+      gap: 15px; /* Spacing between images */
+      max-width: 1200px; /* Limit the container width */
+      margin: auto;
+  }
+
+  .gallery-container img {
+      width: 100%; /* Images adapt to grid column size */
+      height: 300px; /* Uniform height */
+      object-fit: cover; /* Ensures proper cropping */
+      border-radius: 8px; /* Optional rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+      cursor: pointer;
+  }
+
+  /* Responsive Design for Tablets */
+  @media (max-width: 768px) {
+      .gallery-container {
+          grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+      }
+
+      .gallery-container img {
+          height: 250px; /* Adjust height for smaller screens */
+      }
+  }
+
+  /* Responsive Design for Mobile Devices */
+  @media (max-width: 480px) {
+      .gallery-container {
+          grid-template-columns: 1fr; /* 1 image per row */
+      }
+
+      .gallery-container img {
+          height: 200px; /* Adjust height for mobile screens */
+      }
+  }
 </style>
+
 
    
 
