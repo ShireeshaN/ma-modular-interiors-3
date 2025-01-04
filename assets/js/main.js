@@ -224,7 +224,6 @@
 
 })();
 
-<<<<<<< HEAD
 $(document).ready(function() {
   // Pricing carousel
   $(".pricing-carousel").owlCarousel({
@@ -254,9 +253,3 @@ $(document).ready(function() {
       },
     });
   })
-=======
-
-    // Initialize WOW.js
-    new WOW().init();
-
->>>>>>> 67386dc34dee2cd9f021cc7103f2437c76d6441b
