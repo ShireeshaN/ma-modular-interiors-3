@@ -504,7 +504,35 @@ h6 {
 .footer .social-icons li {
   display: inline-block;
 }
+.whatsapp{
+  position: fixed;
+  right: 12px;
+  bottom:4rem;
 
+  
+  cursor: pointer;
+display: grid;
+place-items: center;
+  border-radius: 50px;
+  z-index: 10000;
+  opacity: 1;
+ 
+  background: rgb(37, 211, 102);
+}
+.whatsapp a{
+  padding: 0.3rem 0.5rem;
+}
+.whatsapp a i{
+ 
+  color: white !important;
+}
+.whatsapp:hover a i{
+
+color: var(--white-color) !important;
+}
+.whatsapp a i{
+  font-size: 2.5rem;
+}
 .footer .social-icons li a {
   display: inline-block;
   width: 40px;
